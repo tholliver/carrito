@@ -19,6 +19,13 @@ function App() {
       nombre: "Luis Vallejos Vallejos",
       gitUser: "userGitName" /*Nombre de usario de git Local*/,
     },
+
+/*aQUI */
+
+
+
+
+
     {
       nombre: "Tu nombre",
       gitUser: "userGitName" /*Nombre de usario de git Local*/,
