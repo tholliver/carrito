@@ -10,6 +10,11 @@ function App() {
       nombre: "Miguel LaMadness",
       gitUser: "miguel" /*Nombre de usario de git Local*/,
     },
+    
+    {
+      nombre: "Omar Trujillo",
+      gitUser: "userGitName" /*Nombre de usario de git Local*/,
+    },
     {
       nombre: "Tu nombre",
       gitUser: "userGitName" /*Nombre de usario de git Local*/,
