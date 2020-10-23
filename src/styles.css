@@ -1,0 +1,135 @@
+body {
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    background-image: linear-gradient(90deg, purple, #dc3545);
+}
+
+body::-webkit-scrollbar {
+    width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius: 5px;
+   
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.container-title {
+    width: 600px;
+    padding: 15px;
+    margin-top: 20px;
+    /*border: 5px solid silver;*/
+    text-shadow: 5px 5px 5px black;
+    color: silver;
+
+    display: flex;
+    justify-content: center;
+}
+
+.container-title h2,.container-title i {
+    font-size: 45px;
+    padding: 10px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*  Contenedor de productos */
+.container-productos {
+    width: 1500px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    border: 5px solid silver;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.columna {
+    font-size: 20px;
+    text-shadow: 5px 5px 5px black;
+    color: silver;
+}
+
+.container-detalles {
+    width: 400px;
+    padding: 10px;
+    text-align: center;
+}
+
+.titulo-detalles {
+    border-bottom: 5px solid silver;
+}
+
+.container-detalles p {
+    font-size: 18px;
+}
+
+.contenido-detalles {
+    text-shadow: 5px 5px 5px black;
+    color: turquoise;
+}
+
+.container-buttons {
+    display: flex;
+    width: 800px;
+    justify-content: space-evenly;
+    margin: 20px;
+
+    cursor: pointer;
+    
+}
+
+.btn {
+    width: 250px;
+    height: 40px;
+    margin: 15px;
+
+    text-align: center; 
+    font-size: 24px;
+    
+    box-shadow: 5px 5px 5px silver;
+    border-radius: 10px; 
+    transition: .5s;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+
+.boton-aceptar {
+    color: white;
+    background-color: turquoise;
+    
+}
+
+.boton-cancelar {
+    background-color: crimson;
+}
+
+.boton-vaciar {
+    background-color: #f4841a;
+}
+
+.btn:hover{
+    width: 280px;
+}
+

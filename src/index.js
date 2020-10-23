@@ -1,19 +1,17 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App2 from './App';
-import botones from './App';
+import App from './App';
 import * as serviceWorker from './serviceWorker';
-import tabla from './App';
 
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App2 />
+    <App />
     
   </React.StrictMode>,
-  document.getElementById('tablaModelo')
+  document.getElementById('root')
 );
 
 
