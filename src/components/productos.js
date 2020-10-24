@@ -7,6 +7,8 @@ export default class productos extends Component {
         <Producto 
              producto={producto}
              key={producto.id}
+             EliminarProducto={this.props.EliminarProducto} 
+             doneW = {this.props.doneW}
         />)
     }
 }
