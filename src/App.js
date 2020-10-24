@@ -1,16 +1,23 @@
-import React from "react";
-import "./App.css";
-import "./style.css";
-import ContenedorCarrito from './ContenidoCarrito'
+import React,{Component}from 'react';
+import productos from './ejemplo/Productos.json';
+import Productos from './components/productos.js';
 
+import Titulo from './components/Titulo.js';
+import Btns from './components/btns';
 
-class App extends React.Component {
+class App extends Component{
+  state= {
+    productos:productos
+  } 
+ 
   render(){
-    return(
-      <ContenedorCarrito />
-    );
+    return<div>
+        <Titulo/>
+       <Productos 
+        productos={productos} 
+      />
+       <Btns/>
+    </div>
   }
 }
-
-
 export default App;

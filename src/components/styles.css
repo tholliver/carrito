@@ -73,12 +73,15 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
+
 .titulo-detalles {
     border-bottom: 5px solid silver;
 }
 
 .container-detalles p {
     font-size: 18px;
+    
+    
 }
 
 .contenido-detalles {
@@ -132,4 +135,20 @@ body::-webkit-scrollbar-thumb {
 .btn:hover{
     width: 280px;
 }
+
+.container .container-productos input{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 1400px;
+    margin-top: 25px;
+    position: absolute;
+}
+.btnCambiar {
+    display: block;
+    position:absolute;
+    margin-top: -60px;
+    margin-left: 200px;
+}
+
 
