@@ -1,16 +1,24 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
-import "./style.css";
-import ContenedorCarrito from './ContenidoCarrito'
+import Routes from "./routes";
 
 
-class App extends React.Component {
-  render(){
-    return(
-      <ContenedorCarrito />
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+function App() {
+  /* HERE SHOULD */
+
+  /*CALLING UP API PRODUCTS */
+ 
+    return (
+      <Router>
+        <div className="App">
+          <Routes />
+        </div>
+      </Router>
     );
-  }
+  
+  
 }
-
 
 export default App;
