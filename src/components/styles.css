@@ -1,9 +1,11 @@
+
+/*
 body {
     font-family: 'Sansita Swashed', cursive;
     text-decoration: none;
     background-image: linear-gradient(90deg, purple, #dc3545);
 }
-
+*/
 body::-webkit-scrollbar {
     width: .5rem;
 }
@@ -26,6 +28,8 @@ body::-webkit-scrollbar-thumb {
     justify-content: center
 }
 
+
+
 .container-title {
     width: 600px;
     padding: 15px;
@@ -37,6 +41,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
 }
+
 
 .container-title h2,.container-title i {
     font-size: 45px;
