@@ -4,7 +4,7 @@ import Producto from './producto.js';
 export default class productos extends Component {
     render() {           
     return this.props.productos.map(producto=>
-        <Producto 
+        <Producto        
              producto={producto}
              key={producto.id}
              EliminarProducto={this.props.EliminarProducto} 
@@ -12,3 +12,4 @@ export default class productos extends Component {
         />)
     }
 }
+
