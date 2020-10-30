@@ -7,12 +7,13 @@ import {
 import { CartContext } from "../../contexts/CartContext";
 
 import { formatNumber } from "../../helpers/utils";
+import "./Styles.css"
 
 const CartItem = ({ product }) => {
   const { increase, decrease, removeProduct } = useContext(CartContext);
 
   return (
-    <div className="row no-gutters py-2">
+    <div className="row no-gutters py-2 containe">
       <div className="col-sm-2 p-2">
         <img
           alt={product.name}
