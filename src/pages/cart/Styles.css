@@ -18,7 +18,38 @@ body{
     margin: 10px;
 } 
 
-.py-2 :last-child {
+.py-2 :last-child{
+    border-right: none;
+}
+
+.contenedor-botones-modificacion  {
     border: none;
+    border-left: 5px solid;
+    
+}
+
+.p-2 {
+    height: 100px;
+    width: 200px;
+
+    padding: 15px;
+    border-right: 5px solid;
+    text-align: center;
+    
+}
+
+.container-cantidad{
+    border: none;
+    margin-bottom: -50px;
+}
+
+.container-botons{
+    margin-top: 35px;
+    
+    
+}
+
+.nb-1{
+    width: ;
 }
 
