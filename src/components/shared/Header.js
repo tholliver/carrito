@@ -12,9 +12,9 @@ const Header = () => {
 
     return ( 
         <header className="header-main">
-            <Link to='/'>Tienda </Link>
-            <Link to='/acercade'>Acerca de</Link>
-            <Link to='/carrito'>Carrito ({itemCount})</Link>
+            <Link className="link-header" to='/'>Tienda  </Link>
+            <Link className="link-header" to='/acercade'>Acerca de</Link>
+            <Link className="link-header" to='/carrito'>Carrito ({itemCount})</Link>
         </header>
      );
 }

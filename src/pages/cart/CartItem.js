@@ -23,8 +23,10 @@ const CartItem = ({ product }) => {
         />
       </div>
       <div className="col-sm-4 p-2">
-        <h5 className="mb-1">{product.name}</h5>
-        <p className="mb-1">Precio: {formatNumber(product.price)} </p>
+        <div className="contenedor-nombre-precio">
+         <h5 className="mb-1">{product.name}</h5>
+          <p className="mb-1">Precio: {formatNumber(product.price)} </p>
+        </div>
       </div>
       <div className="col-sm-2 p-2 text-center container-cantidad">
         <p className="mb-0">Cantidad: {product.quantity}</p>
