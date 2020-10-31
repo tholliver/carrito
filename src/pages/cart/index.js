@@ -6,6 +6,9 @@ import { CartContext } from "../../contexts/CartContext";
 import { formatNumber } from "../../helpers/utils";
 import { Link } from "react-router-dom";
 
+import "./Styles.css"
+import Titulo from './Titulo.js';
+
 const Cart = () => {
   const {
     total,
@@ -29,7 +32,10 @@ const Cart = () => {
         <div className="row no-gutters justify-content-center">
           <div className="col-sm-9 p-3">
             {cartItems.length > 0 ? (
+              <div className='titulo'>
+                <Titulo/>
               <CartProducts />
+              </div>
             ) : (
               <div className="p-3 text-center text-muted">
                 <p>Tu carrito esta vacio </p>
