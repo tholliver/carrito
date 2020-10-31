@@ -21,15 +21,17 @@ const CartItem = ({ product }) => {
           src={product.photo}
           className="img-fluid d-block"
         />
+        <h5 className="mb-1">{product.name}</h5>
       </div>
       <div className="col-sm-4 p-2">
         <div className="contenedor-nombre-precio">
-         <h5 className="mb-1">{product.name}</h5>
-          <p className="mb-1">Precio: {formatNumber(product.price)} </p>
+         <h5 className="mb-1">{''} </h5>
+         <br/>
+          <p className="mb-1">{formatNumber(product.price)} </p>
         </div>
       </div>
       <div className="col-sm-2cantidad p-2 text-center container-cantidad">
-        <p className="mb-0">Cantidad: {product.quantity}</p>
+        <p className="mb-0">{product.quantity}</p>
       </div>
       <div className="col-sm-4-botones p-2 text-right contenedor-botones-modificacion">
         <div className="container-botons">
