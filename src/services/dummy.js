@@ -59,4 +59,64 @@ export const dummyProducts = [
     price: "123.82",
     photo: "/img/10.jpg"
   },
+  {
+    id: 11,
+    name: "French bread",
+    price: 101.53,
+    photo: "/img/11.jpg"
+  },
+  {
+    id: 12,
+    name: "Peach",
+    price: 15.51,
+    photo: "/img/12.jpg"
+  },
+  {
+    id: 13,
+    name: "Strawberries",
+    price: 12.47,
+    photo: "/img/13.jpg"
+  },
+  {
+    id: 14,
+    name: "Lemon",
+    price: 5.46,
+    photo: "/img/14.jpg"
+  },
+  {
+    id: 15,
+    name: "Mango",
+    price: 16.78,
+    photo: "/img/15.jpg"
+  },
+  {
+    id: 16,
+    name: "Pineapple",
+    price: 18.79,
+    photo: "/img/16.jpg"
+  },
+  {
+    id: 17,
+    name: "Papaya",
+    price: 21.52,
+    photo: "/img/17.jpg"
+  },
+  {
+    id: 18,
+    name: "Asparagus",
+    price: 5.42,
+    photo: "/img/18.jpg"
+  },
+  {
+    id: 19,
+    name: "Lettuce",
+    price: 6.85,
+    photo: "/img/19.jpg"
+  },
+  {
+    id: 20,
+    name: "Corn",
+    price: 7.53,
+    photo: "/img/20.jpg"
+  },
 ];
