@@ -19,9 +19,11 @@ const Cart = () => {
   return (
     <Layout title="Carrito" description="Cart page">
       <div>
-        <div className="text-center mt-5">
-          <h1>Tu carrito</h1>
-          <p>Pagina con contenido de carrito.</p>
+        <div className="container-elementos-titulo">
+          <div className="text-center mt-5 titulo-carrito">
+            <h1>Tu carrito <i class="fas fa-shopping-cart"></i> </h1>
+            <p>Pagina con contenido de carrito.</p>
+          </div>
         </div>
 
         <div className="row no-gutters justify-content-center">
@@ -45,8 +47,8 @@ const Cart = () => {
             )}
           </div>
           {cartItems.length > 0 && (
-            <div className="col-sm-3 p-3">
-              <div className="card card-body">
+            <div className="col-sm-3 p-3 contenedor-detalles">
+              <div className="card card-body detalles">
                 <p className="mb-1">Cantidad de productos</p>
                 <h4 className=" mb-3 txt-right">{itemCount}</h4>
                 <p className="mb-1">Total</p>
@@ -55,14 +57,14 @@ const Cart = () => {
                 <div className="text-center">
                   <button
                     type="button"
-                    className="btn btn-primary mb-2"
+                    className="btnprocederpago btn-primary mb-2 boton-Detalle-Venta"
                     onClick={handleCheckout}
                   >
                    Proceder a pago
                   </button>
                   <button
                     type="button"
-                    className="btn btn-outlineprimary btn-sm"
+                    className="btnvaciarcarrito btn-outlineprimary btn-sm boton-Detalle-Venta"
                     onClick={clearCart}
                   >
                     Vaciar carrito
