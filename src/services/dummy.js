@@ -46,7 +46,7 @@ export const dummyProducts = [
     name: "Sour Puss Raspberry",
     price: 134.99,
     photo: "/img/8.jpg"
-  },
+  }, 
   {
     id: 9,
     name: "Pork - Chop, Frenched",
