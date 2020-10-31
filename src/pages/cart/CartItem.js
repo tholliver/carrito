@@ -28,14 +28,14 @@ const CartItem = ({ product }) => {
           <p className="mb-1">Precio: {formatNumber(product.price)} </p>
         </div>
       </div>
-      <div className="col-sm-2 p-2 text-center container-cantidad">
+      <div className="col-sm-2cantidad p-2 text-center container-cantidad">
         <p className="mb-0">Cantidad: {product.quantity}</p>
       </div>
-      <div className="col-sm-4 p-2 text-right contenedor-botones-modificacion">
+      <div className="col-sm-4-botones p-2 text-right contenedor-botones-modificacion">
         <div className="container-botons">
         <button
           onClick={() => increase(product)}
-          className="btn btn-primary btn-sm mr-2 mb-1"
+          className="btnaumentar btn-primary btn-sm mr-2 mb-1"
         >
           <PlusCircleIcon width={"20px"} />
         </button>
@@ -43,7 +43,7 @@ const CartItem = ({ product }) => {
         {product.quantity > 1 && (
           <button
             onClick={() => decrease(product)}
-            className="btn btn-danger btn-sm mb-1"
+            className="btndisminuir btn-danger btn-sm mb-1"
           >
             <MinusCircleIcon width={"20px"} />
           </button>
@@ -60,7 +60,7 @@ const CartItem = ({ product }) => {
         {//
           <button
             onClick={() => removeProduct(product)}
-            className="btn btn-danger btn-sm mb-1"
+            className="btneliminar btn-danger btn-sm mb-1"
           >
             <TrashIcon width={"20px"} />
           </button>
