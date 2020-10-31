@@ -57,14 +57,14 @@ const Cart = () => {
                 <div className="text-center">
                   <button
                     type="button"
-                    className="btn btn-primary mb-2 boton-Detalle-Venta"
+                    className="btnprocederpago btn-primary mb-2 boton-Detalle-Venta"
                     onClick={handleCheckout}
                   >
                    Proceder a pago
                   </button>
                   <button
                     type="button"
-                    className="btn btn-outlineprimary btn-sm boton-Detalle-Venta"
+                    className="btnvaciarcarrito btn-outlineprimary btn-sm boton-Detalle-Venta"
                     onClick={clearCart}
                   >
                     Vaciar carrito
