@@ -119,4 +119,64 @@ export const dummyProducts = [
     price: 7.53,
     photo: "/img/20.jpg"
   },
+  {
+    id: 21,
+    name: "spanish cheese",
+    price: 230.82,
+    photo: "/img/21.jpg"
+  },
+  {
+    id: 22,
+    name: "fresh pears",
+    price: 123.82,
+    photo: "/img/22.jpg"
+  },
+  {
+    id: 23,
+    name: "big apples",
+    price: 203.04,
+    photo: "/img/23.jpg"
+  },
+  {
+    id: 24,
+    name: "sweet blueberries",
+    price: 321.02,
+    photo: "/img/24.jpg"
+  },
+  {
+    id: 25,
+    name: "sweet cookies",
+    price: "278.01",
+    photo: "/img/25.jpg"
+  },
+  {
+    id: 26,
+    name: "nectar frush",
+    price: 100.20,
+    photo: "/img/26.jpg"
+  },
+  {
+    id: 27,
+    name: "unsalted butter",
+    price: 236.12,
+    photo: "/img/27.jpg"
+  },
+  {
+    id: 28,
+    name: "strawberry jam",
+    price: 248.25,
+    photo: "/img/28.jpg"
+  },
+  {
+    id: 29,
+    name: "coconut yogurt",
+    price: 250.03,
+    photo: "/img/29.jpg"
+  },
+  {
+    id: 30,
+    name: "mortadella with vegetables",
+    price: 320.82,
+    photo: "/img/30.jpg"
+  },
 ];
