@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import { formatNumber } from '../../helpers/utils';
 
+import {  toast  } from 'react-toastify' ;   
+  import 'react-toastify/dist/ReactToastify.css' ; 
+  
+toast.configure()
+ 
+
 /* Importando estilos*/
 
 
@@ -14,7 +20,20 @@ const ProductItem = ({product}) => {
     const isInCart = product => {
         return !!cartItems.find(item => item.id === product.id);
     }
+    const addProducto =()=>{
+        return(
+            addProduct(product),
+            notificar()
+        )
+    }
 
+    const notificar  = ( ) => {
+        toast.success( 'Se agrego el producto al carrito al carrito',{
+        position: toast.POSITION.TOP_CENTER,
+        autoClose: 2000
+    })
+    }
+    
     return (    
         <div className="card card-body">
             <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
@@ -32,12 +51,12 @@ const ProductItem = ({product}) => {
                 }
 
                 {
-                    !isInCart(product) && 
+                    !isInCart(product) &&
                     <button 
-                    onClick={() => addProduct(product)}
+                    onClick={addProducto}
                     className="btn btn-primary btn-sm">Añadir al carrito</button>
                 }
-                
+               
             </div>
         </div>
      );
