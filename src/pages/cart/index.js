@@ -6,6 +6,7 @@ import { CartContext } from "../../contexts/CartContext";
 import { formatNumber } from "../../helpers/utils";
 import { Link } from "react-router-dom";
 
+
 import "./Styles.css"
 import Titulo from './Titulo.js';
 
@@ -24,7 +25,7 @@ const Cart = () => {
       <div>
         <div className="container-elementos-titulo">
           <div className="text-center mt-5 titulo-carrito">
-            <h1>Tu carrito <i class="fas fa-shopping-cart"></i> </h1>
+            <h1>Tu carrito de compras<i class="fas fa-shopping-cart"></i> </h1>
             <p>Pagina con contenido de carrito.</p>
           </div>
         </div>
@@ -37,9 +38,13 @@ const Cart = () => {
               <CartProducts />
               </div>
             ) : (
+
+              <div>
+                <img className='emptycart' src={require('./boom.svg')} />
               <div className="p-3 text-center text-muted">
                 <p>Tu carrito esta vacio </p>
                 <Link to="/">Ir a la tienda</Link>
+              </div>
               </div>
             )}
 
@@ -64,9 +69,8 @@ const Cart = () => {
                   <button
                     type="button"
                     className="btnprocederpago btn-primary mb-2 boton-Detalle-Venta"
-                    onClick={handleCheckout}
-                  >
-                   Proceder a pago
+                    
+                  ><Link to="/pago">Proceder a pago</Link>
                   </button>
                   <button
                     type="button"
