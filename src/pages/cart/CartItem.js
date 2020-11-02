@@ -35,12 +35,18 @@ const CartItem = ({ product }) => {
       </div>
       <div className="col-sm-4-botones p-2 text-right contenedor-botones-modificacion">
         <div className="container-botons">
-        <button
-          onClick={() => increase(product)}
-          className="btnaumentar btn-primary btn-sm mr-2 mb-1"
-        >
-          <PlusCircleIcon width={"20px"} />
-        </button>
+        
+
+
+        {(
+          <button
+            disabled={product.quantity === 10}
+            onClick={() => increase(product)}
+            className="btnaumentar btn-primary btn-sm mr-2 mb-1"
+          >
+            <PlusCircleIcon width={"20px"} />
+          </button>
+        )}
 
         {product.quantity > 1 && (
           <button
