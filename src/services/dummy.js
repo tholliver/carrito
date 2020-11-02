@@ -179,41 +179,4 @@ export const dummyProducts = [
     price: 320.82,
     photo: "/img/30.jpg"
   },
-  {
-    id: 31,
-    name: "woman coat",
-    price: 400.80,
-    photo: "/img/31.jpg"
-  },
-  {
-    id: 32,
-    name: "man coat",
-    price: 550.00,
-    photo: "/img/32.jpg"
-  },
-  {
-    id: 33,
-    name: "girls coat",
-    price: 250.00,
-    photo: "/img/33.jpg"
-  },
-  {
-    id: 34,
-    name: "wallet",
-    price: 80.00,
-    photo: "/img/34.jpg"
-  },
-  {
-    id: 35,
-    name: "handbag",
-    price: 120.00,
-    photo: "/img/35.jpg"
-  },
-  {
-    id: 36,
-    name: "backpack",
-    price: 390.00,
-    photo: "/img/36.jpg"
-  }
-
 ];
