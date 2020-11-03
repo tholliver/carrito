@@ -21,18 +21,22 @@ const ProductItem = ({product}) => {
         return !!cartItems.find(item => item.id === product.id);
     }
     const addProducto =()=>{
+      /*  var antigo= cartItems.length*/
         return(
-            addProduct(product),
-            notificar()
+            addProduct(product)
+            
         )
     }
 
-    const notificar  = ( ) => {
-        toast.success( 'Se agrego el producto al carrito al carrito',{
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 2000
-    })
-    }
+    /*const notificar  = (a) => {
+        var nuevo=cartItems.length
+        if(nuevo>a){
+            toast.success( 'Se agrego el producto al carrito ',{
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 2000
+            })
+        }
+    }*/
     
     return (    
         <div className="card card-body">
