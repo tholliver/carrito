@@ -20,6 +20,13 @@ const ProductItem = ({product}) => {
     const isInCart = product => {
         return !!cartItems.find(item => item.id === product.id);
     }
+    const disponible = product => {
+        return product.cantDisponible===0;
+    }
+    const agotado = product => {
+        return !!cartItems.find((item)=>item.quantity===product.cantDisponible);
+    }
+    console.log(cartItems.quantity)
     const addProducto =()=>{
       /*  var antigo= cartItems.length*/
         return(
@@ -37,7 +44,17 @@ const ProductItem = ({product}) => {
             })
         }
     }*/
-    
+ 
+const bt={
+    fontsize:'28px',
+    color:'red',
+    border:'none',
+    width:'80px',
+    height:'40px',
+    pading:'20px 25px',
+    cursor: 'pointer',
+}
+
     return (    
         <div className="card card-body">
             <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
@@ -48,22 +65,29 @@ const ProductItem = ({product}) => {
                 <Link  to="/" className="btn btn-link btn-sm mr-2">Detalles</Link>
 
                 {
-                    isInCart(product) && 
+                    isInCart(product) && !agotado(product) && 
                     <button 
                     onClick={() => increase(product)}
                     className="btn btn-outline-primary btn-sm">Añadir mas</button>
                 }
 
                 {
-                    !isInCart(product) &&
+                    !isInCart(product) && !disponible(product) && 
                     <button 
                     onClick={addProducto}
                     className="btn btn-primary btn-sm">Añadir al carrito</button>
+                }
+                {
+                   ( disponible(product) || agotado(product) ) && 
+                    <button style={bt}
+                    onClick={addProducto}
+                    className="btn btn-primary btn-sm">Producto agotado</button>
                 }
                
             </div>
         </div>
      );
 }
- 
+
+
 export default ProductItem;
