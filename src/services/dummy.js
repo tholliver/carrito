@@ -200,13 +200,13 @@ export const dummyProducts = [
     name: "coconut yogurt",
     price: 250.03,
     photo: "/img/29.jpg",
-    cantDisponible:7
+    cantDisponible:0
   },
   {
     id: 30,
     name: "mortadella with vegetables",
     price: 320.82,
     photo: "/img/30.jpg",
-    cantDisponible:10
+    cantDisponible:11
   },
 ];

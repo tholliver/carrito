@@ -38,15 +38,15 @@ const CartItem = ({ product }) => {
         
 
 
-        {(
+      
           <button
-            disabled={product.quantity === 10}
+            
             onClick={() => increase(product)}
             className="btnaumentar btn-primary btn-sm mr-2 mb-1"
           >
             <PlusCircleIcon width={"20px"} />
           </button>
-        )}
+      
 
         {product.quantity > 1 && (
           <button
