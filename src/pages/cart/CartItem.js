@@ -80,7 +80,7 @@ const CartItem = ({ product }) => {
         <div className="contenedor-nombre-precio">
          <h5 className="mb-1">{''} </h5>
          <div className="col-sm-2cantidad p-2 text-center container-cantidad">
-            <p className="mb-0">{(product.quantity)*(product.price)}</p>
+            <p className="mb-0">${ (Math.round((product.quantity)*(product.price)  * 100) / 100).toFixed(2)  }</p>
           </div>
         </div>
       </div>
