@@ -89,7 +89,7 @@ const bt={
                     isInCart(product) && agotado(product) && 
                     <button style={bt}
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Producto agotado 2 </button>
+                    className="btn btn-primary btn-sm">Producto agotado </button>
                 }
                
             </div>
