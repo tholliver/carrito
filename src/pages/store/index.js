@@ -1,13 +1,20 @@
-import React, { useContext,useState } from "react";
-import Nav from '../../App.css';
-const Store = () => {
+import React from 'react';
+import Layout from '../../components/Layout';
+import ProductsGrid from './ProductsGrid';
 
-  return (
-    <div >
-      <h1>Tienda</h1>
-      <p>Esta es la pagina de la tienda.</p>
-      
-    </div>
-  );
+const Store = () => {
+    
+    return ( 
+        <Layout title="Tienda" description="Store page" >
+            <div >
+                <div>
+                    <h1>Tienda</h1>
+                    <p>Esta es la pagina de la tienda.</p>
+                </div>
+                <ProductsGrid/>
+            </div>
+        </Layout>
+     );
 }
+ 
 export default Store;
