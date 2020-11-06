@@ -24,7 +24,9 @@ const ProductItem = ({product}) => {
         return product.cantDisponible===0;
     }
     const agotado = product => {
-        return !!cartItems.find((item)=>item.quantity===product.cantDisponible);
+        var cant2 = product.cantDisponible
+        var cantCarrito = cartItems[cartItems.findIndex(item => item.id === product.id)].quantity
+        return cant2===cantCarrito;
     }
     console.log(cartItems.quantity)
     const addProducto =()=>{
@@ -78,10 +80,16 @@ const bt={
                     className="btn btn-primary btn-sm">Añadir al carrito</button>
                 }
                 {
-                   ( disponible(product) || agotado(product) ) && 
+                   !isInCart(product) && disponible(product) && 
                     <button style={bt}
                     onClick={addProducto}
                     className="btn btn-primary btn-sm">Producto agotado</button>
+                }
+                {
+                    isInCart(product) && agotado(product) && 
+                    <button style={bt}
+                    onClick={addProducto}
+                    className="btn btn-primary btn-sm">Producto agotado 2 </button>
                 }
                
             </div>
