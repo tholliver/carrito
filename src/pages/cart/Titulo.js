@@ -25,7 +25,11 @@ export default class Titulo extends Component {
                     <h3 className="columna">Modificar </h3>
                 </div>
             </div>
-        
+            <div className="container-detalles">
+                <div className="titulo-detalles">
+                    <h3 className="columna">Subtotal </h3>
+                </div>
+            </div>
         </div>
         )
     }
