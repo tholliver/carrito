@@ -75,6 +75,15 @@ const CartItem = ({ product }) => {
           }
         </div>
       </div>
+      {/* lo nuevo q estoy agregando*/}
+      <div className="col-sm-4 p-2">
+        <div className="contenedor-nombre-precio">
+         <h5 className="mb-1">{''} </h5>
+         <div className="col-sm-2cantidad p-2 text-center container-cantidad">
+            <p className="mb-0">{(product.quantity)*(product.price)}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -12,7 +12,6 @@ export default class Titulo extends Component {
             </div>
             <div className="container-detalles">
                     <h3 className="columna">Precio Unitario <i className="fas fa-dollar-sign"></i></h3>
-
             </div>
             
             <div className="container-detalles">
@@ -25,6 +24,12 @@ export default class Titulo extends Component {
                     <h3 className="columna">Modificar </h3>
                 </div>
             </div>
+            <div className="container-detalles">
+                <div className="titulo-detalles">
+                    <h3 className="columna">Subtotal </h3>
+                </div>
+            </div>
+            
         
         </div>
         )
