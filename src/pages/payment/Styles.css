@@ -182,7 +182,8 @@ body{
     border-radius: 10px; 
     transition: .5s;
 }
-.btn-eliminar {
+.btneliminar {
+    display: none; /*borrar esta linea para mostrar el boton de eliminar*/
     color: #FF0033;
     transition: .5s;
     box-shadow: 5px 5px 5px black;
@@ -209,11 +210,4 @@ body{
     border-radius: 10px; 
     transition: .5s;
     font-size: 15px;
-}
-
-
-.emptycart{
-    height: 250px;
-    width: 250px;
-
 }

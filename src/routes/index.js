@@ -8,6 +8,7 @@ import {
 import Store from '../pages/store';
 import About from '../pages/About';
 import Cart from "../pages/cart";
+import Pago from "../pages/payment";
 
 const Routes = () => {
   return (
@@ -18,7 +19,7 @@ const Routes = () => {
           <Route exact path="/" component={Store}/>
           <Route path="/acercade" component={About} /> 
           <Route path="/carrito" component={Cart} />
-          
+          <Route path="/pago" component={Pago} />
         </Switch>
     </Router>
   );
