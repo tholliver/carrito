@@ -68,7 +68,7 @@ const CartItem = ({ product }) => {
         {//
           <button
             onClick={() => removeProduct(product)}
-            className="btneliminar btn-danger btn-sm mb-1"
+            className="btn-eliminar"
           >
             <TrashIcon width={"20px"} />
           </button>
