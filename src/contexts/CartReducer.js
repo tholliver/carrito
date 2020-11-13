@@ -6,7 +6,6 @@ toast.configure()
 
 const noti =()=>{
     toast.success( 'Se agrego el producto al carrito',{
-        position: toast.POSITION.TOP_CENTER,
         autoClose: 2000
     })
 }
