@@ -9,11 +9,32 @@ import { CartContext } from "../../contexts/CartContext";
 import { formatNumber } from "../../helpers/utils";
 import "./Styles.css"
 
+import swal from 'sweetalert'
+
 const CartItem = ({ product }) => {
   const { increase, decrease, removeProduct } = useContext(CartContext);
 
+  const mostrarAlerta =()=>{
+    swal({
+      title: 'Eliminar',
+      text: 'Esta Seguro de eliminar este producto? ',
+      icon: 'warning',
+      buttons:['NO','Si']
+    }).then(respuesta=>{
+      if(respuesta){
+        return removeProduct(product),
+        swal({ text: 'se elimino el producto producto?',
+        icon: 'success',
+        timer: 1000
+      
+      })
+      }
+    }
+)
+  };
+
   return (
-    <div className="row no-gutters py-2 containe">
+    <div className="row no-gutters py-2 container">
       <div className="col-sm-2 p-2">
         <img
           alt={product.name}
@@ -67,7 +88,7 @@ const CartItem = ({ product }) => {
         )}
         {//
           <button
-            onClick={() => removeProduct(product)}
+            onClick={mostrarAlerta/*removeProduct(product)*/}
             className="btn-eliminar"
           >
             <TrashIcon width={"20px"} />
