@@ -1,11 +1,5 @@
-
-
-
-
-
 body{
     font-family: 'Grandstander', cursive;
-    background-image: linear-gradient(45deg, purple, #dc3545);
 }
 
 .row {
@@ -13,64 +7,35 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    width: 95%;   
+}
 
+.Caja-productos-general {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
-.py-2 {
-    padding: 15px;
-    font-size: 20px;
-    border: 5px solid;
-    margin: 10px;
-} 
-
-.py-2 :last-child{
-    border-right: none;
+.probando {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.contenedor-botones-modificacion  {
-    border: none;
-    border-left: 5px solid;
-    
-}
-
-.p-2 {
-    height: 100px;
-    width: 200px;
-
-    padding: 15px;
-    border-right: 5px solid;
-    text-align: center;
-    
-}
-
-/*  Nombre del producto  */
-.p-2 > h5 {
-    font-size: 18px;
-}
-
-.container-cantidad{
-    border: none;
-    margin-bottom: -50px;
-}
-
-.container-botons{
-    margin-top: 35px;
-    
-    
-}
-
-.contenedor-nombre-precio {
-    margin-top: -18px;
+.titulo {
+    width: 90%px;
 }
 
 /*Seccion de detalles de todo el carrito(cantidad de productos, total y botones)*/
 .contenedor-detalles{
-    background-color:silver;
-    background: #E3E6EC;
     border-radius: 30px;
     box-shadow: 10px 10px 20px #d1d9e6,
     -10px -10px 20px silver;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .detalles{
@@ -99,6 +64,7 @@ body{
 .header-main {
     background-image: linear-gradient(45deg, purple, #dc3545);
     height: 40px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -124,8 +90,9 @@ body{
     font-size: 25px;
 }
 
-
-
+.probando {
+    
+}
 
 
 .row {
