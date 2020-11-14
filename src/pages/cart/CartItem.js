@@ -34,7 +34,7 @@ const CartItem = ({ product }) => {
   };
 
   return (
-    <div className="row no-gutters py-2 container">
+    <div className="row no-gutters py-2 container contenedor-individual-producto">
       <div className="col-sm-2 p-2">
         <img
           alt={product.name}

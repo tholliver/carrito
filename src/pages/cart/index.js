@@ -21,10 +21,10 @@ const Cart = () => {
 
   return (
     <Layout title="Carrito" description="Cart page">
-      <div Contenedor-General>
+      <div >
         <div className="container-elementos-titulo">
           <div className="text-center mt-5 titulo-carrito">
-            <h1>Tu carrito de compras<i class="fas fa-shopping-cart"></i> </h1>
+            <h1>Tu carrito de compras<i className="fas fa-shopping-cart"></i> </h1>
             <p>Pagina con contenido de carrito.</p>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Cart = () => {
                 ) : (
 
                   <div>
-                   <img className='emptycart' src={require('./boom.svg')} />
+                   <img className='emptycart img' src={require('./boom.svg')} />
                   <div className="p-3 text-center text-muted">
                     <p>Tu carrito esta vacio </p>
                     <Link to="/">Ir a la tienda</Link>
