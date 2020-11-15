@@ -1,5 +1,5 @@
 body{
-    font-family: 'Grandstander', cursive;
+    font-family: 'Exo 2', sans-serif;
 }
 
 .row {
@@ -15,7 +15,54 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*Contenedor de "Precio Unitario"*/
+.contenedor-nombre-precio {
+    margin-top: -20px;
+}
+
+/*Contenedor de botones Aumentar, disminuir y eliminar*/
+.container-botons{
+    margin-top: 35px;
+}
+
+/*Contenedor Cantidad de un producto*/
+.container-cantidad{
+    margin-bottom: -50px;
+    margin-right: -30px;
+}
+
+/*Contenedor de campos de carrito "Precio, Descuento,etc."*/
+.contenedor-campos-carrito{
     
+    background-color: #879ceb;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+    
+    margin-top: 15px;
+    border: 2px solid ;
+    border-radius: 5px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.contenedor-titulos-campos > h3 {
+    color: #FFFFFF;
+}
+
+/*Contenedor...*/
+.p-2 {
+    height: 100px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*Contenedor de botones de modificacion de producto*/
+.contenedor-botones-modificacion  {
+    margin-right: -40px;
 }
 
 .probando {
@@ -23,30 +70,41 @@ body{
     justify-content: space-evenly;
 }
 
+/*Contenedor individual de cada producto*/
+.contenedor-individual-producto {
+    border: #879ceb 5px solid;
+}
+
+.contenedor-individual-producto:nth-child(2n+1) {
+    background-color: rgb(201, 233, 246, .5);;
+}
+
+.py-2 {
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+
+    margin-left: 5px;
+}
+
 .titulo {
-    width: 90%px;
+    width: 95%;
 }
 
-/*Seccion de detalles de todo el carrito(cantidad de productos, total y botones)*/
-.contenedor-detalles{
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
+/*Caja contenedora del area de detalles*/
 .detalles{
     width: 400px;
     height: 300px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
+    background: #E3E6Ec;
+    border-radius: 30px;
+    box-shadow: 18px 18px 28px #D1D9E6,
+    -18px -18px 28px #FFFFFF;
 }
 
 .detalles > h4, h3 {
@@ -62,19 +120,23 @@ body{
 /*  Cabeza de pagina*/
 
 .header-main {
-    background-image: linear-gradient(45deg, purple, #dc3545);
-    height: 40px;
+    background-color: #879ceb;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: center;
+
+    position: sticky;
+    top: 0;
 }
 
 .link-header {
+    margin-top: 5px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     color: white;
-    text-shadow: 5px 5px 2px black;
+    text-shadow: 5px 5px 5px black;
 }
 
 .container-elementos-titulo{
@@ -90,41 +152,11 @@ body{
     font-size: 25px;
 }
 
-.probando {
-    
-}
-
-
+/*    Contenedor de los productos y detalle de carrito(precio, cantidad, etc.)*/
 .row {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-}
-
-.col-sm-2 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4-botones {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-    border-left: none; 
-    border-right: none;
+    border: 2px solid #879ceb;
+    border-radius: 5px;
+    width: 95%;
 }
 
 .btnaumentar, .btndisminuir, .btneliminar, .btnprocederpago, .btnvaciarcarrito {
@@ -149,6 +181,7 @@ body{
     border-radius: 10px; 
     transition: .5s;
 }
+
 .btn-eliminar {
     color: #FF0033;
     transition: .5s;
@@ -167,6 +200,7 @@ body{
     transition: .5s;
     font-size: 15px;
 }
+
 .btnvaciarcarrito {
     color: black;
     background-color: #f4841a;
