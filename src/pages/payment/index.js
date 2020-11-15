@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import Layout from "../../components/Layout";
 
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./Styles.css";
 //import Titulo from './Titulo.js';

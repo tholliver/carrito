@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import "./Styles.css"
 import Titulo from './Titulo.js';
 
+//handleCheckout,  
+//managing set to empty the cart
 const Cart = () => {
   const {
     total,
@@ -16,7 +18,7 @@ const Cart = () => {
     itemCount,
     clearCart,
     checkout,
-    handleCheckout,
+    
   } = useContext(CartContext);
 
   return (

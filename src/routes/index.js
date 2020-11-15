@@ -9,6 +9,7 @@ import Store from '../pages/store';
 import About from '../pages/About';
 import Cart from "../pages/cart";
 import Pago from "../pages/payment";
+import Pedidos from '../pages/orders';
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
           <Route path="/acercade" component={About} /> 
           <Route path="/carrito" component={Cart} />
           <Route path="/pago" component={Pago} />
+          <Route path="/pedidos" component={Pedidos} />
         </Switch>
     </Router>
   );
