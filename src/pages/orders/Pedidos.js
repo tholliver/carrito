@@ -1,26 +1,26 @@
 import React from 'react';
-
 import axios from 'axios';
 
 export default class Pedidos extends React.Component {
   state = {
-    persons: []
+    products: []
   }
 
   componentDidMount() {
     axios.get(`https://alfasoft-api.herokuapp.com/pedido`)
       .then(res => {
-        const persons = res.data;
-        this.setState({ persons });
-        console.log(persons);
+        const products = res.data;
+        this.setState({ products });
+        console.log(products);
       })
   }
 
   render() {
     return (
+
       <ul>
           
-        { this.state.persons.map(person => <li>{person.name}</li>)}
+    { this.state.products.map(item => <li>Codigo del pedido: {item.idpedido } <br/> { item.direccion }</li>) }
       </ul>
     )
   }
