@@ -1,11 +1,5 @@
-
-
-
-
-
 body{
-    font-family: 'Grandstander', cursive;
-    background-image: linear-gradient(45deg, purple, #dc3545);
+    font-family: 'Exo 2', sans-serif;
 }
 
 .row {
@@ -13,75 +7,104 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    width: 95%;   
+}
 
+.Caja-productos-general {
     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor de "Precio Unitario"*/
+.contenedor-nombre-precio {
+    margin-top: -20px;
+}
+
+/*Contenedor de botones Aumentar, disminuir y eliminar*/
+.container-botons{
+    margin-top: 35px;
+}
+
+/*Contenedor Cantidad de un producto*/
+.container-cantidad{
+    margin-bottom: -50px;
+    margin-right: -30px;
+}
+
+/*Contenedor de campos de carrito "Precio, Descuento,etc."*/
+.contenedor-campos-carrito{
+    
+    background-color: #879ceb;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    align-items: center;
+    
+    margin-top: 15px;
+    border: 2px solid ;
+    border-radius: 5px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.contenedor-titulos-campos > h3 {
+    color: #FFFFFF;
+}
+
+/*Contenedor...*/
+.p-2 {
+    height: 100px;
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+}
+
+/*Contenedor de botones de modificacion de producto*/
+.contenedor-botones-modificacion  {
+    margin-right: -40px;
+}
+
+.probando {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*Contenedor individual de cada producto*/
+.contenedor-individual-producto {
+    border: #879ceb 5px solid;
+}
+
+.contenedor-individual-producto:nth-child(2n+1) {
+    background-color: rgb(201, 233, 246, .5);;
 }
 
 .py-2 {
     padding: 15px;
     font-size: 20px;
-    border: 5px solid;
     margin: 10px;
-} 
 
-.py-2 :last-child{
-    border-right: none;
+    margin-left: 5px;
 }
 
-.contenedor-botones-modificacion  {
-    border: none;
-    border-left: 5px solid;
-    
+.titulo {
+    width: 95%;
 }
 
-.p-2 {
-    height: 100px;
-    width: 200px;
 
-    padding: 15px;
-    border-right: 5px solid;
-    text-align: center;
-    
-}
-
-/*  Nombre del producto  */
-.p-2 > h5 {
-    font-size: 18px;
-}
-
-.container-cantidad{
-    border: none;
-    margin-bottom: -50px;
-}
-
-.container-botons{
-    margin-top: 35px;
-    
-    
-}
-
-.contenedor-nombre-precio {
-    margin-top: -18px;
-}
-
-/*Seccion de detalles de todo el carrito(cantidad de productos, total y botones)*/
-.contenedor-detalles{
-    background-color:silver;
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-}
-
+/*Caja contenedora del area de detalles*/
 .detalles{
     width: 400px;
     height: 300px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     
+    background: #E3E6Ec;
+    border-radius: 30px;
+    box-shadow: 18px 18px 28px #D1D9E6,
+    -18px -18px 28px #FFFFFF;
 }
 
 .detalles > h4, h3 {
@@ -97,18 +120,23 @@ body{
 /*  Cabeza de pagina*/
 
 .header-main {
-    background-image: linear-gradient(45deg, purple, #dc3545);
-    height: 40px;
+    background-color: #879ceb;
+    height: 60px;
+    width: 100%;
     display: flex;
     justify-content: center;
+
+    position: sticky;
+    top: 0;
 }
 
 .link-header {
+    margin-top: 5px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px;
     color: white;
-    text-shadow: 5px 5px 2px black;
+    text-shadow: 5px 5px 5px black;
 }
 
 .container-elementos-titulo{
@@ -124,40 +152,11 @@ body{
     font-size: 25px;
 }
 
-
-
-
-
+/*    Contenedor de los productos y detalle de carrito(precio, cantidad, etc.)*/
 .row {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-}
-
-.col-sm-2 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4-botones {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-    border-left: none; 
-    border-right: none;
+    border: 2px solid #879ceb;
+    border-radius: 5px;
+    width: 95%;
 }
 
 .btnaumentar, .btndisminuir, .btneliminar, .btnprocederpago, .btnvaciarcarrito {
@@ -182,6 +181,7 @@ body{
     border-radius: 10px; 
     transition: .5s;
 }
+
 .btn-eliminar {
     color: #FF0033;
     transition: .5s;
@@ -200,6 +200,7 @@ body{
     transition: .5s;
     font-size: 15px;
 }
+
 .btnvaciarcarrito {
     color: black;
     background-color: #f4841a;
@@ -211,9 +212,94 @@ body{
     font-size: 15px;
 }
 
-
 .emptycart{
     height: 250px;
     width: 250px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .titulo {
+        width: 600px;
+        left: -20px;
+    }
+
+    .detalles {
+        height: 200px;
+        width: 250px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: 150px 40px;
+        grid-template-rows: 60px 60px 60px;
+
+    }
+
+    .text-center {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        margin-left: 10px;
+    }
+
+    .detalles > h4 {
+        margin-left: -20px;
+    }
+
+    .detalles > h3 {
+        margin-left: -50px;
+    }
+
+    .subtotal {
+        margin: 0;
+        padding: 0;
+
+        margin-right: -70px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .contenedor-botones-modificacion {
+        margin: 0;
+        padding: 0;
+
+        padding-left: 60px;
+        margin-right: -35px;
+    }
+
+    .container-cantidad {
+        padding-top: 35px;
+    }
+
+    .precio {
+        margin-top: -35px;
+    }
+
+    .image {
+        height: 60px;
+        padding: 0;
+        margin-top: -70px;
+        margin-bottom: 0px;
+    }
+
+    .nombre-producto {
+        margin-top: 10px;
+    }
+
+    .probando {
+        width: 1000px;
+        margin: 0;
+        margin-left: -120px;
+    }
+
+    .contenedor-individual-producto {
+        margin-left: 0px;
+    }
+
+    .header-main  {
+        margin-left: -80px;
+    }
+
+    .titulo-carrito {
+        margin-left: -110px;
+    }
 
 }
