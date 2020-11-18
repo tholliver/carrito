@@ -212,9 +212,94 @@ body{
     font-size: 15px;
 }
 
-
 .emptycart{
     height: 250px;
     width: 250px;
+
+}
+
+@media screen and (max-width: 1200px) {
+    .titulo {
+        width: 600px;
+        left: -20px;
+    }
+
+    .detalles {
+        height: 200px;
+        width: 250px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: 150px 40px;
+        grid-template-rows: 60px 60px 60px;
+
+    }
+
+    .text-center {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        margin-left: 10px;
+    }
+
+    .detalles > h4 {
+        margin-left: -20px;
+    }
+
+    .detalles > h3 {
+        margin-left: -50px;
+    }
+
+    .subtotal {
+        margin: 0;
+        padding: 0;
+
+        margin-right: -70px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .contenedor-botones-modificacion {
+        margin: 0;
+        padding: 0;
+
+        padding-left: 60px;
+        margin-right: -35px;
+    }
+
+    .container-cantidad {
+        padding-top: 35px;
+    }
+
+    .precio {
+        margin-top: -35px;
+    }
+
+    .image {
+        height: 60px;
+        padding: 0;
+        margin-top: -70px;
+        margin-bottom: 0px;
+    }
+
+    .nombre-producto {
+        margin-top: 10px;
+    }
+
+    .probando {
+        width: 1000px;
+        margin: 0;
+        margin-left: -120px;
+    }
+
+    .contenedor-individual-producto {
+        margin-left: 0px;
+    }
+
+    .header-main  {
+        margin-left: -80px;
+    }
+
+    .titulo-carrito {
+        margin-left: -110px;
+    }
 
 }
