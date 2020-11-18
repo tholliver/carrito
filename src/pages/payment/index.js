@@ -18,7 +18,7 @@ const Payment = () => {
       
       <div className ="contenedor-general">
         <div className="contenedor-forma-de-pago">
-            <div className="text-center forma de pago">
+            <div className="text-center-forma de pago">
               <h3>FORMA DE PAGO <i className="fas fa-dollar-sign"></i> </h3>
             </div>
         </div>
@@ -26,15 +26,15 @@ const Payment = () => {
         <div className="caja-forma-de-pago">
             <div className="caja-resumen-de-factura">
                 <div className="resumen-de-factura">
-                  <h3 className="resumen de factura">Resumen de factura</h3>
+                  <h3 className="resumen de factura">Resumen de factura <i className="fas fa-money-bill"></i> </h3>
                   <h3 className="total-parcial">Total parcial</h3>
                   <p className="total-parcial-numero">{formatNumber(total)}</p>
-                  <h3 className="metodo-de-pago">Metodo de pago</h3>
+                  <h3 className="metodo-de-pago">Metodo de pago <i className="fas fa-dollar-sign"></i> </h3>
                     <div className="contenedor-boton-enviar-mi-pedido">
                       <button
                       type="button"
                       className="boton-enviar-mi-pedido"
-                      > Enviar Mi Pedido En 
+                      > Enviar Mi Pedido En Efectivo
                       </button>
                     </div>      
                 </div>    

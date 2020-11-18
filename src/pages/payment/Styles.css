@@ -5,16 +5,12 @@ body{
 }
 .contenedor-forma-de-pago{
     display: flex;
-justify-content: center;
-color: black;
-/*text-shadow: 1px 1px 10px white;*/
-background-color: cornflowerblue;
+    justify-content: center;
+    color: black;
+    /*text-shadow: 1px 1px 10px white;*/
+    background-color: white;
+    padding: 20px;
 }
-
-
-
-
-
 
 
 /*.caja-forma-de-pago{
@@ -25,10 +21,20 @@ background-color: cornflowerblue;
     justify-content: center;
 }*/
 
+.text-center-forma {
+    display: flex;
+    justify-content: center;
+    background: cornflowerblue;
+    padding: 20px;
+    width: 100%;
+}
+
 .caja-resumen-de-factura {
     display: flex;
     justify-content: left;
-    padding: 10px;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .resumen-de-factura {
     display: table-row;
@@ -58,7 +64,7 @@ background-color: cornflowerblue;
     padding: 10px;
 }
 .boton-enviar-mi-pedido {
-    background: whitesmoke;
+    background: lavender;
     border: 5px solid green;
     border-radius: 10px;
     transition: .5s;
@@ -71,11 +77,16 @@ background-color: cornflowerblue;
     justify-content: center;
 }
 .elegir-ubicacion-de-entrega {
-    background: cyan;
-    border: 2px solid black;
+    background: cornflowerblue;
+    border: 3px solid black;
     border-radius: 30px;
     transition: .5s;
     box-shadow: 5px 5px 5px black;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
+    opacity: 0.6;
+}
+
+.elegir-ubicacion-de-entrega:hover {
+    opacity: 1;
 }
