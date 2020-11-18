@@ -47,7 +47,7 @@ const CartItem = ({ product }) => {
       </div>
       <div className="col-sm-4 p-2">
         <div className="contenedor-nombre-precio">
-          <h5 className="mb-1">{""} </h5>
+          <h5 className="mb-1">{''} </h5>
           <br />
           <p className="mb-1">{formatNumber(product.price)} </p>
         </div>
