@@ -104,7 +104,16 @@ const Payment = () => {
         <p className="mb-1">Total a cancelar</p>
         <h3 className="m-0 txt-right">{formatNumber(total)}</h3>
         {/*HERE CALL THE METHODS to getLast idpedido and then post into pedidosProductos*/}
-        <button
+        <button 
+          href="#"
+          onClick={() => {
+            func1();
+          }}
+        >
+          Test Link
+        </button>
+        
+        <button 
           href="#"
           onClick={() => {
             func1();
