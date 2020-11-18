@@ -38,7 +38,7 @@ const Payment = () => {
     ];
 
     axios
-      .post("http://alfasoft-api.herokuapp.com/pedido", newPedido, {
+      .post("https://alfasoft-api.herokuapp.com/pedido", newPedido, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
@@ -113,14 +113,7 @@ const Payment = () => {
           Test Link
         </button>
         
-        <button 
-          href="#"
-          onClick={() => {
-            func1();
-          }}
-        >
-          Test Link
-        </button>
+        
       </div>
     </Layout>
   );
