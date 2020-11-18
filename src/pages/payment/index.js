@@ -9,9 +9,7 @@ import "./Styles.css";
 //import Titulo from './Titulo.js';
 
 const Payment = () => {
-  const { total, cartItems, itemCount, clearCart, checkout } = useContext(
-    CartContext
-  );
+  
   function func1() {
     let current_datetime = new Date();
     let formatted_date =
