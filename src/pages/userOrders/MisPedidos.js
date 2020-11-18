@@ -19,7 +19,7 @@ export default class MisPedidos extends React.Component {
       <ul>
         {this.state.products.map((item) => (
           <li>
-            Codigo del pedido: {item.idpedido} <br /> {item.direccion}
+            Codigo del pedido: {item.idpedido} <br/> {item.direccion}
           </li>
         ))}
       </ul>
