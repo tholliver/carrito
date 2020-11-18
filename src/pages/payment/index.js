@@ -13,9 +13,7 @@ const Payment = () => {
   
 
   return (
-    <Layout title="Pago" description="Payment page">
-      
-    </Layout>
+   
   );
 };
 
