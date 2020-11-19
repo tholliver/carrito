@@ -24,7 +24,7 @@ const Cart = () => {
             <h1>
               Tu carrito de compras<i className="fas fa-shopping-cart"></i>{" "}
             </h1>
-            <p>Pagina con contenido de carrito.</p>
+            <p>Pagina con contenido de carrito</p>
           </div>
         </div>
 

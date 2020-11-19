@@ -24,7 +24,7 @@ body{
 .text-center-forma {
     display: flex;
     justify-content: center;
-    background: cornflowerblue;
+    background-color: #879ceb;
     padding: 20px;
     width: 100%;
 }
@@ -49,12 +49,12 @@ body{
 
 .resumen {
     border: 2px solid black;
-    background: cornflowerblue;
+    background-color: #879ceb;
 }
 
 .metodo-de-pago {
     border: 2px solid black;
-    background: cornflowerblue;
+    background-color: #879ceb;
 }
 
 
