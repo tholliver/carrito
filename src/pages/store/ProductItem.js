@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 import { formatNumber } from '../../helpers/utils';
 
+import {  toast  } from 'react-toastify' ;   
+  import 'react-toastify/dist/ReactToastify.css' ; 
+  
+toast.configure()
+ 
+
 /* Importando estilos*/
 
 
@@ -14,6 +20,42 @@ const ProductItem = ({product}) => {
     const isInCart = product => {
         return !!cartItems.find(item => item.id === product.id);
     }
+    const disponible = product => {
+        return product.cantDisponible===0;
+    }
+    const agotado = product => {
+        var cant2 = product.cantDisponible
+        var cantCarrito = cartItems[cartItems.findIndex(item => item.id === product.id)].quantity
+        return cant2===cantCarrito;
+    }
+    console.log(cartItems.quantity)
+    const addProducto =()=>{
+      /*  var antigo= cartItems.length*/
+        return(
+            addProduct(product)
+            
+        )
+    }
+
+    /*const notificar  = (a) => {
+        var nuevo=cartItems.length
+        if(nuevo>a){
+            toast.success( 'Se agrego el producto al carrito ',{
+            position: toast.POSITION.TOP_CENTER,
+            autoClose: 2000
+            })
+        }
+    }*/
+ 
+const bt={
+    fontsize:'28px',
+    color:'red',
+    border:'none',
+    width:'80px',
+    height:'40px',
+    pading:'20px 25px',
+    cursor: 'pointer',
+}
 
     return (    
         <div className="card card-body">
@@ -25,22 +67,35 @@ const ProductItem = ({product}) => {
                 <Link  to="/" className="btn btn-link btn-sm mr-2">Detalles</Link>
 
                 {
-                    isInCart(product) && 
+                    isInCart(product) && !agotado(product) && 
                     <button 
                     onClick={() => increase(product)}
                     className="btn btn-outline-primary btn-sm">Añadir mas</button>
                 }
 
                 {
-                    !isInCart(product) && 
+                    !isInCart(product) && !disponible(product) && 
                     <button 
-                    onClick={() => addProduct(product)}
+                    onClick={addProducto}
                     className="btn btn-primary btn-sm">Añadir al carrito</button>
                 }
-                
+                {
+                   !isInCart(product) && disponible(product) && 
+                    <button style={bt}
+                    onClick={addProducto}
+                    className="btn btn-primary btn-sm">Producto agotado</button>
+                }
+                {
+                    isInCart(product) && agotado(product) && 
+                    <button style={bt}
+                    onClick={addProducto}
+                    className="btn btn-primary btn-sm">Producto agotado </button>
+                }
+               
             </div>
         </div>
      );
 }
- 
+
+
 export default ProductItem;

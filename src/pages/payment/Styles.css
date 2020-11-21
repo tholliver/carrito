@@ -1,0 +1,92 @@
+body{
+    font-family: 'Grandstander', cursive;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contenedor-forma-de-pago{
+    display: flex;
+    justify-content: center;
+    color: black;
+    /*text-shadow: 1px 1px 10px white;*/
+    background-color: white;
+    padding: 20px;
+}
+
+
+/*.caja-forma-de-pago{
+    display: flex;
+    font-size: 20px;
+    padding: 10px;
+    width: 70%;
+    justify-content: center;
+}*/
+
+.text-center-forma {
+    display: flex;
+    justify-content: center;
+    background-color: #879ceb;
+    padding: 20px;
+    width: 100%;
+}
+
+.caja-resumen-de-factura {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.resumen-de-factura {
+    display: table-row;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px silver;
+    background: silver;
+}
+
+.resumen {
+    border: 2px solid black;
+    background-color: #879ceb;
+}
+
+.metodo-de-pago {
+    border: 2px solid black;
+    background-color: #879ceb;
+}
+
+
+.contenedor-boton-enviar-mi-pedido{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.boton-enviar-mi-pedido {
+    background: lavender;
+    border: 5px solid green;
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: 5px 5px 5px black;
+    font-size: 30px;
+}
+
+.boton-elegir-ubicacion-de-entrega {
+    display: flex;
+    justify-content: center;
+}
+.elegir-ubicacion-de-entrega {
+    background: cornflowerblue;
+    border: 3px solid black;
+    border-radius: 30px;
+    transition: .5s;
+    box-shadow: 5px 5px 5px black;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.elegir-ubicacion-de-entrega:hover {
+    opacity: 1;
+}

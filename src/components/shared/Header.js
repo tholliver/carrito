@@ -15,6 +15,7 @@ const Header = () => {
             <Link className="link-header" to='/'>Tienda  </Link>
             <Link className="link-header" to='/acercade'>Acerca de</Link>
             <Link className="link-header" to='/carrito'>Carrito ({itemCount})</Link>
+            <Link className="link-header" to='/mis-pedidos'>Mis pedidos</Link>
         </header>
      );
 }
