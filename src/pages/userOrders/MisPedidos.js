@@ -32,7 +32,10 @@ export default class MisPedidos extends React.Component {
             ) 
             }         
           </div>
-        ))}          
+        ))} 
+        <div hidden>
+        {num=0}         
+        </div>
       </div>
     );
   }
