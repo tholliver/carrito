@@ -7,9 +7,9 @@ const ProductsGrid = () => {
 
   return (
     <div>
-      <div className="row">
-        <div className="col-sm-8">
-          <div className="py-3">{products.length} Items</div>
+      <div className="row-items">
+        <div className="separacion">
+          <div className="py-3-numero-de-productos"> <h3>{products.length} Items</h3></div>
         </div>
       </div>
       <div>

@@ -1,211 +1,92 @@
-
-
-
-
-
 body{
     font-family: 'Grandstander', cursive;
-    
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.py-2 {
-    padding: 15px;
-    font-size: 20px;
-    border: 5px solid;
-    margin: 10px;
-} 
-
-.py-2 :last-child{
-    border-right: none;
-}
-
-.contenedor-botones-modificacion  {
-    border: none;
-    border-left: 5px solid;
-    
-}
-
-.p-2 {
-    height: 100px;
-    width: 200px;
-
-    padding: 15px;
-    border-right: 5px solid;
-    text-align: center;
-    
-}
-
-/*  Nombre del producto  */
-.p-2 > h5 {
-    font-size: 18px;
-}
-
-.container-cantidad{
-    border: none;
-    margin-bottom: -50px;
-}
-
-.container-botons{
-    margin-top: 35px;
-    
-    
-}
-
-.contenedor-nombre-precio {
-    margin-top: -18px;
-}
-
-/*Seccion de detalles de todo el carrito(cantidad de productos, total y botones)*/
-.contenedor-detalles{
-    background-color:silver;
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-}
-
-.detalles{
-    width: 400px;
-    height: 300px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.detalles > h4, h3 {
-    padding: 0;
-    margin: 0;
-}
-
-.boton-Detalle-Venta {
-    width: 150px;
-    margin: 10px;
-}
-
-/*  Cabeza de pagina*/
-
-.header-main {
-    
-    height: 40px;
+.contenedor-forma-de-pago{
     display: flex;
     justify-content: center;
+    color: black;
+    /*text-shadow: 1px 1px 10px white;*/
+    background-color: white;
+    padding: 20px;
 }
 
-.link-header {
-    text-decoration: none;
+
+/*.caja-forma-de-pago{
+    display: flex;
     font-size: 20px;
     padding: 10px;
-    color: white;
-    text-shadow: 5px 5px 2px black;
-}
+    width: 70%;
+    justify-content: center;
+}*/
 
-.container-elementos-titulo{
+.text-center-forma {
     display: flex;
     justify-content: center;
-    color: black;
-    text-shadow: 5px 5px 10px silver;
+    background-color: #879ceb;
+    padding: 20px;
+    width: 100%;
 }
 
-.titulo-carrito {
+.caja-resumen-de-factura {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.resumen-de-factura {
+    display: table-row;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px silver;
+    background: silver;
+}
+
+.resumen {
+    border: 2px solid black;
+    background-color: #879ceb;
+}
+
+.metodo-de-pago {
+    border: 2px solid black;
+    background-color: #879ceb;
+}
+
+
+.contenedor-boton-enviar-mi-pedido{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 25px;
+    padding: 10px;
+}
+.boton-enviar-mi-pedido {
+    background: lavender;
+    border: 5px solid green;
+    border-radius: 10px;
+    transition: .5s;
+    box-shadow: 5px 5px 5px black;
+    font-size: 30px;
 }
 
-
-
-
-
-.row {
-    background: #E3E6EC;
+.boton-elegir-ubicacion-de-entrega {
+    display: flex;
+    justify-content: center;
+}
+.elegir-ubicacion-de-entrega {
+    background: cornflowerblue;
+    border: 3px solid black;
     border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-}
-
-.col-sm-2 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4 {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver; 
-    border-left: none; 
-    border-right: none;
-}
-.col-sm-4-botones {
-    background: #E3E6EC;
-    border-radius: 30px;
-    box-shadow: 10px 10px 20px #d1d9e6,
-    -10px -10px 20px silver;
-    border-left: none; 
-    border-right: none;
-}
-
-.btnaumentar, .btndisminuir, .btneliminar, .btnprocederpago, .btnvaciarcarrito {
-    opacity: 0.6;
+    transition: .5s;
+    box-shadow: 5px 5px 5px black;
+    font-size: 22px;
     cursor: pointer;
+    opacity: 0.6;
 }
-.btnaumentar:hover, .btndisminuir:hover, .btneliminar:hover, .btnprocederpago:hover, .btnvaciarcarrito:hover {
+
+.elegir-ubicacion-de-entrega:hover {
     opacity: 1;
-}
-
-.btndisminuir {
-    color: #FF0033;
-    transition: .5s;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px; 
-    transition: .5s;
-}
-.btnaumentar {
-    color: lightseagreen;
-    transition: .5s;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px; 
-    transition: .5s;
-}
-.btneliminar {
-    display: none; /*borrar esta linea para mostrar el boton de eliminar*/
-    color: #FF0033;
-    transition: .5s;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px; 
-    transition: .5s;
-}
-
-.btnprocederpago {
-    color: black;
-    background-color: #BAC94A;
-    opacity: 0.6;
-    transition: .5s;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px; 
-    transition: .5s;
-    font-size: 15px;
-}
-.btnvaciarcarrito {
-    color: black;
-    background-color: #f4841a;
-    opacity: 0.6;
-    transition: .5s;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px; 
-    transition: .5s;
-    font-size: 15px;
 }
