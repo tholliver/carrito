@@ -15,6 +15,7 @@ export default class MisPedidos extends React.Component {
       const products = res.data;
       this.setState({ products });
       console.log(products)
+      //estoy probando una modificacion
     });
   }
   render() {
