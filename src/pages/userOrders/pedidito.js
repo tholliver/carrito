@@ -46,7 +46,7 @@ export default class Pedidito extends React.Component {
             }         
           </div>
         ))}
-        <b>Total de compra:</b> Bs. {this.props.productito.totalPagar}
+        <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
         <br></br>
       </div>
     );
