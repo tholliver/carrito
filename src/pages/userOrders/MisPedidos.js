@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import Pedidito from "./Pedidito";
+import Pedidito from './Pedidito';
 import Produc from './Produc';
 var idclientePru=1;
 var num =0;
