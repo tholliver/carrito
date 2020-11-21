@@ -39,7 +39,7 @@ const Payment = () => {
     ];
 
     axios
-      .post("https://alfasoft-api.herokuapp.com/pedido", newPedido, {
+      .post("http://alfasoft-api.herokuapp.com/pedido", newPedido, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
@@ -48,21 +48,32 @@ const Payment = () => {
       .catch((error) => {
         console.log(error);
       });
+    //Sending post req[newPedido]
   }
   //We are sending the last idPedido the we got.
-  function func2() {}
+  function func2() {
+    //Storing  the client products bag
+    const arr = [];
+    cartItems.map((item) => {
+      var newADE = 7; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
+      arr.push({ idpedido: newADE, idproducto: item.id ,cantidadComp: itemCount});
+    });
+    //Getting the tuple [{pedido_idpedido}{producto_idproducto}]
+    console.log(arr, "Showing the array insert to pedidosProductos");
+    
+    axios
+      .post("http://localhost:8000/pedido/items", arr, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    //Sending post req[newPedido]
+  }
 
-  const arr = [];
-  cartItems.map((item) => {
-    var newADE = 7; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
-    arr.push({ idpedido: newADE, idproducto: item.id });
-    /*if (temp.name === oldName) {
-            temp.name = name;
-        }*/
-  });
-  //Getting the tuple [{pedido_idpedido}{producto_idproducto}]
-  console.log(arr);
-  console.log(itemCount);
   return (
     <Layout title="Pago" description="Payment page">
       <div className="contenedor-general">
@@ -112,20 +123,20 @@ const Payment = () => {
                 Metodo de pago <i className="fas fa-dollar-sign"></i>{" "}
               </h3>
               <div className="contenedor-boton-enviar-mi-pedido">
-                
                 <button type="button" className="boton-enviar-mi-pedido">
                   {" "}
                   Enviar Mi Pedido En Efectivo
                 </button>
               </div>
-              <button
-                  href="#"
-                  onClick={() => {
-                    func1();
-                  }}
-                >
-                  Test Link
-                </button>
+              <button href="#"
+                onClick={() => {
+
+                  func2();
+                  //func2()
+                }}
+              >
+                Test Link`
+              </button>
             </div>
           </div>
 
