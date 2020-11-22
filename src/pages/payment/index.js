@@ -130,7 +130,7 @@ const Payment = () => {
               </div>
               <button href="#"
                 onClick={() => {
-//handle syncro funcs
+
                   func2();
                   //func2()
                 }}

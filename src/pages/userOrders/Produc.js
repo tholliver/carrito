@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 
 
-import Pedidito from './Pedidito'
+import Pedidito from './pedidito'
 import { formatNumber } from "../../helpers/utils";
 import "../cart/Styles.css"
 
