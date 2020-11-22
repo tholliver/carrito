@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import Produc from "./Produc";
 import MisPedidos from './MisPedidos'
-//dammn
 import { formatNumber } from "../../helpers/utils";
 import "../cart/Styles.css"
 
