@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Pedidito from "./pedidito";
-import Produc from './Produc';
+//import Produc from './Produc';
 var idclientePru=1;
 var num =0;
 export default class MisPedidos extends React.Component {
