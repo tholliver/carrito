@@ -14,7 +14,7 @@ const Store = () => {
                         Tienda<i className="fas fa-store"></i>
                     </h1>
                     <h2 className="subtitulo">
-                        Esta es la pagina de la tienda2
+                        Esta es la pagina de la tienda
                     </h2>
                 </div>
                 <ProductsGrid/>
