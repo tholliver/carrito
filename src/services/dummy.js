@@ -25,7 +25,9 @@ async function getapi(url) {
 getapi(url);
 console.log(dummyProduct);
 
+
 export const dummyProducts = dummyProduct;
+
 /*
 export const dummyProducts = [
  
