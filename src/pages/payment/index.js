@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import { formatNumber } from "../../helpers/utils";
@@ -58,7 +58,7 @@ const Payment = () => {
     const arr = [];
     cartItems.map((item) => {
       var newADE = 21; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
-      arr.push({ pedido_idpedido: newADE, producto_idproducto: item.id ,cantidadComp:5});
+      arr.push({ pedido_idpedido: newADE, producto_idproducto: item.id ,cantidadComp:item.quantity});
     });
     //Getting the tuple [{pedido_idpedido}{producto_idproducto}]
     console.log(arr, "Showing the array insert to pedidosProductos");
