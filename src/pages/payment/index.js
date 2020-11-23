@@ -44,7 +44,9 @@ const Payment = () => {
       })
       .then((response) => {
         console.log(response);
+        
       })
+      
       .catch((error) => {
         console.log(error);
       });
@@ -55,14 +57,14 @@ const Payment = () => {
     //Storing  the client products bag
     const arr = [];
     cartItems.map((item) => {
-      var newADE = 7; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
-      arr.push({ idpedido: newADE, idproducto: item.id ,cantidadComp: itemCount});
+      var newADE = 21; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
+      arr.push({ pedido_idpedido: newADE, producto_idproducto: item.id ,cantidadComp:5});
     });
     //Getting the tuple [{pedido_idpedido}{producto_idproducto}]
     console.log(arr, "Showing the array insert to pedidosProductos");
     
     axios
-      .post("http://localhost:8000/pedido/items", arr, {
+      .post("http://alfasoft-api.herokuapp.com/pedido/items", arr, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
@@ -129,10 +131,9 @@ const Payment = () => {
                 </button>
               </div>
               <button href="#"
-                onClick={() => {
-
-                  func2();
-                  //func2()
+                onClick={async() => {
+                  await func1();
+                  await func2();
                 }}
               >
                 Test Link`
