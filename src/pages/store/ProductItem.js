@@ -7,11 +7,7 @@ import {  toast  } from 'react-toastify' ;
   import 'react-toastify/dist/ReactToastify.css' ; 
   
 toast.configure()
- 
-
 /* Importando estilos*/
-
-
 
 const ProductItem = ({product}) => {
 
@@ -28,7 +24,7 @@ const ProductItem = ({product}) => {
         var cantCarrito = cartItems[cartItems.findIndex(item => item.id === product.id)].quantity
         return cant2===cantCarrito;
     }
-    console.log(cartItems.quantity)
+    //console.log(product)
     const addProducto =()=>{
       /*  var antigo= cartItems.length*/
         return(
@@ -57,14 +53,16 @@ const bt={
     cursor: 'pointer',
 }
 
-    return (    
+    return (
+    <div className="contenedor-de-productos-items">
         <div className="card card-body">
+            <div className="tarjetas-de-productos">
             <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
             src={product.photo + '?v=' + product.id} alt=""/>
-            <p>{product.name}</p>
+            <h3 className="nombre-producto"> {product.name}</h3>
             <h3 className="text-left">{formatNumber(product.price)}</h3>
             <div className="text-right">
-                <Link  to="/" className="btn btn-link btn-sm mr-2">Detalles</Link>
+                <Link  to="/" className="btn-link btn-link btn-sm mr-2">Detalles</Link>
 
                 {
                     isInCart(product) && !agotado(product) && 
@@ -93,7 +91,9 @@ const bt={
                 }
                
             </div>
+            </div>
         </div>
+    </div>
      );
 }
 

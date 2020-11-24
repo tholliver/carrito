@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Pedidito from "./pedidito";
-import Produc from './Produc';
+//import Produc from './Produc';
 var idclientePru=1;
 var num =0;
 export default class MisPedidos extends React.Component {
@@ -15,6 +15,7 @@ export default class MisPedidos extends React.Component {
       const products = res.data;
       this.setState({ products });
       console.log(products)
+      //estoy probando una modificacion
     });
   }
   render() {
@@ -32,7 +33,10 @@ export default class MisPedidos extends React.Component {
             ) 
             }         
           </div>
-        ))}          
+        ))} 
+        <div hidden>
+        {num=0}         
+        </div>
       </div>
     );
   }

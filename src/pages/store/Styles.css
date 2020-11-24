@@ -40,3 +40,55 @@
     display: flex;
     justify-content: center;
 }
+
+
+/*cartas de productos*/
+
+.card {
+    display: grid;
+    justify-content: center;
+}
+.contenedor-de-productos-items {
+    padding: 5px;
+    display: grid;
+    justify-content: center;
+}
+.tarjetas-de-productos {
+    padding: 5px;
+    border: 3px solid black;
+    /*margin-right: 35%;
+    margin-left: 35%;*/
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: lavender;
+}
+.nombre-producto {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.text-left {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+.text-right {
+    display: flex;
+    justify-content: center;
+}
+.btn-link {
+    padding: 7px;
+}
+.btn {
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: springgreen;
+    transition: .5s;
+    opacity: 0.6;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+}
+.btn:hover {
+    opacity: 1;
+}

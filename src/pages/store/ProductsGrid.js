@@ -1,25 +1,55 @@
-import React, { useContext } from "react";
+import React, { useContext, Component } from "react";
 import ProductItem from "./ProductItem";
 import { ProductsContext } from "../../contexts/ProductsContext";
 
-const ProductsGrid = () => {
-  const { products } = useContext(ProductsContext);
+//sconst ProductsGrid= ()=>{}
+let dummyProduct = [];
+let m = 0;
+class ProductsGrid extends Component {
+  state = {
+    productos: [],
+  };
 
-  return (
-    <div>
-      <div className="row-items">
-        <div className="separacion">
-          <div className="py-3-numero-de-productos"> <h3>{products.length} Items</h3></div>
+  async componentDidMount() {
+    const res = await fetch("https://alfasoft-api.herokuapp.com/productos");
+    const products = await res.json();
+    // this.setState({products: date})
+    m = dummyProduct.length;
+    if (m == 0) {
+      for (let i = 0; i < products.length; i++) {
+        dummyProduct.push({
+          id: products[i].idproducto,
+          name: products[i].nombre,
+          price: products[i].precio,
+          photo: products[i].img,
+          cantDisponible: products[i].cantidad,
+        });
+      }
+    }
+    this.setState({ productos: dummyProduct });
+  }
+
+  // const { products } = useContext(ProductsContext);
+  render() {
+    return (
+      <div className="contenedor-de-productos">
+        <div className="row-items">
+          <div className="separacion">
+            <div className="py-3-numero-de-productos">
+              {" "}
+              <h3>{this.state.productos.length} Items</h3>
+            </div>
+          </div>
         </div>
+        <div>
+          {this.state.productos.map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </div>
+        <div></div>
       </div>
-      <div>
-        {products.map((product) => (
-          <ProductItem key={product.id} product={product} />
-        ))}
-      </div>
-      <div></div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default ProductsGrid;
