@@ -41,7 +41,7 @@ class ProductsGrid extends Component {
             </div>
           </div>
         </div>
-        <div>
+        <div className="container-product">
           {this.state.productos.map((product) => (
             <ProductItem key={product.id} product={product} />
           ))}
