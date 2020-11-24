@@ -91,6 +91,16 @@ export const CartReducer = (state, action) => {
       };
     case "CLEAR":
       function func1() {
+        let total = state.cartItems.reduce(
+            (total, product) => total + product.price * product.quantity,
+            0
+          )
+          .toFixed(2);
+          //So in useContext -----try(1)
+        let itemCount = state.cartItems.reduce(
+          (total, product) => total + product.quantity,
+          0
+        );
         let current_datetime = new Date();
         let formatted_date =
           current_datetime.getFullYear() +
@@ -109,8 +119,8 @@ export const CartReducer = (state, action) => {
           {
             direccion: "sameHouseEveryone",
             fechaPedido: formatted_date,
-            cantidadTotal: sumItems.itemCount,
-            totalPagar: sumItems.total,
+            cantidadTotal: itemCount,
+            totalPagar: total,
             idclienteP: 1,
           },
         ];
