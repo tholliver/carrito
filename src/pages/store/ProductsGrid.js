@@ -44,10 +44,11 @@ render(){
         <div className="separacion">
           <div className="py-3-numero-de-productos"> <h3>{this.state.productos.length} Items</h3></div>
         </div>
-      </div>
+      </div> <div className= 'container-product'>
         {this.state.productos.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))}
+        </div>
     </div>
   );}
 };
