@@ -68,26 +68,26 @@ const bt={
                     isInCart(product) && !agotado(product) && 
                     <button 
                     onClick={() => increase(product)}
-                    className="btn btn-outline-primary btn-sm">Añadir mas</button>
+                    className="btn-tienda btn-outline-primary btn-sm">Añadir mas</button>
                 }
 
                 {
                     !isInCart(product) && !disponible(product) && 
                     <button 
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Añadir al carrito</button>
+                    className="btn-tienda btn-primary btn-sm">Añadir al carrito</button>
                 }
                 {
                    !isInCart(product) && disponible(product) && 
                     <button style={bt}
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Producto agotado</button>
+                    className="btn-tienda btn-primary btn-sm">Producto agotado</button>
                 }
                 {
                     isInCart(product) && agotado(product) && 
                     <button style={bt}
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Producto agotado </button>
+                    className="btn-tienda btn-primary btn-sm">Producto agotado </button>
                 }
                
             </div>
