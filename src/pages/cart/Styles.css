@@ -2,6 +2,10 @@ body{
     font-family: 'Exo 2', sans-serif;
 }
 
+*{
+    text-decoration: none;
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -389,6 +393,85 @@ body{
 
     .titulo-carrito {
         justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .titulo {
+        width: 600px;
+        
+    }
+
+    .probando {
+        margin: 0;
+        margin-left: -150px;
+        width: 1150px;
+    }
+
+    .Caja-productos-general{
+        width: 1400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+    .detalles {
+        height: 200px;
+        width: 350px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: 150px 40px;
+        grid-template-rows: 60px 60px 60px;
+
+    }
+
+    .subtotal {
+        margin: 0;
+        padding: 0;
+
+        margin-right: -70px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .contenedor-botones-modificacion {
+        margin: 0;
+        padding: 0;
+
+        padding-left: 60px;
+        margin-right: -35px;
+    }
+
+    .container-cantidad {
+        padding-top: 35px;
+    }
+
+    .precio {
+        margin-top: -35px;
+    }
+
+    .image {
+        height: 60px;
+        padding: 0;
+        margin-top: -70px;
+        margin-bottom: 0px;
+    }
+
+    .nombre-producto {
+        margin-top: 10px;
+    }
+
+    .contenedor-individual-producto {
+        margin-left: -18px;
+        width: 600px;
+    }
+
+    .titulo-carrito {
+        margin-left: 250px;
+        text-align: center;
     }
 
 }
