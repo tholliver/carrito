@@ -28,6 +28,7 @@ const Cart = () => {
           </div>
         </div>
 
+        <div className="Contenedor">
         <div className="Caja-productos-general">
           <div className="row no-gutters justify-content-center probando">
             <div className="xv">
@@ -88,6 +89,7 @@ const Cart = () => {
               </div>
             )}
           </div>
+        </div>
         </div>
       </div>
     </Layout>

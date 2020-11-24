@@ -305,6 +305,10 @@ body{
     .contenedor-individual-producto {
         width: 650px;
     }
+
+    .Caja-productos-general{
+        margin-right: -90px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
