@@ -1,4 +1,38 @@
+/*let dummyProduct = [];
+let url = "https://alfasoft-api.herokuapp.com/productos";
+
+async function getapi(url) {
+  
+  // Storing response
+  const response = await fetch(url);
+
+  // Storing data in form of JSON
+  var products = await response.json();
+  //console.log(products);
+  
+    for (let i = 0; i < products.length; i++) {
+      dummyProduct.push({
+        'id': products[i].idproducto,
+        'name': products[i].nombre,
+        'price': products[i].precio,
+        'photo': products[i].img,
+        'cantDisponible': products[i].cantidad,
+      });
+  
+  }
+}
+
+getapi(url);
+console.log(dummyProduct, 'dummyProduct'); */
+
+
+
+/*
 export const dummyProducts = [
+ 
+
+
+  
   {
     id: 1,
     name: "Buffalo - Striploin",
@@ -53,6 +87,7 @@ export const dummyProducts = [
     name: "Sour Puss Raspberry",
     price: 134.99,
 <<<<<<< HEAD
+<<<<<<< HEAD
     photo: "/img/8.jpg"
   }, 
 =======
@@ -60,6 +95,11 @@ export const dummyProducts = [
     cantDisponible:7
   },
 >>>>>>> 0e7625a699a7bea1aa83480ae1ed6b0e4afee012
+=======
+    photo: "/img/8.jpg",
+    cantDisponible:7
+  },
+>>>>>>> b186889682a26cdf52ded77443be66c61cc5de84
   {
     id: 9,
     name: "Pork - Chop, Frenched",
@@ -214,4 +254,7 @@ export const dummyProducts = [
     photo: "/img/30.jpg",
     cantDisponible:11
   },
+
+  
 ];
+*/

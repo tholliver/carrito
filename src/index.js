@@ -5,7 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import { HelmetProvider } from "react-helmet-async";
 import ProductsContextProvider from "./contexts/ProductsContext";
 import CartContextProvider from "./contexts/CartContext";
-
+import Store from './pages/store';
 ReactDOM.render(
   <HelmetProvider>
     <ProductsContextProvider>

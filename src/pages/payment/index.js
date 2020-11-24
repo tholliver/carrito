@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import { formatNumber } from "../../helpers/utils";
@@ -13,66 +13,9 @@ const Payment = () => {
     CartContext
   );
 
-  function func1() {
-    let current_datetime = new Date();
-    let formatted_date =
-      current_datetime.getFullYear() +
-      "-" +
-      (current_datetime.getMonth() + 1) +
-      "-" +
-      current_datetime.getDate() +
-      " " +
-      current_datetime.getHours() +
-      ":" +
-      current_datetime.getMinutes() +
-      ":" +
-      current_datetime.getSeconds();
-
-    const newPedido = [
-      {
-        direccion: "sameHouseEveryone",
-        fechaPedido: formatted_date,
-        cantidadTotal: itemCount,
-        totalPagar: total,
-        idclienteP: 1,
-      },
-    ];
-
-    axios
-      .post("http://alfasoft-api.herokuapp.com/pedido", newPedido, {
-        headers: { "Content-Type": "application/json" },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    //Sending post req[newPedido]
-  }
-  //We are sending the last idPedido the we got.
-  function func2() {
-    //Storing  the client products bag
-    const arr = [];
-    cartItems.map((item) => {
-      var newADE = 7; //Maybe get (select max(idpedido) from pedido; then asign the id to newADE)
-      arr.push({ idpedido: newADE, idproducto: item.id ,cantidadComp: itemCount});
-    });
-    //Getting the tuple [{pedido_idpedido}{producto_idproducto}]
-    console.log(arr, "Showing the array insert to pedidosProductos");
-    
-    axios
-      .post("http://localhost:8000/pedido/items", arr, {
-        headers: { "Content-Type": "application/json" },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-    //Sending post req[newPedido]
-  }
+  var ridoff = (clearCart) => {
+    return clearCart;
+  };
 
   return (
     <Layout title="Pago" description="Payment page">
@@ -98,7 +41,7 @@ const Payment = () => {
                     <ul>
                       <li>
                         <p>
-                          {number.name} || {number.quantity} {" X "}
+                          {number.name} || {number.quantity} {"     X      "}
                           {formatNumber(number.price * number.quantity)}
                         </p>
                       </li>
@@ -123,20 +66,14 @@ const Payment = () => {
                 Metodo de pago <i className="fas fa-dollar-sign"></i>{" "}
               </h3>
               <div className="contenedor-boton-enviar-mi-pedido">
-                <button type="button" className="boton-enviar-mi-pedido">
-                  {" "}
+                <button
+                  type="button"
+                  className="boton-enviar-mi-pedido"
+                  onClick={clearCart}
+                >
                   Enviar Mi Pedido En Efectivo
                 </button>
               </div>
-              <button href="#"
-                onClick={() => {
-
-                  func2();
-                  //func2()
-                }}
-              >
-                Test Link`
-              </button>
             </div>
           </div>
 
