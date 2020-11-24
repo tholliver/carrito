@@ -30,6 +30,7 @@ class ProductsGrid extends Component {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
  // const { products } = useContext(ProductsContext);
 render(){
   return (
@@ -44,6 +45,8 @@ render(){
           <ProductItem key={product.id} product={product} />
         ))}
 =======
+=======
+>>>>>>> dev
   // const { products } = useContext(ProductsContext);
   render() {
     return (
@@ -56,12 +59,19 @@ render(){
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div>
+=======
+        <div className="container-product">
+>>>>>>> dev
           {this.state.productos.map((product) => (
             <ProductItem key={product.id} product={product} />
           ))}
         </div>
         <div></div>
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
       </div>
     );
