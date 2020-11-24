@@ -7,11 +7,7 @@ import {  toast  } from 'react-toastify' ;
   import 'react-toastify/dist/ReactToastify.css' ; 
   
 toast.configure()
- 
-
 /* Importando estilos*/
-
-
 
 const ProductItem = ({product}) => {
 
@@ -28,7 +24,7 @@ const ProductItem = ({product}) => {
         var cantCarrito = cartItems[cartItems.findIndex(item => item.id === product.id)].quantity
         return cant2===cantCarrito;
     }
-    console.log(cartItems.quantity)
+    //console.log(product)
     const addProducto =()=>{
       /*  var antigo= cartItems.length*/
         return(
