@@ -10,3 +10,6 @@ INSERT INTO `producto` (`idproducto`,`nombre`,`cantidad`,`precio`) VALUES (1,'co
  
  
  /*CONSULTAS*/
+ /* 1.- Todos los clientes */
+
+SELECT * FROM bpxswzqwuifl3kr6kmvs.cliente;
