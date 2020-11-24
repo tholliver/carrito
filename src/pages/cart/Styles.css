@@ -126,6 +126,11 @@ body{
     display: flex;
     justify-content: center;
 
+    margin-top: -15px;
+    margin-left: -10px;
+    width: 1550px;
+    height: 60px;
+
     position: sticky;
     top: 0;
 }
@@ -300,6 +305,90 @@ body{
 
     .titulo-carrito {
         margin-left: -110px;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .titulo {
+        width: 600px;
+        
+    }
+
+    .detalles {
+        height: 200px;
+        width: 350px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: 150px 40px;
+        grid-template-rows: 60px 60px 60px;
+
+    }
+
+    .text-center {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        margin-left: 10px;
+    }
+
+    .detalles > h4 {
+        margin-left: -20px;
+    }
+
+    .detalles > h3 {
+        margin-left: -50px;
+    }
+
+    .subtotal {
+        margin: 0;
+        padding: 0;
+
+        margin-right: -70px;
+        margin-left: 0px;
+        padding-top: 10px;
+    }
+
+    .contenedor-botones-modificacion {
+        margin: 0;
+        padding: 0;
+
+        padding-left: 60px;
+        margin-right: -35px;
+    }
+
+    .container-cantidad {
+        padding-top: 35px;
+    }
+
+    .precio {
+        margin-top: -35px;
+    }
+
+    .image {
+        height: 60px;
+        padding: 0;
+        margin-top: -70px;
+        margin-bottom: 0px;
+    }
+
+    .nombre-producto {
+        margin-top: 10px;
+    }
+
+    .contenedor-individual-producto {
+        margin-left: -18px;
+        width: 600px;
+    }
+
+    .header-main  {
+        margin-top: -15px;
+        margin-left: -10px;
+        width: 1320px;
+        height: 60px;
+    }
+
+    .titulo-carrito {
+        justify-content: center;
     }
 
 }
