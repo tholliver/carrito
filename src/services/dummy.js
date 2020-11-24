@@ -1,4 +1,4 @@
-let dummyProduct = [];
+/*let dummyProduct = [];
 let url = "https://alfasoft-api.herokuapp.com/productos";
 
 async function getapi(url) {
@@ -23,9 +23,10 @@ async function getapi(url) {
 }
 
 getapi(url);
-console.log(dummyProduct);
+console.log(dummyProduct, 'dummyProduct'); */
 
-export const dummyProducts = dummyProduct;
+
+
 /*
 export const dummyProducts = [
  

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Produc from "./Produc";
-import MisPedidos from './MisPedidos'
-import { formatNumber } from "../../helpers/utils";
+//import MisPedidos from './MisPedidos'
+//import { formatNumber } from "../../helpers/utils";
 import "../cart/Styles.css"
 
-import swal from 'sweetalert'
-var num =0;
+//import swal from 'sweetalert'
+//var num =0;
 export default class Pedidito extends React.Component {
   state = {
     products: [],
