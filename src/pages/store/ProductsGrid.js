@@ -32,7 +32,7 @@ class ProductsGrid extends Component {
   // const { products } = useContext(ProductsContext);
   render() {
     return (
-      <div className="contenedor-de-productos">
+      <div>
         <div className="row-items">
           <div className="separacion">
             <div className="py-3-numero-de-productos">
