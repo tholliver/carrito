@@ -53,43 +53,47 @@ const bt={
     cursor: 'pointer',
 }
 
-    return (    
+    return (
+    <div className="contenedor-de-productos-items">
         <div className="card card-body">
+            <div className="tarjetas-de-productos">
             <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
             src={product.photo + '?v=' + product.id} alt=""/>
-            <p>{product.name}</p>
+            <h3 className="nombre-producto"> {product.name}</h3>
             <h3 className="text-left">{formatNumber(product.price)}</h3>
             <div className="text-right">
-                <Link  to="/" className="btn btn-link btn-sm mr-2">Detalles</Link>
+                <Link  to="/" className="btn-link btn-link btn-sm mr-2">Detalles</Link>
 
                 {
                     isInCart(product) && !agotado(product) && 
                     <button 
                     onClick={() => increase(product)}
-                    className="btn btn-outline-primary btn-sm">Añadir mas</button>
+                    className="btn-tienda btn-outline-primary btn-sm">Añadir mas</button>
                 }
 
                 {
                     !isInCart(product) && !disponible(product) && 
                     <button 
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Añadir al carrito</button>
+                    className="btn-tienda btn-primary btn-sm">Añadir al carrito</button>
                 }
                 {
                    !isInCart(product) && disponible(product) && 
                     <button style={bt}
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Producto agotado</button>
+                    className="btn-tienda btn-primary btn-sm">Producto agotado</button>
                 }
                 {
                     isInCart(product) && agotado(product) && 
                     <button style={bt}
                     onClick={addProducto}
-                    className="btn btn-primary btn-sm">Producto agotado </button>
+                    className="btn-tienda btn-primary btn-sm">Producto agotado </button>
                 }
                
             </div>
+            </div>
         </div>
+    </div>
      );
 }
 

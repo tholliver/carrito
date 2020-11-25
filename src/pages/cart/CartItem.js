@@ -51,7 +51,7 @@ const CartItem = ({ product }) => {
           <p className="mb-1">{formatNumber(product.price)} </p>
         </div>
       </div>
-      <div className="col-sm-2cantidad p-2 text-center container-cantidad subtotal">
+      <div className="col-sm-2cantidad p-2 text-center container-cantidad subtotal cant">
         <p className="mb-0">{product.quantity}</p>
       </div>
       <div className="col-sm-4-botones p-2 text-right contenedor-botones-modificacion">
