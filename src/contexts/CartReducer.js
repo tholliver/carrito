@@ -90,6 +90,7 @@ export const CartReducer = (state, action) => {
         ...sumItems([]),
       };
     case "CLEAR":
+      /*
       function func1() {
         let current_datetime = new Date();
         let formatted_date =
@@ -152,7 +153,7 @@ export const CartReducer = (state, action) => {
           });
       }
 
-      func1();
+      func1();*/
 
       return {
         cartItems: [],
