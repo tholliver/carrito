@@ -11,7 +11,7 @@ export default class Pedidito extends React.Component {
   state = {
     products: [],
   };
- 
+
   componentDidMount() {
     axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
       const products = res.data;
@@ -22,7 +22,7 @@ export default class Pedidito extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="contenedor-pedidos">
         <b>Dirección:</b> {this.props.productito.direccion}
         <br></br>
         <b>Nombre del Cliente:</b> {this.props.productito.nombreCli}
@@ -48,10 +48,11 @@ export default class Pedidito extends React.Component {
         ))}
         <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
         <p></p>
+          <button type="button" className="ver-pedido">
+            <a href="#">Ver pedido</a>
+          </button>
         <br></br>
-      </div>
+      </div>     
     );
   }
 }
-
-
