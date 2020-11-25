@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from "react-router-dom";
+import { Link,withRouter } from "react-router-dom";
 import { CartContext } from '../../contexts/CartContext';
 
 /*IMPORTANDO ESTILOS */
@@ -20,4 +20,4 @@ const Header = () => {
      );
 }
  
-export default Header;
+export default withRouter(Header);
