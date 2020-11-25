@@ -19,12 +19,12 @@ const Payment = () => {
     CartContext
   );
   const mostrarAlerta =()=>{
-  
+     
     swal({
       text: 'El Envio del pedido fue un Exito ',
       icon: 'success',
     }).then((value) => {
-      clearCart()
+      clearCart();
     });
   };
   
@@ -87,11 +87,7 @@ const Payment = () => {
                 <button
                   type="button"
                   className="boton-enviar-mi-pedido"
-                  onClick={async()=>{
-                    
-                    await mostrarAlerta()
-                  }
-                  }
+                  onClick={mostrarAlerta}
                 >
                   Enviar Mi Pedido En Efectivo
                 </button>
@@ -107,7 +103,7 @@ const Payment = () => {
         </div>
       </div>
     </Layout>
-     { cartItems.length==0 && <Redirect to='/carrito'/>}
+     { cartItems.length==0 && <Redirect to='/acercade'/>}
     </React.Fragment>
   );
 };
