@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Layout from "../../components/Layout";
 import axios from "axios";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import { formatNumber } from "../../helpers/utils";
@@ -11,6 +11,14 @@ import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
 
 
+const mostrarAlerta =()=>{
+  swal({
+    text: 'El Envio del pedido fue un Exito ',
+    icon: 'success',
+  }).then((value) => {
+    return <Redirect to ='/carrito'/>
+  });
+};
 
 
 
@@ -18,24 +26,12 @@ const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
-  const mostrarAlerta =()=>{
-     
-    swal({
-      text: 'El Envio del pedido fue un Exito ',
-      icon: 'success',
-    }).then((value) => {
-      clearCart();
-    });
-  };
-  
-  
 
   var ridoff = (clearCart) => {
     return clearCart;
   };
   
   return (
-    <React.Fragment>
     <Layout title="Pago" description="Payment page">
       <div className="contenedor-general">
         <div className="contenedor-forma-de-pago">
@@ -103,8 +99,6 @@ const Payment = () => {
         </div>
       </div>
     </Layout>
-     { cartItems.length==0 && <Redirect to='/acercade'/>}
-    </React.Fragment>
   );
 };
 
