@@ -24,3 +24,8 @@ SELECT * FROM bpxswzqwuifl3kr6kmvs.pedidoProductos;
 
 /*5.- nombre y direccion de los pedidos que el cliente hizo.*/
 select nombre,direccion from bpxswzqwuifl3kr6kmvs.pedido,bpxswzqwuifl3kr6kmvs.cliente where idcliente=idpedido;
+
+/*6.- nombre y direccion de los pedidos que el cliente hizo.*/
+select nombre,direccion 
+from bpxswzqwuifl3kr6kmvs.pedido p,bpxswzqwuifl3kr6kmvs.cliente c 
+where c.idcliente=p.idclienteP;
