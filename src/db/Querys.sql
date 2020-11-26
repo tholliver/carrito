@@ -10,8 +10,7 @@ INSERT INTO `producto` (`idproducto`,`nombre`,`cantidad`,`precio`) VALUES (1,'co
  
  
  /*CONSULTAS*/
- /* 1.- Todos los clientes */
-
+/* 1.- Todos los clientes */
 SELECT * FROM bpxswzqwuifl3kr6kmvs.cliente;
 
 /*2.- Todos los Pedidos*/
@@ -23,3 +22,5 @@ SELECT * FROM bpxswzqwuifl3kr6kmvs.producto;
 /*4.- Todos los PedidosProductos*/
 SELECT * FROM bpxswzqwuifl3kr6kmvs.pedidoProductos;
 
+/*5.- nombre y direccion de los pedidos que el cliente hizo.*/
+select nombre,direccion from bpxswzqwuifl3kr6kmvs.pedido,bpxswzqwuifl3kr6kmvs.cliente where idcliente=idpedido;
