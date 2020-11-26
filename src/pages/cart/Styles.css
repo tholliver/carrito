@@ -151,6 +151,8 @@ body::-webkit-scrollbar-thumb {
 
     position: sticky;
     top: 0;
+
+    z-index: 100;
 }
 
 .link-header {
