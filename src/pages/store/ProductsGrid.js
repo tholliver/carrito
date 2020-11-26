@@ -10,8 +10,16 @@ class ProductsGrid extends Component {
     productos: [],
   };
 
+<<<<<<< HEAD
   async componentDidMount() {
     const res = await fetch("https://alfasoft-api.herokuapp.com/productos");
+=======
+  
+  
+  async componentDidMount(){
+    
+    const res = await fetch("https://alfasoft-api.herokuapp.com/productos")
+>>>>>>> 1aec0f9c87f2b96725531d5e2138fa6268b7f015
     const products = await res.json();
     // this.setState({products: date})
     m = dummyProduct.length;
