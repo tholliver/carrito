@@ -19,3 +19,7 @@ SELECT * FROM bpxswzqwuifl3kr6kmvs.pedido;
 
 /*3.- Todos los Productos*/
 SELECT * FROM bpxswzqwuifl3kr6kmvs.producto;
+
+/*4.- Todos los PedidosProductos*/
+SELECT * FROM bpxswzqwuifl3kr6kmvs.pedidoProductos;
+
