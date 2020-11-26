@@ -145,3 +145,18 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `produc
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('13', '6', '8');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('14', '5', '6');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('15', '4', '9');
+
+/* Añadiendo datos a la tabla pedidos */
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('18', 'Naranja', '25', '5.00', '/img/48.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('19', 'Piña', '18', '4.00', '/img/49.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('20', 'Kiwi', '22', '8.00', '/img/50.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('21', 'Platano', '25', '7.00', '/img/51.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('22', 'Sandia', '17', '5.00', '/img/52.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('23', 'Pera', '30', '5.00', '/img/53.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('24', 'Papaya', '15', '10.00', '/img/54.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('25', 'Mango', '30', '12.00', '/img/55.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('26', 'Pomelo', '25', '10.00', '/img/56.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('27', 'Higo', '50', '3.00', '/img/57.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('28', 'Uva', '100', '7.00', '/img/58.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('29', 'Durazno', '50', '12.00', '/img/59.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('30', 'Palta', '35', '7.00', '/img/60.jpg');
