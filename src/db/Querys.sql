@@ -118,3 +118,17 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedi
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('14', 'Av. Ayacucho y La Paz N 652', '2020-11-03 13:00:45', '3', '25.50', '3');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('15', 'Av. Jose Ballivian y Chuquisaca N 96', '2020-11-03 14:26:35', '7', '95.50', '4');
 
+/*Productos*/
+
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('6', 'Lemon', '10', '24.51', '/img/6.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('7', 'Mango', '7', '35.50', '/img/7.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('8', 'Pineapple', '21', '18.89', '/img/8.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('9', 'Asparagus', '15', '15.42', '/img/9.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('10', 'Lettuce', '18', '17.45', '/img/10.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('11', 'Corn', '17', '7.53', '/img/11.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('12', 'spanish cheese', '25', '230.82', '/img/12.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('13', 'fresh pears', '20', '123.82', '/img/13.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('14', 'big apples', '12', '203.04', '/img/14.jpg');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('15', 'sweet blueberries', '17', '321.02', '/img/15.jpg');
+
+
