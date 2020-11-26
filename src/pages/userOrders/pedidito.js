@@ -4,6 +4,7 @@ import Produc from "./Produc";
 //import MisPedidos from './MisPedidos'
 //import { formatNumber } from "../../helpers/utils";
 import "../cart/Styles.css";
+import "./detalles.css"
 //import swal from 'sweetalert';
 import swal from '@sweetalert/with-react'
 //import swal from 'sweetalert'
@@ -26,19 +27,28 @@ export default class Pedidito extends React.Component {
      const pp =()=>{
       
       swal(
-        <div className="contenedor-pedidos">
-          <h1>Codigo de pedido: {this.props.productito.idpedido}</h1>
-        <b>Dirección:</b> {this.props.productito.direccion}
-        <br></br>
-        <b>Nombre del Cliente:</b> {this.props.productito.nombreCli}
-        <br></br> 
-        <b>Resumen:</b>
-        <br></br>
-        <div>
-        <b>Nombre del producto</b>/ <b>Cantidad</b>  /<b>Precio unitario</b>
-        </div>
-        
-        {this.state.products.map((item) => (
+        <div className="contenedor-detalle">
+          <div className="detalle-codigo-pedido">
+            <h3>Codigo de pedido: {this.props.productito.idpedido}</h3>
+          </div>
+            <br></br>
+            <div className="detalle-direccion">
+              <b>Dirección:</b> {this.props.productito.direccion}
+            </div>
+              <br></br>
+            <div className="detalle-nombre"> 
+              <b>Nombre del Cliente:</b> {this.props.productito.nombreCli}
+            </div>
+              <br></br>
+             <div className="detalle-resumen">  
+            <h3>Resumen:</h3>
+            </div>
+              
+          <div className="detalle-pedidos-productos">
+            <b>Nombre del producto</b>/ <b>Cantidad</b>  /<b>Precio unitario</b>
+          </div>
+            <br></br>
+            {this.state.products.map((item) => (
           
           <div>
   
@@ -51,12 +61,15 @@ export default class Pedidito extends React.Component {
             }         
           </div>
         ))}
-        <br/>
-        <b>Cantidad Total:</b>  {this.props.productito.cantidadTotal}
-        <br/>
-        <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
-        <p></p>
-        <br></br>
+            <br></br>
+            <br/>
+          <div className="detalle-cantidad-total">
+            <b>Cantidad Total:</b>  {this.props.productito.cantidadTotal}
+          </div>
+            <br/>
+          <div className="detalle-total-compra">
+            <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
+          </div>
       </div>  
       )
      }
