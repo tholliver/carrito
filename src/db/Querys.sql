@@ -102,3 +102,19 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('12
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('13', 'Irene Torres');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('14', 'Angeles Alarcon');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('15', 'Ana Belen Ramirez');
+
+/*Pedidos*/
+
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('4', 'Av. Oquendo y Sucre N 256', '2020-10-17 17:15:02', '8', '102.58', '6');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('5', 'Av. Oquendo y Jordan N 57', '2020-10-17 18:29:11', '6', '82.50', '7');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('6', '16 de Julio y Calama N 14', '2020-10-17 15:15:28', '2', '56.00', '8');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('7', 'Antezana y Ladislao Cabrera N48', '2020-11-01 10:21:05', '8', '84.50', '9');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('8', 'Lanza y Bolivar N 12', '2020-11-02 12:25:05', '2', '94.30', '10');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('9', 'Av. Heroinas y San Martin N 74', '2020-11-02 13:15:45', '8', '120.50', '11');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('10', '25 de Mayo y Colombia N 52', '2020-11-02 17:45:52', '10', '152.00', '12');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('11', 'España y Ecuador N 247', '2020-11-02 19:36:21', '5', '60.50', '13');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('12', 'Baptista y Mayor Rocha N 59', '2020-11-03 09:42:02', '4', '83.50', '14');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('13', 'Baptista y Mexico N 48', '2020-11-03 11:00:45', '8', '91.00', '15');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('14', 'Av. Ayacucho y La Paz N 652', '2020-11-03 13:00:45', '3', '25.50', '3');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedido` (`idpedido`, `direccion`, `fechaPedido`, `cantidadTotal`, `totalPagar`, `idclienteP`) VALUES ('15', 'Av. Jose Ballivian y Chuquisaca N 96', '2020-11-03 14:26:35', '7', '95.50', '4');
+
