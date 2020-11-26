@@ -71,7 +71,7 @@ const Payment = () => {
                   className="boton-enviar-mi-pedido"
                   onClick={clearCart}
                 >
-                  Enviar Mi Pedido En Efectivo
+                   Enviar Mi Pedido En Efectivo
                 </button>
               </div>
             </div>
