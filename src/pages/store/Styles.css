@@ -73,9 +73,13 @@ border: 200px;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
     background-color: lavender;
+    opacity: 0.5;
+    transition: 0.5s;
 }
 .tarjetas-de-productos:hover {
     border: 0.3rem solid royalblue;
+    
+    opacity: 1;
 }
 
 .nombre-producto {
