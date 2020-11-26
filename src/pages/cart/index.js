@@ -63,7 +63,7 @@ const Cart = () => {
               </div>
             </div>
             {cartItems.length > 0 && (
-              <div className="col-sm-3 p-3 contenedor-detalles">
+              <div className="contenedor-detalles">
                 <div className="card card-body detalles">
                   <p className="mb-1">Cantidad de productos</p>
                   <h4 className=" mb-3 txt-right">{itemCount}</h4>
