@@ -62,3 +62,10 @@ from bpxswzqwuifl3kr6kmvs.pedido pe,bpxswzqwuifl3kr6kmvs.cliente c,
 	 bpxswzqwuifl3kr6kmvs.pedidoProductos pp,bpxswzqwuifl3kr6kmvs.producto p 
 where c.idcliente=pe.idclienteP and pe.idpedido=pp.pedido_idpedido and pp.producto_idproducto = p.idproducto  
 and pe.direccion = 'Av. Aroma N 30';
+
+/* 12.- nombre ,direccion y el producto que compro de los pedidos que el cliente con la fecha y hora, con el total a pagar */
+
+select c.nombre,pe.direccion, pe.fechaPedido, p.nombre,pe.totalPagar
+from bpxswzqwuifl3kr6kmvs.pedido pe,bpxswzqwuifl3kr6kmvs.cliente c, 
+	 bpxswzqwuifl3kr6kmvs.pedidoProductos pp,bpxswzqwuifl3kr6kmvs.producto p 
+where c.idcliente=pe.idclienteP and pe.idpedido=pp.pedido_idpedido and pp.producto_idproducto = p.idproducto;
