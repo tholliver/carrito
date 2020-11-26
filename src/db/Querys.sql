@@ -79,7 +79,7 @@ where c.idcliente=pe.idclienteP and pe.idpedido=pp.pedido_idpedido and pp.produc
 order by c.nombre asc;
 
 /* 14.- nombre ,direccion y el producto que compro de los pedidos que el cliente con la fecha y hora, con el total a pagar en orden alfabetico */
-y cuantos peidos hizo en total
+/*y cuantos peidos hizo en total*/
 
 select c.nombre,pe.direccion, pe.fechaPedido, p.nombre,pe.totalPagar,count(c.nombre) as ordenes
 from bpxswzqwuifl3kr6kmvs.pedido pe,bpxswzqwuifl3kr6kmvs.cliente c, 
@@ -132,3 +132,16 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('15', 'sweet blueberries', '17', '321.02', '/img/15.jpg');
 
 
+/*Pedidos Productos*/
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('4', '15', '4');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('5', '14', '10');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('6', '13', '2');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('7', '12', '3');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('8', '11', '4');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('9', '10', '5');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('10', '9', '4');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('11', '8', '2');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('12', '7', '7');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('13', '6', '8');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('14', '5', '6');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`pedidoProductos` (`pedido_idpedido`, `producto_idproducto`, `cantidadComp`) VALUES ('15', '4', '9');
