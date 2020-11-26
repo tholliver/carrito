@@ -27,7 +27,7 @@ export default class Pedidito extends React.Component {
       
       swal(
         <div className="contenedor-pedidos">
-          <h1>Detalle del Pedido</h1>
+          <h1>Codigo de pedido: {this.props.productito.idpedido}</h1>
         <b>Dirección:</b> {this.props.productito.direccion}
         <br></br>
         <b>Nombre del Cliente:</b> {this.props.productito.nombreCli}

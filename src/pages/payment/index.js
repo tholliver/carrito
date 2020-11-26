@@ -27,10 +27,10 @@ const Payment = () => {
       current_datetime.getHours() + ":" +
       current_datetime.getMinutes() + ":" +
       current_datetime.getSeconds();
-
+    let ramdom = Math.floor(Math.random() * 50) + 1;;
     const newPedido = [
       {
-        direccion: "sameHouseEveryone",
+        direccion: "Calle Antezana y Ladislao Cabrera N"+ramdom,
         fechaPedido: formatted_date,
         cantidadTotal: itemCount,
         totalPagar: total, 
