@@ -59,7 +59,7 @@ export default class Pedidito extends React.Component {
               </div>  
             ) 
             }         
-          </div>
+          </div>   
         ))}
             <br></br>
             <br/>
@@ -106,9 +106,11 @@ export default class Pedidito extends React.Component {
         <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
         <br/>
         <p></p>
+        <div className = "caja-boton">
           <button onClick={pp} type="button" className="ver-pedido">
             <a href="#">Ver pedido</a>
           </button>
+          </div>
         <br></br>
       </div>     
     );

@@ -189,11 +189,11 @@ body::-webkit-scrollbar-thumb {
     width: 95%;
 }
 
-.btnaumentar, .btndisminuir, .btneliminar, .btnprocederpago, .btnvaciarcarrito {
+.btnaumentar, .btndisminuir, .btn-eliminar, .btnprocederpago, .btnvaciarcarrito {
     opacity: 0.6;
     cursor: pointer;
 }
-.btnaumentar:hover, .btndisminuir:hover, .btneliminar:hover, .btnprocederpago:hover, .btnvaciarcarrito:hover {
+.btnaumentar:hover, .btndisminuir:hover, .btn-eliminar:hover, .btnprocederpago:hover, .btnvaciarcarrito:hover {
     opacity: 1;
 }
 
