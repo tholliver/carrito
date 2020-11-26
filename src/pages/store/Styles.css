@@ -1,4 +1,15 @@
 
+
+.container-product{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(350px,2fr));
+grid-gap: 50px;
+border: 200px;
+}
+
+
+
+
 /*contenido de titulo y subititulo*/
 .contenedor-tienda {
     display: table;

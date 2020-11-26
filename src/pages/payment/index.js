@@ -7,17 +7,84 @@ import "./Styles.css";
 import { formatNumber } from "../../helpers/utils";
 import { CartContext } from "../../contexts/CartContext";
 //import Titulo from './Titulo.js';
+import swal from 'sweetalert';
+import { Redirect } from "react-router-dom";
+
+
+
 
 const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
 
-  var ridoff = (clearCart) => {
-    return clearCart;
-  };
+  function func1() {
+    let current_datetime = new Date();
+    let formatted_date =
+      current_datetime.getFullYear() + "-" +
+      (current_datetime.getMonth() + 1) + "-" +
+      current_datetime.getDate() +  " " +
+      current_datetime.getHours() + ":" +
+      current_datetime.getMinutes() + ":" +
+      current_datetime.getSeconds();
 
+    const newPedido = [
+      {
+        direccion: "sameHouseEveryone",
+        fechaPedido: formatted_date,
+        cantidadTotal: itemCount,
+        totalPagar: total, 
+        idclienteP: 1,
+      },
+    ];
+    axios
+      .post("https://alfasoft-api.herokuapp.com/pedido", newPedido, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+
+    function func2() {
+      const arr = [];
+      cartItems.map((item) => {
+        var newADE = 21;
+        arr.push({
+          pedido_idpedido: newADE,
+          producto_idproducto: item.id,
+          cantidadComp: item.quantity,
+        });
+      });
+      console.log(arr, "Showing the array insert to pedidosProductos");
+      axios
+        .post("https://alfasoft-api.herokuapp.com/pedido/items", arr, {
+          headers: { "Content-Type": "application/json" },
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+
+  const mostrarAlerta =()=>{
+    func1();
+    swal({
+      text: 'El Envio del pedido fue un Exito ',
+      icon: 'success',
+    }).then((value) => {
+      func2()
+      clearCart()
+    });
+  };
+  
   return (
+    <React.Fragment>
     <Layout title="Pago" description="Payment page">
       <div className="contenedor-general">
         <div className="contenedor-forma-de-pago">
@@ -69,7 +136,7 @@ const Payment = () => {
                 <button
                   type="button"
                   className="boton-enviar-mi-pedido"
-                  onClick={clearCart}
+                  onClick={mostrarAlerta}
                 >
                    Enviar Mi Pedido En Efectivo
                 </button>
@@ -85,6 +152,8 @@ const Payment = () => {
         </div>
       </div>
     </Layout>
+    {cartItems.length ==0 && <Redirect to='/carrito'/> }
+    </React.Fragment>
   );
 };
 
