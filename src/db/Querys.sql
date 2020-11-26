@@ -36,3 +36,8 @@ where c.idcliente=p.idclienteP;
 select DISTINCT nombre,direccion 
 from bpxswzqwuifl3kr6kmvs.pedido p,bpxswzqwuifl3kr6kmvs.cliente c 
 where c.idcliente=p.idclienteP;
+
+/*8.- nombre y direccion de los pedidos que el cliente hizo para la Av. Aroma N 30*/
+select DISTINCT nombre,direccion 
+from bpxswzqwuifl3kr6kmvs.pedido p,bpxswzqwuifl3kr6kmvs.cliente c 
+where c.idcliente=p.idclienteP and p.direccion = 'Av. Aroma N 30';
