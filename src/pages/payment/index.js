@@ -72,7 +72,7 @@ const Payment = () => {
         });
     }
 
-  const  mostrarAlerta =()=>{
+  const mostrarAlerta =()=>{
     func1();
     swal({
       text: 'El Envio del pedido fue un Exito ',
