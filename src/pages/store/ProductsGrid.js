@@ -2,7 +2,7 @@ import React, { useContext, Component } from "react";
 import ProductItem from "./ProductItem";
 import { ProductsContext } from "../../contexts/ProductsContext";
 
-//sconst ProductsGrid= ()=>{}
+//sconst ProductsGrid= ()=>{} some ramdom comment
 let dummyProduct = [];
 let m = 0;
 class ProductsGrid extends Component {
