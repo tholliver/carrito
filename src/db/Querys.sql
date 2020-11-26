@@ -87,3 +87,18 @@ from bpxswzqwuifl3kr6kmvs.pedido pe,bpxswzqwuifl3kr6kmvs.cliente c,
 where c.idcliente=pe.idclienteP and pe.idpedido=pp.pedido_idpedido and pp.producto_idproducto = p.idproducto
 group by c.nombre
 order by c.nombre asc;
+
+/*Insertar clientes*/
+
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('4', 'Francisco lopez');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('5', 'Manuel Gonzales');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('6', 'Pedro Gomez');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('7', 'Javier Perez');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('8', 'Daniel Gonzales');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('9', 'Luis Romero');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('10', 'Pablo Molina');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('11', 'Maria Tereza Llanos');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('12', 'Raquel Ortiz');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('13', 'Irene Torres');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('14', 'Angeles Alarcon');
+INSERT INTO `bpxswzqwuifl3kr6kmvs`.`cliente` (`idcliente`, `nombre`) VALUES ('15', 'Ana Belen Ramirez');
