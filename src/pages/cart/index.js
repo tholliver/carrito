@@ -68,7 +68,7 @@ const Cart = () => {
                   <p className="mb-1">Cantidad de productos</p>
                   <h4 className=" mb-3 txt-right">{itemCount}</h4>
                   <p className="mb-1">Total</p>
-                  <h3 className="m-0 txt-right">{formatNumber(total)}</h3>
+                  <h3 className="m-0 txt-right">Bs. {total}</h3>
                   <hr className="my-4" />
                   <div className="text-center">
                     <button
