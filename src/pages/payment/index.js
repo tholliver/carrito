@@ -108,8 +108,8 @@ const Payment = () => {
                     <ul>
                       <li>
                         <p>
-                          {number.name} || {number.quantity} {"     X      "}
-                          {formatNumber(number.price * number.quantity)}
+                          {number.name} || {number.quantity} {"     X      "}Bs. 
+                          {number.price * number.quantity}
                         </p>
                       </li>
                     </ul>
@@ -128,9 +128,9 @@ const Payment = () => {
               </div>
 
               <h3 className="total-parcial">Total parcial</h3>
-              <p className="total-parcial-numero">{formatNumber(total)}</p>
+              <p className="total-parcial-numero">Bs. {total}</p>
               <h3 className="metodo-de-pago">
-                Metodo de pago <i className="fas fa-dollar-sign"></i>{" "}
+                Metodo de pago Bs.{" "}
               </h3>
               <div className="contenedor-boton-enviar-mi-pedido">
                 <button
