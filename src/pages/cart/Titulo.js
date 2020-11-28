@@ -12,7 +12,7 @@ export default class Titulo extends Component {
                 
             </div>
             <div className="container-detalles contenedor-titulos-campos">
-                    <h3 className="columna">Precio Unitario <i className="fas fa-dollar-sign"></i></h3>
+                    <h3 className="columna">Precio Unitario Bs.</h3>
             </div>
             
             <div className="container-detalles ">
