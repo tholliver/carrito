@@ -90,7 +90,7 @@ const Payment = () => {
         <div className="contenedor-forma-de-pago">
           <div className="text-center-forma de pago">
             <h3>
-              FORMA DE PAGO <i className="fas fa-dollar-sign"></i>{" "}
+              FORMA DE PAGO Bs.{" "}
             </h3>
           </div>
         </div>
