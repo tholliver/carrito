@@ -10,6 +10,9 @@ import "./Styles.css";
 import Titulo from "./Titulo.js";
 import swal from '@sweetalert/with-react';
 import Login from "../../components/auth/Login";
+import Cookies from 'universal-cookie';
+
+const cookies = new Cookies();
 
 //handleCheckout,
 //managing set to empty the cart
@@ -19,8 +22,8 @@ const Cart = () => {
   );
 
  const loginAlert =()=>{
-      //if(cookies.get('username')){
-      if(false){
+      if(cookies.get('username')){
+      //if(false){
         window.location.href="./pago";
     }else{
       swal(
@@ -89,10 +92,10 @@ const Cart = () => {
                     <button
                       type="button"
                       className="btnprocederpago btn-primary mb-2 boton-Detalle-Venta"
-                    >
-                      <Link to="/pago">Proceder a pago</Link>
+                      onClick ={loginAlert}
+                    >Proceder a pago
+                     {/* <Link to="/pago">Proceder a pago</Link>*/}
                     </button>
-                    <button onClick ={loginAlert}>login</button>
                     <button
                       type="button"
                       className="btnvaciarcarrito btn-outlineprimary btn-sm boton-Detalle-Venta"
