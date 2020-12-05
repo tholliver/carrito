@@ -9,9 +9,7 @@ import { CartContext } from "../../contexts/CartContext";
 //import Titulo from './Titulo.js';
 import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
-
-
-
+import Tarjeta from  './tarjeta'
 
 const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
@@ -132,6 +130,7 @@ const Payment = () => {
               <h3 className="metodo-de-pago">
                 Metodo de pago Bs.{" "}
               </h3>
+              <Tarjeta></Tarjeta>
               <div className="contenedor-boton-enviar-mi-pedido">
                 <button
                   type="button"
