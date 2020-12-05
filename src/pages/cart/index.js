@@ -8,17 +8,8 @@ import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import Titulo from "./Titulo.js";
-<<<<<<< HEAD
-import swal from "sweetalert";
-
-=======
 import swal from '@sweetalert/with-react';
-import  Login  from "../../components/auth/Login";
-import Cookies from 'universal-cookie';
-
-
-const cookies = new Cookies();
->>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
+import Login from "../../components/auth/Login";
 
 //handleCheckout,
 //managing set to empty the cart
@@ -26,50 +17,20 @@ const Cart = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
-<<<<<<< HEAD
 
-  const loginAlert =()=>{
-    
-    swal({
-      title: '',
-      text: 'Para poder usar esta funcion primero debe iniciar sesion ',
-      buttons: {
-        catch: {
-          text: "Iniciar Sesion",
-          value: "inLogin",
-        },
-        Registarse: true,
-        cancel: "Canselar",
-      },
-    }).then(respuesta=>{
-      switch(respuesta){
-        case "Registarse":
-          swal( <div>
-                <h2>Registrarse</h2>
-          </div>)
-          break;
-        case "inLogin":
-          swal(
-            <div> 
-            </div>,{button: "Cancelar",}
-          )
-          break;
-          default:
-      }
-  });
-=======
-  const loginAlert =()=>{
-    //if(cookies.get('username')){
-    if(false){
-      window.location.href="./pago";
-  }else{
-    swal(
-      <div> 
-        <Login  ubicacion = "carrito"></Login>
-      </div>,{button: "Cancelar",}
-    );}
->>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
-}
+ const loginAlert =()=>{
+      //if(cookies.get('username')){
+      if(false){
+        window.location.href="./pago";
+    }else{
+      swal(
+        <div> 
+          <Login  ubicacion = "carrito"></Login>
+        </div>,{button: "Cancelar",}
+      );
+    }
+  }
+       
   return (
     <Layout title="Carrito" description="Cart page">
       <div>

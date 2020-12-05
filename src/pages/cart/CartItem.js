@@ -6,7 +6,7 @@ import {
 } from "../../components/icons";
 import { CartContext } from "../../contexts/CartContext";
 
-import { formatNumber } from "../../helpers/utils";
+//import { formatNumber } from "../../helpers/utils";
 import "./Styles.css"
 
 import swal from 'sweetalert'

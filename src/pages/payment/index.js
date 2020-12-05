@@ -10,11 +10,8 @@ import { CartContext } from "../../contexts/CartContext";
 import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
-<<<<<<< HEAD
 
 
-=======
->>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
 
 const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
@@ -156,7 +153,7 @@ const Payment = () => {
         </div>
       </div>
     </Layout>
-    {cartItems.length ==0 && <Redirect to='/carrito'/> }
+    {cartItems.length === 0 && <Redirect to='/carrito'/> }
     </React.Fragment>
   );
 };
