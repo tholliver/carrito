@@ -8,6 +8,12 @@ import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import Titulo from "./Titulo.js";
+import swal from '@sweetalert/with-react';
+import  Login  from "../../components/auth/Login";
+import Cookies from 'universal-cookie';
+
+
+const cookies = new Cookies();
 
 //handleCheckout,
 //managing set to empty the cart
@@ -15,7 +21,17 @@ const Cart = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
-
+  const loginAlert =()=>{
+    //if(cookies.get('username')){
+    if(false){
+      window.location.href="./pago";
+  }else{
+    swal(
+      <div> 
+        <Login  ubicacion = "carrito"></Login>
+      </div>,{button: "Cancelar",}
+    );}
+}
   return (
     <Layout title="Carrito" description="Cart page">
       <div>
@@ -77,6 +93,7 @@ const Cart = () => {
                     >
                       <Link to="/pago">Proceder a pago</Link>
                     </button>
+                    <button onClick ={loginAlert}>login</button>
                     <button
                       type="button"
                       className="btnvaciarcarrito btn-outlineprimary btn-sm boton-Detalle-Venta"
