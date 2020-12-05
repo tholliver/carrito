@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import Titulo from "./Titulo.js";
+import swal from "sweetalert";
+
 
 //handleCheckout,
 //managing set to empty the cart
@@ -16,6 +18,36 @@ const Cart = () => {
     CartContext
   );
 
+  const loginAlert =()=>{
+    
+    swal({
+      title: '',
+      text: 'Para poder usar esta funcion primero debe iniciar sesion ',
+      buttons: {
+        catch: {
+          text: "Iniciar Sesion",
+          value: "inLogin",
+        },
+        Registarse: true,
+        cancel: "Canselar",
+      },
+    }).then(respuesta=>{
+      switch(respuesta){
+        case "Registarse":
+          swal( <div>
+                <h2>Registrarse</h2>
+          </div>)
+          break;
+        case "inLogin":
+          swal(
+            <div> 
+            </div>,{button: "Cancelar",}
+          )
+          break;
+          default:
+      }
+  });
+}
   return (
     <Layout title="Carrito" description="Cart page">
       <div>
@@ -77,6 +109,7 @@ const Cart = () => {
                     >
                       <Link to="/pago">Proceder a pago</Link>
                     </button>
+                    <button onClick ={loginAlert}>login</button>
                     <button
                       type="button"
                       className="btnvaciarcarrito btn-outlineprimary btn-sm boton-Detalle-Venta"

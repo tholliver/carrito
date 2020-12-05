@@ -9,7 +9,7 @@ import { CartContext } from "../../contexts/CartContext";
 //import Titulo from './Titulo.js';
 import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
-
+import Tarjeta from  './tarjeta'
 
 
 
@@ -132,6 +132,7 @@ const Payment = () => {
               <h3 className="metodo-de-pago">
                 Metodo de pago <i className="fas fa-dollar-sign"></i>{" "}
               </h3>
+              <Tarjeta></Tarjeta>
               <div className="contenedor-boton-enviar-mi-pedido">
                 <button
                   type="button"
