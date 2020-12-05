@@ -28,7 +28,7 @@ class Login extends Component {
         cookies.set('username', this.state.form.username, {path: "/"});
         if(this.props.ubicacion==="loginPrincipal"){
         window.location.href="./";
-        }else{if (this.props.ubicacion==="carrito") {
+        }else { if (this.props.ubicacion==="carrito") {
             window.location.href="./pago";
         } else {
             
@@ -37,6 +37,42 @@ class Login extends Component {
        }
 
     }
+
+    iniciarSesion=async()=>{
+        console.log(baseUrl+this.state.form.username,'hola soy yo');
+        await axios.get(baseUrl+this.state.form.username)
+        .then(response=>{
+            return response.data;
+        })
+        .then(response=>{
+            console.log(response.CI,'hola soy yo4');
+           // {"CI":"8585998","nombreUsuario":"omar10","password":"omar123456","tipoUsuarioNombre":"Cliente","nombreEstado":"Habilitado"}
+            if(response.password===this.state.form.password){
+                console.log(response.password,'hola soy yo');
+               // var respuesta=response[0];
+                cookies.set('ci', response.CI, {path: "/"});
+                cookies.set('username', response.nombreUsuario, {path: "/"});
+                alert(`Bienvenido ${response.nombreUsuario}`);
+                if(this.props.ubicacion==="pedidos"){
+                    window.location.href="./mis-pedidos";
+                    }else { if (this.props.ubicacion==="carrito") {
+                        window.location.href="./pago";
+                    } else {
+                        window.location.href="./";
+                    }
+                   }
+                       
+            }else{
+                alert('El usuario o la contraseña no son correctos');
+            }
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
+    }
+
+
     render() {
 
     return (
@@ -61,7 +97,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <button className="btn btn-primary" onClick={()=> this.iniciarSesion1()}>Iniciar Sesión</button>
+            <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
             <a href="/"> registarse</a>
           </div>
         </div>  
