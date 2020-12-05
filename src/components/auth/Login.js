@@ -22,7 +22,6 @@ class Login extends Component {
             }
         });
     }
-
     iniciarSesion1 =()=>{
         console.log({username: this.state.form.username, password: (this.state.form.password)})
         
@@ -38,22 +37,23 @@ class Login extends Component {
        }
 
     }
-    reader(){
-        return(
-    <div className="container login-container">
-    <div className="containerSecundario">
-  <div className="form-group">
-    <label>Usuario: </label>
-    <br />
-    <input
-      type="text"
-      className="form-control"
-      name="username"
-      onChange={this.handleChange}
-    />
-    <br />
-    <label>Contraseña: </label>
-    <br />
+    render() {
+
+    return (
+        <div className="container login-container">
+            <div className="containerSecundario">
+             <div className="form-group">
+            <label>Usuario: </label>
+            <br />
+            <input
+              type="text"
+              className="form-control"
+              name="username"
+              onChange={this.handleChange}
+            />
+            <br />
+            <label>Contraseña: </label>
+            <br />
             <input
               type="password"
               className="form-control"
@@ -61,13 +61,13 @@ class Login extends Component {
               onChange={this.handleChange}
             />
             <br />
-            <button className="btn btn-primary" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+            <button className="btn btn-primary" onClick={()=> this.iniciarSesion1()}>Iniciar Sesión</button>
             <a href="/"> registarse</a>
           </div>
         </div>  
         </div>
     )
-}
+ }
 }
 
 export default Login;
