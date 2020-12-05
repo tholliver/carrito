@@ -60,7 +60,7 @@ const bt={
             <img style={{display: "block", margin: "0 auto 10px", maxHeight: "200px"}} className="img-fluid" 
             src={product.photo + '?v=' + product.id} alt=""/>
             <h3 className="nombre-producto"> {product.name}</h3>
-            <h3 className="text-left">{formatNumber(product.price)}</h3>
+            <h3 className="text-left">Bs. {product.price}</h3>
             <div className="text-right">
                 <Link  to="/" className="btn-link btn-link btn-sm mr-2">Detalles</Link>
 

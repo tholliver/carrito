@@ -10,8 +10,11 @@ import { CartContext } from "../../contexts/CartContext";
 import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
 
 const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
@@ -90,7 +93,7 @@ const Payment = () => {
         <div className="contenedor-forma-de-pago">
           <div className="text-center-forma de pago">
             <h3>
-              FORMA DE PAGO <i className="fas fa-dollar-sign"></i>{" "}
+              FORMA DE PAGO Bs.{" "}
             </h3>
           </div>
         </div>
@@ -108,8 +111,8 @@ const Payment = () => {
                     <ul>
                       <li>
                         <p>
-                          {number.name} || {number.quantity} {"     X      "}
-                          {formatNumber(number.price * number.quantity)}
+                          {number.name} || {number.quantity} {"     X      "}Bs. 
+                          {number.price * number.quantity}
                         </p>
                       </li>
                     </ul>
@@ -128,9 +131,9 @@ const Payment = () => {
               </div>
 
               <h3 className="total-parcial">Total parcial</h3>
-              <p className="total-parcial-numero">{formatNumber(total)}</p>
+              <p className="total-parcial-numero">Bs. {total}</p>
               <h3 className="metodo-de-pago">
-                Metodo de pago <i className="fas fa-dollar-sign"></i>{" "}
+                Metodo de pago Bs.{" "}
               </h3>
               <Tarjeta></Tarjeta>
               <div className="contenedor-boton-enviar-mi-pedido">

@@ -50,7 +50,7 @@ const CartItem = ({ product }) => {
         <div className="contenedor-nombre-precio precio">
          <h5 className="mb-1">{''} </h5>
          <br/>
-          <p className="mb-1">{formatNumber(product.price)} </p>
+          <p className="mb-1">Bs. { (product.price)} </p>
         </div>
       </div>
       <div className="col-sm-2cantidad p-2 text-center container-cantidad subtotal cant">
@@ -103,7 +103,7 @@ const CartItem = ({ product }) => {
         <div className="contenedor-nombre-precio">
          <h5 className="mb-1">{''} </h5>
          <div className="col-sm-2cantidad p-2 text-center  subtotal">
-            <p className="mb-0">${ (Math.round((product.quantity)*(product.price)  * 100) / 100).toFixed(2)  }</p>
+            <p className="mb-0">Bs. { (Math.round((product.quantity)*(product.price)  * 100) / 100).toFixed(2)  }</p>
           </div>
         </div>
       </div>

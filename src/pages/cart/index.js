@@ -8,8 +8,17 @@ import { Link } from "react-router-dom";
 
 import "./Styles.css";
 import Titulo from "./Titulo.js";
+<<<<<<< HEAD
 import swal from "sweetalert";
 
+=======
+import swal from '@sweetalert/with-react';
+import  Login  from "../../components/auth/Login";
+import Cookies from 'universal-cookie';
+
+
+const cookies = new Cookies();
+>>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
 
 //handleCheckout,
 //managing set to empty the cart
@@ -17,6 +26,7 @@ const Cart = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
+<<<<<<< HEAD
 
   const loginAlert =()=>{
     
@@ -47,6 +57,18 @@ const Cart = () => {
           default:
       }
   });
+=======
+  const loginAlert =()=>{
+    //if(cookies.get('username')){
+    if(false){
+      window.location.href="./pago";
+  }else{
+    swal(
+      <div> 
+        <Login  ubicacion = "carrito"></Login>
+      </div>,{button: "Cancelar",}
+    );}
+>>>>>>> c72dc3a7de89b1e81f1b2c667aa8bcb33efbe923
 }
   return (
     <Layout title="Carrito" description="Cart page">
@@ -100,7 +122,7 @@ const Cart = () => {
                   <p className="mb-1">Cantidad de productos</p>
                   <h4 className=" mb-3 txt-right">{itemCount}</h4>
                   <p className="mb-1">Total</p>
-                  <h3 className="m-0 txt-right">{formatNumber(total)}</h3>
+                  <h3 className="m-0 txt-right">Bs. {total}</h3>
                   <hr className="my-4" />
                   <div className="text-center">
                     <button

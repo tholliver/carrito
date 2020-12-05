@@ -29,46 +29,43 @@ export default class Pedidito extends React.Component {
       swal(
         <div className="contenedor-detalle">
           <div className="detalle-codigo-pedido">
-            <h3>Codigo de pedido: {this.props.productito.idpedido}</h3>
+            <p>Codigo de pedido: {this.props.productito.idpedido}</p>
           </div>
-            <br></br>
+            
             <div className="detalle-direccion">
-              <b>Dirección:</b> {this.props.productito.direccion}
-            </div>
-              <br></br>
+              <p>Dirección: {this.props.productito.direccion}</p>
+            </div> 
+
             <div className="detalle-nombre"> 
-              <b>Nombre del Cliente:</b> {this.props.productito.nombreCli}
+              <p>Nombre del Cliente: {this.props.productito.nombreCli}</p>
             </div>
-              <br></br>
+
              <div className="detalle-resumen">  
-            <h3>Resumen:</h3>
+            <p>Resumen:</p>
             </div>
               
           <div className="detalle-pedidos-productos">
-            <b>Nombre del producto</b>/ <b>Cantidad</b>  /<b>Precio unitario</b>
+            <p>Nombre del producto  /  Cantidad  /  Precio unitario</p>
           </div>
-            <br></br>
+
+          <div className="recuperar-producto">
             {this.state.products.map((item) => (
-          
-          <div>
-  
-             {this.props.productito.idpedido===item.pedido_idpedido&&(
-              <div>
-                
-                <Produc key={item.id} productitoCom={item} />
-              </div>  
-            ) 
-            }         
-          </div>   
-        ))}
-            <br></br>
-            <br/>
+            <div className="recuperar-cantidad">
+             {this.props.productito.idpedido===item.pedido_idpedido&& 
+              (<Produc key={item.id} productitoCom={item} />) 
+             }         
+            </div>
+              )
+              )
+            }
+         </div>    
+            
           <div className="detalle-cantidad-total">
-            <b>Cantidad Total:</b>  {this.props.productito.cantidadTotal}
+            <p>Cantidad Total:  {this.props.productito.cantidadTotal}</p>
           </div>
-            <br/>
+            
           <div className="detalle-total-compra">
-            <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
+            <p>Total compra: Bs. {this.props.productito.totalPagar}</p>
           </div>
       </div>  
       )
