@@ -1,0 +1,73 @@
+
+
+/* ---------- Formulario Tarjeta ----------*/
+
+.formulario-tarjeta label {
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #CED6E0;
+	font-size: 18px;
+	
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+.selec{
+	width: 150px;
+	height: 40px;
+}
+.segu{
+	width: 40px;
+	height: 40px;
+}
+
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 2px solid #93BDED;
+}
+
+
+
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+
+.formulario-tarjeta input {
+	margin-bottom: 0px;
+	text-transform: uppercase;
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.formulario-tarjeta .expira {
+	width: 100px;
+}
+.formulario-tarjeta .grupo {
+	width: 100%;
+}
+.pro {
+	width: 380px;
+}
+
+
+.formulario-tarjeta .ccv {
+	min-width: 70px;
+}
+
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right:-70px;
+	margin-left:-70px;
+	
+}
