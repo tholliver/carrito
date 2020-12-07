@@ -10,7 +10,9 @@ import { CartContext } from "../../contexts/CartContext";
 import swal from 'sweetalert';
 import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
+import Cookies from "universal-cookie";
 
+const cookies = new Cookies()
 
 
 const Payment = () => {
@@ -82,7 +84,7 @@ const Payment = () => {
       clearCart()
     });
   };
-  
+  if(cookies.get("username")){
   return (
     <React.Fragment>
     <Layout title="Pago" description="Payment page">
@@ -156,6 +158,9 @@ const Payment = () => {
     {cartItems.length === 0 && <Redirect to='/carrito'/> }
     </React.Fragment>
   );
+}else{
+  window.location.href='./';
+}
 };
 
 export default Payment;

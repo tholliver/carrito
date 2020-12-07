@@ -78,6 +78,7 @@ class Login extends Component {
     return (
         <div className="container login-container">
             <div className="containerSecundario">
+            <div><h2>Login</h2></div>
              <div className="form-group">
             <label>Usuario: </label>
             <br />
