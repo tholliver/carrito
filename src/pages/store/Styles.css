@@ -14,37 +14,38 @@ border: 200px;
     display: table;
     justify-content: center;
     width: 99%;
-    padding: 10px;
 }
 .titulo-tienda{
     justify-content: center;
     width: 100%;
-    /*padding: 5px;*/
-    background-color: #879ceb;
-    border: 4px solid navy
+    font-size: 25px;
 }
 .tienda{
     display: flex;
     justify-content: center;
     color: black;
 }
-.subtitulo {
+/*.subtitulo {
     display: flex;
     justify-content: center;
     color: black;
-}
+}*/
 
 /*contenido de # de items*/
 .row-items {
     padding: 5px;
 }
 .separacion {
-    padding: 5px;
-    border: 4px solid black;
-    border-radius: 30px;
+    padding: 6px;
+    font-size: 18px;
+    border-radius: 5px;
     margin-left: 2%;
     margin-right: 2%;
-    background-color: silver;
+    color: #FFFFFF;
+   background-color: #879ceb;
+   border: 2px solid black;
+   text-shadow: 5px 5px 5px black;
+
 }
 .py-3-numero-de-productos {
     display: flex;
@@ -54,6 +55,7 @@ border: 200px;
 
 /*cartas de productos*/
 .container-product{
+    padding: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(350px,2fr));
     grid-gap: 30px;
