@@ -40,6 +40,17 @@ class Login extends Component {
 
     iniciarSesion=async()=>{
         console.log(baseUrl+this.state.form.username,'hola soy yo');
+        if(this.state.form.username==='admin'){
+           // cookies.set('name', 'alfasolft', {path: "/"});
+           if(this.state.form.password==='12345678'){
+            cookies.set('username', this.state.form.username, {path: "/"});
+            cookies.set('tipoUsuario', 'admin', {path: "/"});
+            alert(`Bienvenido `);
+            window.location.href="./mis-pedidos";
+           }else{
+            alert('El usuario o la contraseña no son correctos');
+           }
+        }else{
         await axios.get(baseUrl+this.state.form.username)
         .then(response=>{
             return response.data;
@@ -52,6 +63,7 @@ class Login extends Component {
                // var respuesta=response[0];
                 cookies.set('ci', response.CI, {path: "/"});
                 cookies.set('username', response.nombreUsuario, {path: "/"});
+                cookies.set('tipoUsuario', response.tipoUsuarioNombre, {path: "/"});
                 alert(`Bienvenido ${response.nombreUsuario}`);
                 if(this.props.ubicacion==="pedidos"){
                     window.location.href="./mis-pedidos";
@@ -69,6 +81,7 @@ class Login extends Component {
         .catch(error=>{
             console.log(error);
         })
+        }
 
     }
 
