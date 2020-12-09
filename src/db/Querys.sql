@@ -160,3 +160,7 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('28', 'Uva', '100', '7.00', '/img/58.jpg');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('29', 'Durazno', '50', '12.00', '/img/59.jpg');
 INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad`, `precio`, `img`) VALUES ('30', 'Palta', '35', '7.00', '/img/60.jpg');
+
+ALTER TABLE bpxswzqwuifl3kr6kmvs.pedido add esatdo varchar(45);
+
+ALTER TABLE bpxswzqwuifl3kr6kmvs.pedido CHANGE esatdo estado varchar(45);
