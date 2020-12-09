@@ -164,3 +164,19 @@ INSERT INTO `bpxswzqwuifl3kr6kmvs`.`producto` (`idproducto`, `nombre`, `cantidad
 ALTER TABLE bpxswzqwuifl3kr6kmvs.pedido add esatdo varchar(45);
 
 ALTER TABLE bpxswzqwuifl3kr6kmvs.pedido CHANGE esatdo estado varchar(45);
+
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Pendiente' WHERE (`idpedido` = '1') and (`idclienteP` = '1');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Pendiente' WHERE (`idpedido` = '2') and (`idclienteP` = '1');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Pendiente' WHERE (`idpedido` = '3') and (`idclienteP` = '2');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Pendiente' WHERE (`idpedido` = '4') and (`idclienteP` = '6');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Pendiente' WHERE (`idpedido` = '5') and (`idclienteP` = '7');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'En Camino' WHERE (`idpedido` = '6') and (`idclienteP` = '8');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'En Camino' WHERE (`idpedido` = '7') and (`idclienteP` = '9');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'En Camino' WHERE (`idpedido` = '8') and (`idclienteP` = '10');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'En Camino' WHERE (`idpedido` = '9') and (`idclienteP` = '11');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'En Camino' WHERE (`idpedido` = '10') and (`idclienteP` = '12');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Entregado' WHERE (`idpedido` = '11') and (`idclienteP` = '13');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Entregado' WHERE (`idpedido` = '12') and (`idclienteP` = '14');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Entregado' WHERE (`idpedido` = '13') and (`idclienteP` = '15');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Entregado' WHERE (`idpedido` = '14') and (`idclienteP` = '3');
+UPDATE `bpxswzqwuifl3kr6kmvs`.`pedido` SET `estado` = 'Entregado' WHERE (`idpedido` = '15') and (`idclienteP` = '4');
