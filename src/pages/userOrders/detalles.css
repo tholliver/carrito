@@ -49,12 +49,23 @@
     margin-right: 7%;
     /*border: 1px solid gray;*/
 }
-.recuperar-cantidad {
+/*.recuperar-cantidad {
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-left: 7%;
+}*/
+
+.contenedor-llamada-de-productos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 15%;
 }
-
-
+.llamada-de-productos {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
 
 .detalle-pedidos-productos {
     display: flex;

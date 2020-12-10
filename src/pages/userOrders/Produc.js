@@ -10,8 +10,16 @@ import swal from 'sweetalert'
 const Produc = ({ productitoCom}) => {
     console.log(productitoCom)
   return (
-    <div >
-      {productitoCom.nombre}  {productitoCom.cantidadComp}  Bs.{productitoCom.precio}
+    <div className="contenedor-llamada-de-productos">
+      <div className="llamada-de-productos">
+        <div> {productitoCom.nombre} </div>
+        </div>
+          <div className="llamada-de-productos">
+            <div> {productitoCom.cantidadComp} </div>
+          </div> 
+              <div className="llamada-de-productos">
+                <div> Bs.{productitoCom.precio} </div>
+              </div>
     </div>
   );
 };

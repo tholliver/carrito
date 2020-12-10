@@ -49,15 +49,15 @@ export default class Pedidito extends React.Component {
           </div>
 
           <div className="recuperar-producto">
-            {this.state.products.map((item) => (
+             <pre>{this.state.products.map((item) =>(
             <div className="recuperar-cantidad">
-             {this.props.productito.idpedido===item.pedido_idpedido&& 
+             {this.props.productito.idpedido === item.pedido_idpedido &&  
               (<Produc key={item.id} productitoCom={item} />) 
-             }         
+             }
             </div>
               )
               )
-            }
+            }</pre>
          </div>    
             
           <div className="detalle-cantidad-total">

@@ -45,7 +45,7 @@ export default class MisPedidos extends React.Component {
                     </select>
                   }
                  </div>
-              <div  className="row-mi no-gutters py-2 container contenedor-indi">     
+              <div  className="row-mi no-gutters py-2 container contenedor-indi">   
                 <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
               </div>  
               </div>
