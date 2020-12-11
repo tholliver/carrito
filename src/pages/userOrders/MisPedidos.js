@@ -18,12 +18,12 @@ export default class MisPedidos extends React.Component {
     this.setState({value: e.target.value});
     
   }
- 
+
   componentDidMount() {
     axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
       const products = res.data;
       this.setState({ products });
-      //console.log(products)
+      console.log(products)
       //estoy probando una modificacion
     });
   }
@@ -31,7 +31,7 @@ export default class MisPedidos extends React.Component {
     return (
       <div className="conte">
         {this.state.products.map((item) => (
-          <div>
+          <div className='container-pedido'>
              {item.idcliente===idclientePru&&(
                <div className = "numeroPro">
                  <div className="cajas">
@@ -46,7 +46,7 @@ export default class MisPedidos extends React.Component {
                   }
                  </div>
               <div  className="row-mi no-gutters py-2 container contenedor-indi">   
-                <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
+                 <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
               </div>  
               </div>
               </div>

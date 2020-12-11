@@ -18,7 +18,7 @@ export default class Pedidito extends React.Component {
     axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
       const products = res.data;
       this.setState({ products });
-     console.log(products)
+    // console.log(products)
     });
   }
 
