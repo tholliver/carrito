@@ -107,12 +107,10 @@ const Header = () => {
             <Link className="link-header" onClick={loginPedidos} >Pedidos</Link>
             
             }
-            <div>  
-                    {isUsuario()   && <Link className="link-header" onClick={loginA} >{cookies.get('name')+' '+cookies.get('apellido')}</Link>}
-                    {!isUsuario() && <Link className="link-header" onClick={loginA} >Iniciar Sesion</Link>}
+                    {isUsuario()   && <Link className="linker" onClick={loginA} >{cookies.get('name')+' '+cookies.get('apellido')}</Link>}
+                    {!isUsuario() && <Link className="linker" onClick={loginA} >Iniciar Sesion</Link>}
                     {/*<button onClick={loginA}>{name}</button>*/}
-           </div>
-            
+                   <div className="userIma"> <i class="fas fa-user-circle"></i></div>
  
         </header>
      );
