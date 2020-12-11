@@ -210,3 +210,8 @@
     height: 25px;
 
 }
+
+.cambio-estado {
+    display: flex;
+    flex-direction: column;
+}

@@ -20,7 +20,6 @@ export default class MisPedidos extends React.Component {
   };
   
   aumentar = ()=>{
-    console.log("entraaaa");
     var select = document.getElementById("combo-carrito");
     this.setState({value: select.value});
   }
@@ -39,20 +38,22 @@ export default class MisPedidos extends React.Component {
       <div className="conte">
         {this.state.products.map((item) => (
           <div className='container-pedido'>
-             {item.idcliente===idclientePru&&(
-               <div className = "numeroPro">
-                 <div className="cajas">
-                 <div className= "nu"> 
-                 Pedido número: {num=num+1}
+            {item.idcliente===idclientePru&&(
+              <div className = "numeroPro">
+                <div className="cajas">
+                <div className= "nu"> 
+                Pedido número: {num=num+1}
                   {cookies.get('tipoUsuario')==='admin' &&
                     <div className="estado-carrito">
                       <p>{this.state.value}</p>
-                      <select className="combobox-estado-carrito" id="combo-carrito" onchange={this.aumentar}>
-                        <option value="Pendiente">Pendiente</option>
-                        <option value="En Camino">En Camino</option>
-                        <option value="Entregado" onchange={this.aumentar}>Entregado</option>
-                      </select>
-                      <button onClick={this.aumentar}>Guardar</button>
+                      <div className="cambio-estado">
+                        <select className="combobox-estado-carrito" id="combo-carrito">
+                          <option value="Pendiente">Pendiente</option>
+                          <option value="En Camino">En Camino</option>
+                          <option value="Entregado">Entregado</option>
+                        </select>
+                        <button onClick={this.aumentar}>Ok</button>
+                      </div>
                     </div>
                     
                   }
