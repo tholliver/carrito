@@ -31,7 +31,7 @@ export default class MisPedidos extends React.Component {
     return (
       <div className="conte">
         {this.state.products.map((item) => (
-          <div>
+          <div className="container-pedido">
              {item.idcliente===idclientePru&&(
                <div className = "numeroPro">
                  <div className="cajas">

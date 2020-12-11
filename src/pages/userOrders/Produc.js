@@ -12,13 +12,13 @@ const Produc = ({ productitoCom}) => {
   return (
     <div className="contenedor-llamada-de-productos">
       <div className="llamada-de-productos">
-        <div> {productitoCom.nombre} </div>
+        <div className="recuperacion"> {productitoCom.nombre} </div>
         </div>
           <div className="llamada-de-productos">
-            <div> {productitoCom.cantidadComp} </div>
+            <div className="recuperacion"> {productitoCom.cantidadComp} </div>
           </div> 
               <div className="llamada-de-productos">
-                <div> Bs.{productitoCom.precio} </div>
+                <div className="recuperacion"> Bs.{productitoCom.precio} </div>
               </div>
     </div>
   );
