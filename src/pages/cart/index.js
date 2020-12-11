@@ -34,7 +34,11 @@ const Cart = () => {
     }
   }
        
-  return (
+  
+    if (cookies.get('tipoUsuario')==='admin') {
+      return  window.location.href="./mis-pedidos";
+    } else {
+      return (
     <Layout title="Carrito" description="Cart page">
       <div>
         <div className="container-elementos-titulo">
@@ -112,6 +116,7 @@ const Cart = () => {
       </div>
     </Layout>
   );
+  }
 };
 
 export default Cart;

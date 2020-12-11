@@ -25,11 +25,12 @@ export default class MisPedidos extends React.Component {
     this.setState({value: select.value});
   }
   
+
   componentDidMount() {
     axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
       const products = res.data;
       this.setState({ products });
-      //console.log(products)
+      console.log(products)
       //estoy probando una modificacion
     });
   }
@@ -37,12 +38,12 @@ export default class MisPedidos extends React.Component {
     return (
       <div className="conte">
         {this.state.products.map((item) => (
-          <div>
-              {item.idcliente===idclientePru&&(
-                <div className = "numeroPro">
-                  <div className="cajas">
-                  <div className= "nu"> 
-                  Pedido número: {num=num+1}
+          <div className='container-pedido'>
+             {item.idcliente===idclientePru&&(
+               <div className = "numeroPro">
+                 <div className="cajas">
+                 <div className= "nu"> 
+                 Pedido número: {num=num+1}
                   {cookies.get('tipoUsuario')==='admin' &&
                     <div className="estado-carrito">
                       <p>{this.state.value}</p>
