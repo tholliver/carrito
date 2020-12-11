@@ -22,21 +22,6 @@ class Login extends Component {
             }
         });
     }
-    iniciarSesion1 =()=>{
-        console.log({username: this.state.form.username, password: (this.state.form.password)})
-        
-        cookies.set('username', this.state.form.username, {path: "/"});
-        if(this.props.ubicacion==="loginPrincipal"){
-        window.location.href="./";
-        }else { if (this.props.ubicacion==="carrito") {
-            window.location.href="./pago";
-        } else {
-            
-            //window.location.href="./pago";
-        }
-       }
-
-    }
 
     iniciarSesion=async()=>{
         console.log(baseUrl+this.state.form.username,'hola soy yo');
