@@ -174,10 +174,28 @@
     padding: 2px;
     background-color:#879ceb;
     border-radius: 10px;
-     border: 2px solid black;
-     margin-left: 1%;
-     margin-right: 1%;
-     color: #FFFFFF;
-     border: 2px solid black;
-     text-shadow: 5px 5px 5px black;
+    border: 2px solid black;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: #FFFFFF;
+    border: 2px solid black;
+    text-shadow: 5px 5px 5px black;
+    
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    padding-left: 18px;
+}
+
+.estado-carrito{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    left: 50px;
+    align-items: center;
+}
+
+.combobox-estado-carrito{
+    height: 25px;
+
 }
