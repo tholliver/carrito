@@ -50,17 +50,25 @@
     /*border: 1px solid gray;*/
 }
 
+
+/*correccion del segundo sprint (carry over)*/
 .contenedor-llamada-de-productos {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 7%;
-    margin-right: 15%;
-}
-.llamada-de-productos {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(120px,2fr));
     padding: 2px;
 }
+
+.recuperacion1 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25%;
+}
+.recuperacion3 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+/*hasta aqui la correccion*/
 
 .detalle-pedidos-productos {
     display: flex;
