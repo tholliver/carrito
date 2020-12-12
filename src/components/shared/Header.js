@@ -42,6 +42,8 @@ const Header = () => {
        console.log( cookies.get('name') + '  '+ cookies.get('apellido'));
        console.log( cookies.get('username'));
        console.log( cookies.get('ci'));
+       console.log( cookies.get('apellido'));
+       console.log( cookies.get('tipoUsuario'));
         if (cookies.get('username')) {
                 swal(
                     <div> 
@@ -83,7 +85,7 @@ const Header = () => {
     const isUsuario=()=>{
         if (cookies.get('username')) {
             
-            obtener();
+            //obtener();
             if (cookies.get('name')) {
                 return true
             } else {

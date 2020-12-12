@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
 
-const baseUrl='https://api-thejuniors.herokuapp.com/api/user/'
+//const baseUrl='https://api-thejuniors.herokuapp.com/api/user/'
+const baseUrl='https://alfasoft-api.herokuapp.com/auth'
 const cookies = new Cookies();
 
 class Login extends Component {
@@ -36,20 +37,23 @@ class Login extends Component {
             alert('El usuario o la contraseña no son correctos');
            }
         }else{
-        await axios.get(baseUrl+this.state.form.username)
+        await axios.post(baseUrl,this.state.form, {headers: { "Content-Type": "application/json" }})
         .then(response=>{
             return response.data;
         })
         .then(response=>{
-            console.log(response.CI,'hola soy yo4');
+            console.log(response[0],'hola soy omar');
+            console.log(this.state.form,'hola so');
            // {"CI":"8585998","nombreUsuario":"omar10","password":"omar123456","tipoUsuarioNombre":"Cliente","nombreEstado":"Habilitado"}
-            if(response.password===this.state.form.password){
+            if(response.length>0){
                 console.log(response.password,'hola soy yo');
-               // var respuesta=response[0];
-                cookies.set('ci', response.CI, {path: "/"});
-                cookies.set('username', response.nombreUsuario, {path: "/"});
-                cookies.set('tipoUsuario', response.tipoUsuarioNombre, {path: "/"});
-                alert(`Bienvenido ${response.nombreUsuario}`);
+                var respuesta=response[0];
+                cookies.set('ci', respuesta.idcliente, {path: "/"});
+                cookies.set('username', respuesta.username, {path: "/"});
+                cookies.set('tipoUsuario', respuesta.tipoUsuario, {path: "/"});
+                cookies.set('name', respuesta.nombre, {path: "/"});
+                cookies.set('apellido', respuesta.apellido, {path: "/"});
+                alert(`Bienvenido ${respuesta.nombre}`);
                 if(this.props.ubicacion==="pedidos"){
                     window.location.href="./mis-pedidos";
                     }else { if (this.props.ubicacion==="carrito") {

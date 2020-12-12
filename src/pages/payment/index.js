@@ -36,7 +36,7 @@ const Payment = () => {
         fechaPedido: formatted_date,
         cantidadTotal: itemCount,
         totalPagar: total, 
-        idclienteP: 1,
+        idclienteP: cookies.get('ci'),
       },
     ];
     axios
