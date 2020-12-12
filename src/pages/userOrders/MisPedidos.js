@@ -26,19 +26,29 @@ export default class MisPedidos extends React.Component {
   
 
   componentDidMount() {
-    axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
+    if (cookies.get('tipoUsuario')==='Cliente') {
+      const idU = cookies.get('ci')
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario/`+idU).then((res) => {
       const products = res.data;
       this.setState({ products });
       console.log(products)
       //estoy probando una modificacion
     });
+      
+    } else {
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
+      const products = res.data;
+      this.setState({ products });
+      //console.log(products)
+      //estoy probando una modificacion
+    });
+    }
   }
   render() {
     return (
       <div className="conte">
         {this.state.products.map((item) => (
           <div className='container-pedido'>
-            {item.idcliente===idclientePru&&(
               <div className = "numeroPro">
                 <div className="cajas">
                 <div className= "nu"> 
@@ -63,8 +73,7 @@ export default class MisPedidos extends React.Component {
               </div>  
               </div>
               </div>
-            ) 
-          }         
+       
           </div>
         ))} 
         <div hidden>

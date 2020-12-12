@@ -13,9 +13,10 @@ export default class Pedidito extends React.Component {
   state = {
     products: [],
   };
-
   componentDidMount() {
-    axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
+     //axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
+       const idP = this.props.productito.idpedido;
+      axios.get(`https://alfasoft-api.herokuapp.com/productopedido/`+idP).then((res) => {
       const products = res.data;
       this.setState({ products });
     // console.log(products)
@@ -51,9 +52,9 @@ export default class Pedidito extends React.Component {
           <div className="recuperar-producto">
              <pre>{this.state.products.map((item) =>(
             <div className="recuperar-cantidad">
-             {this.props.productito.idpedido === item.pedido_idpedido &&  
-              (<Produc key={item.id} productitoCom={item} />) 
-             }
+             
+              <Produc key={item.id} productitoCom={item} />
+             
             </div>
               )
               )
@@ -83,19 +84,7 @@ export default class Pedidito extends React.Component {
         <b>Nombre del producto</b>/ <b>Cantidad</b>  /<b>Precio unitario</b>
        </div>*/}
         
-        {this.state.products.map((item) => (
-          
-          <div>
-  
-             {this.props.productito.idpedido===item.pedido_idpedido&&(
-              <div>
-                
-                {/*<Produc key={item.id} productitoCom={item} />*/}
-              </div>  
-            ) 
-            }         
-          </div>
-        ))}
+      
         <br/>
         <b>Cantidad Total:</b>  {this.props.productito.cantidadTotal}
         <br/>
