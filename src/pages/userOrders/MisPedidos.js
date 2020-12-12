@@ -3,6 +3,8 @@ import axios from "axios";
 import Pedidito from "./pedidito";
 import "./detalles.css"
 import Cookies from "universal-cookie";
+//import Estado from "./Estado"
+
 //import Produc from './Produc';
 var idclientePru=1;
 var num =0;
@@ -53,27 +55,15 @@ export default class MisPedidos extends React.Component {
                 <div className="cajas">
                 <div className= "nu"> 
                 Pedido número: {num=num+1}
-                  {cookies.get('tipoUsuario')==='admin' &&
-                    <div className="estado-carrito">
-                      <p>{this.state.value}</p>
-                      <div className="cambio-estado">
-                        <select className="combobox-estado-carrito" id="combo-carrito">
-                          <option value="Pendiente">Pendiente</option>
-                          <option value="En Camino">En Camino</option>
-                          <option value="Entregado">Entregado</option>
-                        </select>
-                        <button onClick={this.aumentar}>Ok</button>
-                      </div>
-                    </div>
+                  <Estado key={item.idpedido} idPedido={item.idpedido} value={item.estado}></Estado>
                     
-                  }
                   </div>
               <div  className="row-mi no-gutters py-2 container contenedor-indi">     
                 <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
               </div>  
               </div>
               </div>
-       
+        
           </div>
         ))} 
         <div hidden>
@@ -81,5 +71,45 @@ export default class MisPedidos extends React.Component {
         </div>
       </div>
     );
+  }
+
+}
+
+class Estado extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {value: 'Pendiente'};
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+      this.setState({value: event.target.value});
+      console.log(event.target.value+'   '+ this.props.idPedido)
+      //realizar la actualizacion en la bd
+  }
+
+  handleSubmit(event) {
+      alert('Your favorite flavor is: '+ this.state.value);
+      event.preventDefault();
+  }
+
+  render() {
+      const {value} = this.state;
+      return (
+          <div className="cambio-estadp">
+              <label><p>{value}</p>
+                  {cookies.get('tipoUsuario')==='admin' &&
+                      <select className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
+                          <option value="Pendiente">Pendiente</option>
+                          <option value="En Camino">En Camino</option>
+                          <option value="Entregado">Entregado</option>
+                      </select>
+                  }
+
+              </label>
+          </div>
+      );
   }
 }
