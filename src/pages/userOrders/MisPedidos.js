@@ -7,51 +7,73 @@ import Cookies from "universal-cookie";
 var idclientePru=1;
 var num =0;
 const cookies = new Cookies();
+
+setInterval('imprimirValor()', 1000);
+
 export default class MisPedidos extends React.Component {
   state = {
     
     value:"Pendiente",
     products: [],
-  };
-  onChange(e) {
-    console.log(e.target.value)
-    this.setState({value: e.target.value});
+    estado:"pendiente",
     
+  };
+  
+  aumentar = ()=>{
+    var select = document.getElementById("combo-carrito");
+    this.setState({value: select.value});
   }
- 
+  
+
   componentDidMount() {
-    axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
+    if (cookies.get('tipoUsuario')==='Cliente') {
+      const idU = cookies.get('ci')
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario/`+idU).then((res) => {
+      const products = res.data;
+      this.setState({ products });
+      console.log(products)
+      //estoy probando una modificacion
+    });
+      
+    } else {
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
       const products = res.data;
       this.setState({ products });
       //console.log(products)
       //estoy probando una modificacion
     });
+    }
   }
   render() {
     return (
       <div className="conte">
         {this.state.products.map((item) => (
-          <div className="container-pedido">
-             {item.idcliente===idclientePru&&(
-               <div className = "numeroPro">
-                 <div className="cajas">
-                 <div className= "nu"> 
-                 Pedido número: {num=num+1}
+          <div className='container-pedido'>
+              <div className = "numeroPro">
+                <div className="cajas">
+                <div className= "nu"> 
+                Pedido número: {num=num+1}
                   {cookies.get('tipoUsuario')==='admin' &&
-                    <select value={this.state.value} onChange={this.onChange}>
-                      <option value="Pendiente">Pendiente</option>
-                      <option value="En Camino">En Camino</option>
-                      <option value="Entregado">Entregado</option>
-                    </select>
+                    <div className="estado-carrito">
+                      <p>{this.state.value}</p>
+                      <div className="cambio-estado">
+                        <select className="combobox-estado-carrito" id="combo-carrito">
+                          <option value="Pendiente">Pendiente</option>
+                          <option value="En Camino">En Camino</option>
+                          <option value="Entregado">Entregado</option>
+                        </select>
+                        <button onClick={this.aumentar}>Ok</button>
+                      </div>
+                    </div>
+                    
                   }
-                 </div>
-              <div  className="row-mi no-gutters py-2 container contenedor-indi">   
+                  </div>
+              <div  className="row-mi no-gutters py-2 container contenedor-indi">     
                 <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
               </div>  
               </div>
               </div>
-            ) 
-            }         
+       
           </div>
         ))} 
         <div hidden>
