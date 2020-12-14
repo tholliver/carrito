@@ -10,6 +10,7 @@ body{
     /*text-shadow: 1px 1px 10px white;*/
     background-color: white;
     padding: 20px;
+    font-size: 25px;
 }
 
 
@@ -24,15 +25,14 @@ body{
 .text-center-forma {
     display: flex;
     justify-content: center;
-    background-color: #879ceb;
-    padding: 20px;
+    background-color: white;
+    padding: 15px;
     width: 100%;
 }
 
 .caja-resumen-de-factura {
     display: flex;
     justify-content: left;
-    padding: 20px;
     margin-left: 10%;
     margin-right: 10%;
 }
