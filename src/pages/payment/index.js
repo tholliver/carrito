@@ -37,6 +37,7 @@ const Payment = () => {
         cantidadTotal: itemCount,
         totalPagar: total, 
         idclienteP: cookies.get('ci'),
+        estado: 'Pendiente'
       },
     ];
     axios

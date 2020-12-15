@@ -10,8 +10,6 @@ var idclientePru=1;
 var num =0;
 const cookies = new Cookies();
 
-setInterval('imprimirValor()', 1000);
-
 export default class MisPedidos extends React.Component {
   state = {
     
@@ -38,7 +36,7 @@ export default class MisPedidos extends React.Component {
     });
       
     } else {
-      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidoIn`).then((res) => {
       const products = res.data;
       this.setState({ products });
       //console.log(products)
@@ -78,7 +76,7 @@ export default class MisPedidos extends React.Component {
 class Estado extends React.Component {
   constructor(props) {
       super(props);
-      this.state = {value: 'Pendiente'};
+      this.state = {value:this.props.value};
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
