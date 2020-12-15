@@ -41,7 +41,7 @@ const Payment = () => {
       },
     ];
     axios
-      .post("https://alfasoft-api.herokuapp.com/pedido", newPedido, {
+      .post("https://alfasoft-api.herokuapp.com/pedidoIn", newPedido, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
