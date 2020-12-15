@@ -84,7 +84,7 @@ class Estado extends React.Component {
       this.setState({value: event.target.value});
       console.log(event.target.value+'   '+ this.props.idPedido)
       //realizar la actualizacion en la bd
-      axios.post("/estadoPedido/", {estado: event.target.value,idpedido:this.props.idPedido}, {
+      axios.post("https://alfasoft-api.herokuapp.com/estadoPedido/", {estado: event.target.value,idpedido:this.props.idPedido}, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {
