@@ -7,6 +7,10 @@ import swal from '@sweetalert/with-react'
 
 
 function Formulario() {
+
+  function validar2(){
+    
+  }
   
   function validar(){
     var numeTar=parseInt(document.getElementById('inputNumero').value); 
@@ -105,12 +109,13 @@ return (
       <form id="formulario-tarjeta" class="formulario-tarjeta" onsubmit='return validar()'>
       
       <h1>Ingresa los datos de tu tarjeta</h1>
-   
+       {/*input para ingreso del numero de tarjeta*/}
         <div className="grupo">
             <label for="inputNumero">Número de tarjeta</label>
             <input className= "pro" type="text" id="inputNumero" minlength="13" maxlength="18" autocomplete="off"  required pattern="[0-9]+"  />
         </div>
         <br/>
+        {/*input para ingreso del nombre titular de la tarjeta*/}
         <div className="grupo">
             <label for="inputNombre">Nombre titular de la tarjeta</label>
             <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" oninvalid="this.setCustomValidity('Hola')" />
@@ -123,6 +128,7 @@ return (
           <label for="selectMes">MM/AA</label>
           <div className="flexbox">
               <div className="grupo-select">
+                 {/*input para ingreso del mes*/}
               <label className= "pro2" for="inputMes">Mes</label>
               <br/>
             <input className= "pro22" type="text" id="inputMes" maxlength="30" required pattern="[0-9]+" minlength="1" maxlength="2"/>
@@ -132,14 +138,16 @@ return (
               <div className="grupo-select">
               <label className= "pro3" for="inputAno">Año</label>
               <br/>
-            <input className= "pro33" type="text" id="inputAno" maxlength="30"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
+              {/*input para ingreso del año*/}
+              {/*aumentando a 4 el tamaño*/}
+            <input className= "pro33" type="text" id="inputAno" maxlength="30"  required pattern="[0-9]+" minlength="2" maxlength="4"/>
                
               </div>
             </div>
             </div>
         
         <div className="grupo ccv">
-        
+          {/*input para ingreso del codigo de seguridad*/}
             <label for="inputCVV">Código de seguridad</label>
             <div align="center">
             
