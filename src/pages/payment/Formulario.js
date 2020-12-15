@@ -7,7 +7,13 @@ import swal from '@sweetalert/with-react'
 
 
 function Formulario() {
+  
   function validar(){
+    var numeTar=parseInt(document.getElementById('inputNumero').value); 
+    console.log(numeTar);
+    var numeSeg=parseInt(document.getElementById('inputCVV').value); 
+    console.log(numeSeg);
+
     console.log("y dale funca")
     var todo_correcto = true;
     var expresion = /^[A-Z+ ]+$/i;
@@ -35,12 +41,26 @@ function Formulario() {
   if(document.getElementById('inputAno').value===""){
   todo_correcto = false;
   }
+  
   if(isNaN(document.getElementById('inputCVV').value)){
     todo_correcto = false;
   }
   if(document.getElementById('inputCVV').value===""){
   todo_correcto = false;
   }
+  //el numero sea mayor a 2 digitos
+    if(numeTar <100000000000000){
+      todo_correcto = false;
+      console.log('true')
+  }
+
+
+  //el numero sea mayor a 2 digitos
+  if(numeSeg <100){
+      todo_correcto = false;
+      console.log('true')
+  }
+
   if(document.getElementById('inputNombre').value===""){
     todo_correcto = false;
     }
@@ -93,7 +113,7 @@ return (
         <br/>
         <div className="grupo">
             <label for="inputNombre">Nombre titular de la tarjeta</label>
-            <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" />
+            <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" oninvalid="this.setCustomValidity('Hola')" />
         </div>
         
         <br/>
