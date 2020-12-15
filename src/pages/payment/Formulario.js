@@ -47,6 +47,8 @@ function Formulario() {
     
     if(!todo_correcto){
     }else{
+      //ocultando el boton de pago en efectivo 
+      document.getElementById('probandoID').style.display="none"
       swal({
         text: 'Transacción exitosa',
         icon: 'success',
