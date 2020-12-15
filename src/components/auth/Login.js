@@ -106,7 +106,7 @@ class Login extends Component {
                     /> 
                 <div className="options">
                     <button className="btn btn-primary btn-iniciar" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
-                    <a href="/"> registarse</a>
+                    <a href="/"> Registrarse</a>
                     
                 </div>
             </div>

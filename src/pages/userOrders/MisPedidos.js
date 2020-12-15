@@ -10,11 +10,8 @@ var idclientePru=1;
 var num =0;
 const cookies = new Cookies();
 
-setInterval('imprimirValor()', 1000);
-
 export default class MisPedidos extends React.Component {
-  state = {
-    
+  state = {    
     value:"Pendiente",
     products: [],
     estado:"pendiente",
@@ -26,7 +23,6 @@ export default class MisPedidos extends React.Component {
     this.setState({value: select.value});
   }
   
-
   componentDidMount() {
     if (cookies.get('tipoUsuario')==='Cliente') {
       const idU = cookies.get('ci')
@@ -78,7 +74,7 @@ export default class MisPedidos extends React.Component {
 class Estado extends React.Component {
   constructor(props) {
       super(props);
-      this.state = {value: 'Pendiente'};
+      this.state = {value:this.props.value};
 
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -88,6 +84,16 @@ class Estado extends React.Component {
       this.setState({value: event.target.value});
       console.log(event.target.value+'   '+ this.props.idPedido)
       //realizar la actualizacion en la bd
+      axios.post("https://alfasoft-api.herokuapp.com/estadoPedido/", {estado: event.target.value,idpedido:this.props.idPedido}, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      
   }
 
   handleSubmit(event) {
