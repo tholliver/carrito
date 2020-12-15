@@ -34,7 +34,7 @@ export default class MisPedidos extends React.Component {
     });
       
     } else {
-      axios.get(`https://alfasoft-api.herokuapp.com/pedidoIn`).then((res) => {
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
       const products = res.data;
       this.setState({ products });
       //console.log(products)
