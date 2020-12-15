@@ -48,7 +48,7 @@ class Tarjeta extends Component{
             <form>
                 <h4>Pagar con:</h4>
                 <div >
-                <label>
+                <label id="probandoID" >
                 Efectivo
                     <input type="radio" value="efectivo"  
                                 checked ={value==='efectivo'}
