@@ -3,16 +3,15 @@ import axios from "axios";
 import Pedidito from "./pedidito";
 import "./detalles.css"
 import Cookies from "universal-cookie";
+//import Estado from "./Estado"
+
 //import Produc from './Produc';
 var idclientePru=1;
 var num =0;
 const cookies = new Cookies();
 
-setInterval('imprimirValor()', 1000);
-
 export default class MisPedidos extends React.Component {
-  state = {
-    
+  state = {    
     value:"Pendiente",
     products: [],
     estado:"pendiente",
@@ -24,7 +23,6 @@ export default class MisPedidos extends React.Component {
     this.setState({value: select.value});
   }
   
-
   componentDidMount() {
     if (cookies.get('tipoUsuario')==='Cliente') {
       const idU = cookies.get('ci')
@@ -36,7 +34,7 @@ export default class MisPedidos extends React.Component {
     });
       
     } else {
-      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario`).then((res) => {
+      axios.get(`https://alfasoft-api.herokuapp.com/pedidoIn`).then((res) => {
       const products = res.data;
       this.setState({ products });
       //console.log(products)
@@ -53,27 +51,15 @@ export default class MisPedidos extends React.Component {
                 <div className="cajas">
                 <div className= "nu"> 
                 Pedido número: {num=num+1}
-                  {cookies.get('tipoUsuario')==='admin' &&
-                    <div className="estado-carrito">
-                      <p>{this.state.value}</p>
-                      <div className="cambio-estado">
-                        <select className="combobox-estado-carrito" id="combo-carrito">
-                          <option value="Pendiente">Pendiente</option>
-                          <option value="En Camino">En Camino</option>
-                          <option value="Entregado">Entregado</option>
-                        </select>
-                        <button onClick={this.aumentar}>Ok</button>
-                      </div>
-                    </div>
+                  <Estado key={item.idpedido} idPedido={item.idpedido} value={item.estado}></Estado>
                     
-                  }
                   </div>
               <div  className="row-mi no-gutters py-2 container contenedor-indi">     
                 <Pedidito key={item.id} productito={item} product={'producto mal parido '}/>
               </div>  
               </div>
               </div>
-       
+        
           </div>
         ))} 
         <div hidden>
@@ -81,5 +67,55 @@ export default class MisPedidos extends React.Component {
         </div>
       </div>
     );
+  }
+
+}
+
+class Estado extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {value:this.props.value};
+
+      this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(event) {
+      this.setState({value: event.target.value});
+      console.log(event.target.value+'   '+ this.props.idPedido)
+      //realizar la actualizacion en la bd
+      axios.post("https://alfasoft-api.herokuapp.com/estadoPedido/", {estado: event.target.value,idpedido:this.props.idPedido}, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      
+  }
+
+  handleSubmit(event) {
+      alert('Your favorite flavor is: '+ this.state.value);
+      event.preventDefault();
+  }
+
+  render() {
+      const {value} = this.state;
+      return (
+          <div className="cambio-estadp">
+              <label><p>{value}</p>
+                  {cookies.get('tipoUsuario')==='admin' &&
+                      <select className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
+                          <option value="Pendiente">Pendiente</option>
+                          <option value="En Camino">En Camino</option>
+                          <option value="Entregado">Entregado</option>
+                      </select>
+                  }
+
+              </label>
+          </div>
+      );
   }
 }

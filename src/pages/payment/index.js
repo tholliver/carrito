@@ -36,11 +36,12 @@ const Payment = () => {
         fechaPedido: formatted_date,
         cantidadTotal: itemCount,
         totalPagar: total, 
-        idclienteP: 1,
+        idclienteP: cookies.get('ci'),
+        estado: 'Pendiente'
       },
     ];
     axios
-      .post("https://alfasoft-api.herokuapp.com/pedido", newPedido, {
+      .post("https://alfasoft-api.herokuapp.com/pedidoIn", newPedido, {
         headers: { "Content-Type": "application/json" },
       })
       .then((response) => {

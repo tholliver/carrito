@@ -14,7 +14,6 @@ const About = () => {
                 <p>Documentacion consultada:<strong></strong>por AlfaSoft.</p>
             </div>
         </Layout>
-     );
+    );
 }
- 
 export default About;
