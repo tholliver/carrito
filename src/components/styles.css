@@ -133,6 +133,11 @@ body::-webkit-scrollbar-thumb {
     background-color: crimson;
 }
 
+.cerrarSecionn{
+    padding: 50px;
+    color: green;
+}
+
 .boton-vaciar {
     background-color: #f4841a;
 }
