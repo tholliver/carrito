@@ -119,4 +119,14 @@ color: #7d8994;
 	
 }
 
+/*estilos formulario de tarjeta*/
 
+.subtitulos-formulario{
+	display: flex;
+	justify-content: left;
+	margin-left: 5%;
+}
+.grupo-select1{
+	display: flex;
+	justify-content: center;
+}
