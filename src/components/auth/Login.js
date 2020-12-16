@@ -43,8 +43,6 @@ class Login extends Component {
             return response.data;
         })
         .then(response=>{
-            console.log(response[0],'hola soy omar');
-            console.log(this.state.form,'hola so');
            // {"CI":"8585998","nombreUsuario":"omar10","password":"omar123456","tipoUsuarioNombre":"Cliente","nombreEstado":"Habilitado"}
             if(response.length>0){
                 console.log(response.password,'hola soy yo');
