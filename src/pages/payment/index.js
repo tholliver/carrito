@@ -184,8 +184,8 @@ const Payment = () => {
                   type="button"
                   className="boton-enviar-mi-pedido"
                   onClick={mostrarAlerta}
-                >{/*cambiando texto  */}
-                   Enviar Mi Pedido
+                >{/*cambiando texto de confirmar pedido  */}
+                   Confirmar mi pedido
                 </button>
               </div>
             </div>
