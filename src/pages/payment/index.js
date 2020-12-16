@@ -90,10 +90,26 @@ const Payment = () => {
     swal({
       text: 'Ingrese su Direccion de entrega.',
       content: "input",
-      button: {
-        text: "ACEPTAR",
-        closeModal: false,
+      
+      buttons: {
+        cancel: "Cancelar",
+        catch: {
+          text: "Aceptar",
+          value: "catch",
+        },
       },
+    })
+    .then((value) => {
+      switch (value) {
+     
+     
+        case "catch":
+          swal("Realizado!", "Se guardo la direccion de tu ubicacion!", "success");
+          break;
+     
+        default:
+          swal("Se cancelo!");
+      }
     })
     .then(name => {
       if (!name) throw null;

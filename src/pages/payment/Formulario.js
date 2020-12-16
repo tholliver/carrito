@@ -167,7 +167,7 @@ return (
                 <div className="grupo-select1">
                   <p className= "pro2" for="inputMes">MM </p>
                 </div>
-              <br/>
+              
                {/*limitando el numero de digitos en el input*/}
             <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
    
@@ -179,7 +179,7 @@ return (
                 <div className="grupo-select1">
                   <p className= "pro3" for="inputAno">AA</p>
                 </div>
-              <br/>
+              
               {/*input para ingreso del año*/}
               {/*limitando el numero de digitos en el input*/}
             <input className= "pro33" type="text" id="inputAno"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
