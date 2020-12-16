@@ -23,13 +23,22 @@ function Formulario() {
     var numeMes="";
     numeMes=parseInt(document.getElementById('inputMes').value); 
     console.log(numeMes);
-    var num111=""+numeMes.toString;
-    console.log(num111);
+    
+    var m = new Number(numeMes);
+    console.log(m);
+    console.log(m.toString().length);
+    var mm =m.toString().length;
+    console.log(mm);
 
     var numeAnio="";
     numeAnio=parseInt(document.getElementById('inputAno').value); 
     console.log(numeAnio);
-    console.log(numeAnio.length);
+
+    var a = new Number(numeAnio);
+    console.log(a);
+    console.log(a.toString().length);
+    var aa =a.toString().length;
+    console.log(aa);
 
     console.log("y dale funca")
     var todo_correcto = true;
@@ -37,6 +46,14 @@ function Formulario() {
     var email = document.getElementById('inputNombre').value;
     if (!expresion.test(email)){
         todo_correcto = false;
+    }
+
+
+    if(mm<2){
+      todo_correcto = false;
+    }
+    if(aa<2){
+      todo_correcto = false;
     }
 
 
