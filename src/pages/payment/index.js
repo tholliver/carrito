@@ -253,15 +253,16 @@ const Payment = () => {
             </div>
           </div>
 
-          <div className="boton-elegir-ubicacion-de-entrega">
+          {/*<div className="boton-elegir-ubicacion-de-entrega">
             <button 
               type="button" 
               className="elegir-ubicacion-de-entrega"
               onClick={mostrarDireccion}
             >
               Elegir Ubicacion De Entrega
+                  
             </button>
-          </div>
+          </div>*/}
         </div>
       </div>
     </Layout>
