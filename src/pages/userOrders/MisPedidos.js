@@ -104,8 +104,7 @@ class Estado extends React.Component {
   render() {
       const {value} = this.state;
       return (
-          <div className="cambio-estadp">
-              <label><p>{value}</p>
+              <label className="estado"><p className = "combobox-estado-carrito" >{value}</p>
                   {cookies.get('tipoUsuario')==='admin' &&
                       <select className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
                           <option value="Pendiente">Pendiente</option>
@@ -115,7 +114,6 @@ class Estado extends React.Component {
                   }
 
               </label>
-          </div>
       );
   }
 }
