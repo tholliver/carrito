@@ -6,6 +6,7 @@ import { CartContext } from '../../contexts/CartContext';
 import Login from '../auth/Login';
 import Cookies from 'universal-cookie';
 import axios from "axios";
+import "./cerrarSecion.css"
 
 /*IMPORTANDO ESTILOS */
 
@@ -47,8 +48,8 @@ const Header = () => {
         if (cookies.get('username')) {
                 swal(
                     <div> 
-                        <h3>cerrar Sesion</h3>
-                        <button onClick={cerrarSesion}>Cerrar</button>
+                        <h3>Cerrar Sesion</h3>
+                        <button className="cerrarSecionn" onClick={cerrarSesion}>Cerrar</button>
                     </div>,{button: "Cancelar",}
                 );
         } else {
