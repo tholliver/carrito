@@ -8,6 +8,8 @@ import swal from '@sweetalert/with-react'
 
 function Formulario() {
 
+  
+
   function validar2(){
     
   }
@@ -17,6 +19,17 @@ function Formulario() {
     console.log(numeTar);
     var numeSeg=parseInt(document.getElementById('inputCVV').value); 
     console.log(numeSeg);
+
+    var numeMes="";
+    numeMes=parseInt(document.getElementById('inputMes').value); 
+    console.log(numeMes);
+    var num111=""+numeMes.toString;
+    console.log(num111);
+
+    var numeAnio="";
+    numeAnio=parseInt(document.getElementById('inputAno').value); 
+    console.log(numeAnio);
+    console.log(numeAnio.length);
 
     console.log("y dale funca")
     var todo_correcto = true;
@@ -131,7 +144,8 @@ return (
                  {/*input para ingreso del mes*/}
               <label className= "pro2" for="inputMes">Mes</label>
               <br/>
-            <input className= "pro22" type="text" id="inputMes" maxlength="30" required pattern="[0-9]+" minlength="1" maxlength="2"/>
+               {/*limitando el numero de digitos en el input*/}
+            <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
    
               </div>
               <p className= "pro44">   /</p>
@@ -139,8 +153,8 @@ return (
               <label className= "pro3" for="inputAno">Año</label>
               <br/>
               {/*input para ingreso del año*/}
-              {/*aumentando a 4 el tamaño*/}
-            <input className= "pro33" type="text" id="inputAno" maxlength="30"  required pattern="[0-9]+" minlength="2" maxlength="4"/>
+              {/*limitando el numero de digitos en el input*/}
+            <input className= "pro33" type="text" id="inputAno"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
                
               </div>
             </div>
