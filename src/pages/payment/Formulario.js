@@ -121,7 +121,7 @@ return (
     <div>
       <form id="formulario-tarjeta" class="formulario-tarjeta" onsubmit='return validar()'>
       
-      <h1>Ingresa los datos de tu tarjeta</h1>
+      <h2>Ingresa los datos de tu tarjeta</h2>
        {/*input para ingreso del numero de tarjeta*/}
         <div className="grupo">
             <h4 for="inputNumero"> Número de tarjeta </h4>
@@ -130,7 +130,7 @@ return (
         <br/>
         {/*input para ingreso del nombre titular de la tarjeta*/}
         <div className="grupo">
-            <label for="inputNombre">Nombre titular de la tarjeta</label>
+            <h4 for="inputNombre">Nombre titular de la tarjeta</h4>
             <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" oninvalid="this.setCustomValidity('Hola')" />
         </div>
         
@@ -142,7 +142,7 @@ return (
           <div className="flexbox">
               <div className="grupo-select">
                  {/*input para ingreso del mes*/}
-              <label className= "pro2" for="inputMes">Mes</label>
+              <label className= "pro2" for="inputMes">MM</label>
               <br/>
                {/*limitando el numero de digitos en el input*/}
             <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
