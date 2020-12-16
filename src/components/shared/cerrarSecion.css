@@ -1,0 +1,19 @@
+.cerrarSecionn{
+    position: absolute;
+    padding: 7px 30px;
+    color:white;
+    top: 70px;
+    font-size: 15px;
+    left: 100px;
+    background-color: rgb(255, 92, 92);
+    border-radius: 5px;
+    border-bottom: 3px 3px 5px black;
+    transition: .5s;
+    cursor: pointer;
+    opacity: 0.6;
+    font-size: 15px;
+}
+
+.cerrarSecionn:hover{
+    opacity: 1;
+}
