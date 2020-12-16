@@ -200,11 +200,12 @@ return (
         
         </div>
         <br/>
-        <button className="contenedor-btn" to="/mis-pedidos"  formnovalidate type="submit"onClick={validar}  >Realizar pago</button>
+        <div className="botones-formulario de tarjeta">
+          <button className="contenedor-btn" to="/mis-pedidos"  formnovalidate type="submit"onClick={validar}  >Realizar pago</button>
+          &nbsp;&nbsp;&nbsp;
+          <button className="contenedor-btn" type="submit"onClick={pagoCancelado}  >Cancelar</button>
+          </div>
         </form>
-        <br/>
-        <button className="contenedor-btn" type="submit"onClick={pagoCancelado}  >Cancelar</button>
-    
     </div>
   );
 }
