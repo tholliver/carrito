@@ -88,10 +88,10 @@ const Payment = () => {
   };
   const mostrarDireccion =()=>{
     swal({
-      text: 'Search for a movie. e.g. "La La Land".',
+      text: 'Ingrese su Direccion de entrega.',
       content: "input",
       button: {
-        text: "Search!",
+        text: "ACEPTAR",
         closeModal: false,
       },
     })
