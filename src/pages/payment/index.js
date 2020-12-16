@@ -20,7 +20,9 @@ const Payment = () => {
   const { total, cartItems, itemCount, clearCart, checkout } = useContext(
     CartContext
   );
-
+ var Direccion = "";
+ var NombreCalle = "";
+ var NumeroCalle ="";
   function func1() {
     let current_datetime = new Date();
     let formatted_date =
@@ -33,7 +35,7 @@ const Payment = () => {
     let ramdom = Math.floor(Math.random() * 50) + 1;;
     const newPedido = [
       {
-        direccion: "Calle Antezana y Ladislao Cabrera N"+ramdom,
+        direccion: cookies.get('direccion')+'-N° '+cookies.get('numCasa'),
         fechaPedido: formatted_date,
         cantidadTotal: itemCount,
         totalPagar: total, 
@@ -41,6 +43,8 @@ const Payment = () => {
         estado: 'Pendiente'
       },
     ];
+    cookies.remove('direccion',{path: "/"});
+    cookies.remove('numCasa',{path: "/"});
     axios
       .post("https://alfasoft-api.herokuapp.com/pedidoIn", newPedido, {
         headers: { "Content-Type": "application/json" },
@@ -76,7 +80,7 @@ const Payment = () => {
         });
     }
 
-  const mostrarAlerta =()=>{
+  const mostrarAlerta =()=>{if (cookies.get('direccion') && cookies.get('numCasa')) {
     func1();
     swal({
       text: 'El Envio del pedido fue un Exito ',
@@ -85,6 +89,12 @@ const Payment = () => {
       func2()
       clearCart()
     });
+  } else {
+    swal({
+      title: 'Es Obligatorio llenar el campo direccion ',
+    
+    })
+  }
   };
   const mostrarDireccion =()=>{
     swal({
@@ -144,6 +154,16 @@ const Payment = () => {
       }
     });
   };
+  const onChange =(e)=>{
+    cookies.remove('direccion',{path: "/"});
+    cookies.set('direccion', e.target.value , {path: "/"});
+    console.log(cookies.get('direccion'))
+  }
+  const onChange2 =(e)=>{
+    cookies.remove('numCasa',{path: "/"});
+    cookies.set('numCasa', e.target.value , {path: "/"});
+    console.log(cookies.get('numCasa'))
+}
   if(cookies.get("username")){
   return (
     <React.Fragment>
@@ -192,8 +212,34 @@ const Payment = () => {
               <h3 className="total-parcial">Total parcial</h3>
               <p className="total-parcial-numero">Bs. {total}</p>
               <h3 className="metodo-de-pago">
+                Direccion {" "}
+              </h3>
+              <form>
+
+              <div class="">
+                <div class="form-row">
+                     <div class="form-group col-md-3">
+                     <label for="inputAddress2">Direccion </label>
+                     </div>
+                     <div class="form-group col-md-5">
+                     <input type="text" class="form-control" id="inputAddress2" placeholder="Av America / Libertador " onChange={onChange}/>
+                     </div>
+                     <div class="form-group col-md-2">
+                     <label for="inputAddress2">N° Casa </label>
+                     </div>
+                     <div class="form-group col-md-1">
+                     <input type="number" class="form-control" id="inputAddress2" placeholder="55" onChange={onChange2}/>
+                     </div>
+                </div>
+                <div class='valid-feedback'>Direccion Valido</div>
+                <div class='invalid-feedback'>Complete el Campo</div>
+              </div>
+              </form>
+              <h3 className="metodo-de-pago">
                 Metodo de pago Bs.{" "}
               </h3>
+              
+        
               <Tarjeta></Tarjeta>
               <div className="contenedor-boton-enviar-mi-pedido">
                 <button
