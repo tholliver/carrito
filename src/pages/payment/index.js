@@ -12,6 +12,7 @@ import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
 import Cookies from "universal-cookie";
 
+
 const cookies = new Cookies()
 
 
@@ -85,6 +86,48 @@ const Payment = () => {
       clearCart()
     });
   };
+  const mostrarDireccion =()=>{
+    swal({
+      text: 'Search for a movie. e.g. "La La Land".',
+      content: "input",
+      button: {
+        text: "Search!",
+        closeModal: false,
+      },
+    })
+    .then(name => {
+      if (!name) throw null;
+     
+      return fetch(`https://itunes.apple.com/search?term=${name}&entity=movie`);
+    })
+    .then(results => {
+      return results.json();
+    })
+    .then(json => {
+      const movie = json.results[0];
+     
+      if (!movie) {
+        return swal("No movie was found!");
+      }
+     
+      const name = movie.trackName;
+      const imageURL = movie.artworkUrl100;
+     
+      swal({
+        title: "Top result:",
+        text: name,
+        icon: imageURL,
+      });
+    })
+    .catch(err => {
+      if (err) {
+        swal("Oh noes!", "The AJAX request failed!", "error");
+      } else {
+        swal.stopLoading();
+        swal.close();
+      }
+    });
+  };
   if(cookies.get("username")){
   return (
     <React.Fragment>
@@ -141,16 +184,20 @@ const Payment = () => {
                   type="button"
                   className="boton-enviar-mi-pedido"
                   onClick={mostrarAlerta}
-                >
-                   Enviar Mi Pedido En Efectivo
+                >{/*cambiando texto de confirmar pedido  */}
+                   Confirmar mi pedido
                 </button>
               </div>
             </div>
           </div>
 
           <div className="boton-elegir-ubicacion-de-entrega">
-            <button type="button" className="elegir-ubicacion-de-entrega">
-              <a href="prueba.html">Elegir Ubicacion De Entrega</a>
+            <button 
+              type="button" 
+              className="elegir-ubicacion-de-entrega"
+              onClick={mostrarDireccion}
+            >
+              Elegir Ubicacion De Entrega
             </button>
           </div>
         </div>

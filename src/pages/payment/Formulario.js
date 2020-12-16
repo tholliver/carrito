@@ -7,7 +7,30 @@ import swal from '@sweetalert/with-react'
 
 
 function Formulario() {
+
+  
+
+  function validar2(){
+    
+  }
+  
   function validar(){
+    var numeTar=parseInt(document.getElementById('inputNumero').value); 
+    console.log(numeTar);
+    var numeSeg=parseInt(document.getElementById('inputCVV').value); 
+    console.log(numeSeg);
+
+    var numeMes="";
+    numeMes=parseInt(document.getElementById('inputMes').value); 
+    console.log(numeMes);
+    var num111=""+numeMes.toString;
+    console.log(num111);
+
+    var numeAnio="";
+    numeAnio=parseInt(document.getElementById('inputAno').value); 
+    console.log(numeAnio);
+    console.log(numeAnio.length);
+
     console.log("y dale funca")
     var todo_correcto = true;
     var expresion = /^[A-Z+ ]+$/i;
@@ -35,18 +58,34 @@ function Formulario() {
   if(document.getElementById('inputAno').value===""){
   todo_correcto = false;
   }
+  
   if(isNaN(document.getElementById('inputCVV').value)){
     todo_correcto = false;
   }
   if(document.getElementById('inputCVV').value===""){
   todo_correcto = false;
   }
+  //el numero sea mayor a 2 digitos
+    if(numeTar <100000000000000){
+      todo_correcto = false;
+      console.log('true')
+  }
+
+
+  //el numero sea mayor a 2 digitos
+  if(numeSeg <100){
+      todo_correcto = false;
+      console.log('true')
+  }
+
   if(document.getElementById('inputNombre').value===""){
     todo_correcto = false;
     }
     
     if(!todo_correcto){
     }else{
+      //ocultando el boton de pago en efectivo 
+      document.getElementById('probandoID').style.display="none"
       swal({
         text: 'Transacción exitosa',
         icon: 'success',
@@ -82,16 +121,17 @@ return (
     <div>
       <form id="formulario-tarjeta" class="formulario-tarjeta" onsubmit='return validar()'>
       
-      <h2>Ingresa los datos de tu tarjeta</h2>
-   
+      <h1>Ingresa los datos de tu tarjeta</h1>
+       {/*input para ingreso del numero de tarjeta*/}
         <div className="grupo">
             <h4 for="inputNumero"> Número de tarjeta </h4>
             <input className= "pro" type="text" id="inputNumero" minlength="13" maxlength="18" autocomplete="off"  required pattern="[0-9]+"  />
         </div>
         <br/>
+        {/*input para ingreso del nombre titular de la tarjeta*/}
         <div className="grupo">
-            <h4 for="inputNombre">Nombre titular de la tarjeta</h4>
-            <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" />
+            <label for="inputNombre">Nombre titular de la tarjeta</label>
+            <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" oninvalid="this.setCustomValidity('Hola')" />
         </div>
         
         <br/>
@@ -101,23 +141,27 @@ return (
           
           <div className="flexbox">
               <div className="grupo-select">
-              <label className= "pro2" for="inputMes">MM</label>
+                 {/*input para ingreso del mes*/}
+              <label className= "pro2" for="inputMes">Mes</label>
               <br/>
-            <input className= "pro22" type="text" id="inputMes" maxlength="30" required pattern="[0-9]+" minlength="1" maxlength="2"/>
+               {/*limitando el numero de digitos en el input*/}
+            <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
    
               </div>
               <p className= "pro44">   /</p>
               <div className="grupo-select">
               <label className= "pro3" for="inputAno">AA</label>
               <br/>
-            <input className= "pro33" type="text" id="inputAno" maxlength="30"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
+              {/*input para ingreso del año*/}
+              {/*limitando el numero de digitos en el input*/}
+            <input className= "pro33" type="text" id="inputAno"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
                
               </div>
             </div>
             </div>
         
         <div className="grupo ccv">
-        
+          {/*input para ingreso del codigo de seguridad*/}
             <label for="inputCVV">Código de seguridad</label>
             <div align="center">
             
