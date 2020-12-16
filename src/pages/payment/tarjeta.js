@@ -47,7 +47,9 @@ class Tarjeta extends Component{
         return(
             <form>
                 <h4>Pagar con:</h4>
-                <div >
+                <div>
+
+                <div display="online" >
                 <label id="probandoID" >
                 Efectivo
                     <input type="radio" value="efectivo"  
@@ -65,6 +67,8 @@ class Tarjeta extends Component{
                    
                 </label>
                 </div>
+                </div>
+
             </form>
         )
     }
