@@ -211,10 +211,11 @@
 
 .combobox-estado-carrito{
     height: 25px;
-
+    margin-top: 20px;
 }
 
-.cambio-estado {
+.estado {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin-left: 25px;
 }
