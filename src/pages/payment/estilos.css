@@ -130,6 +130,24 @@ color: #7d8994;
 	display: flex;
 	justify-content: center;
 }
+.flexbox-datos{
+	display: flex;
+	justify-content: space-around;
+	/*grid-template-columns: repeat(auto-fill,minmax(100px,1fr));*/
+	margin-left: 15%;
+	margin-right: 20%;
+}
+.pro44{
+	margin-block: 1%;
+}
+
+.datos-de-entrada{
+	display: grid;
+	grid-template-columns: repeat(auto-fill,minmax(112px,2fr));
+	margin-left: 24%;
+	margin-right: 15%;
+}
+
 .contenedor-btn{
 	color: black;
 }

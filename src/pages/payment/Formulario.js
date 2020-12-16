@@ -157,36 +157,24 @@ return (
         
         <br/>
         <div className="grupo expira">
-        <div className="grupo-select1">
-          <p for="selectMes">Fecha de expiración </p>
-        </div> 
+          <div className="grupo-select1">
+            <p for="selectMes">Fecha de expiración </p>
+          </div> 
           
-          <div className="flexbox">
-              <div className="grupo-select">
-                 {/*input para ingreso del mes*/}
-                <div className="grupo-select1">
+          <div className="flexbox-datos">
                   <p className= "pro2" for="inputMes">MM </p>
-                </div>
-              
-               {/*limitando el numero de digitos en el input*/}
-            <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
-   
-              </div>
-              
-                <p className= "pro44">   /</p>
-              
-              <div className="grupo-select">
-                <div className="grupo-select1">
-                  <p className= "pro3" for="inputAno">AA</p>
-                </div>
-              
+                  <p className= "pro44"> / </p> 
+                  <p className= "pro3" for="inputAno">AA</p> 
+          </div>
+          <div className="datos-de-entrada">
+              {/*input para ingreso del mes*/}
+              {/*limitando el numero de digitos en el input*/}
+              <input className= "pro22" type="text" id="inputMes"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
               {/*input para ingreso del año*/}
               {/*limitando el numero de digitos en el input*/}
-            <input className= "pro33" type="text" id="inputAno"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
-               
-              </div>
-            </div>
-            </div>
+              <input className= "pro33" type="text" id="inputAno"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
+          </div>
+        </div>
         
         <div className="grupo ccv">
           {/*input para ingreso del codigo de seguridad*/}
