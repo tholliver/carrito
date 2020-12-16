@@ -82,15 +82,15 @@ return (
     <div>
       <form id="formulario-tarjeta" class="formulario-tarjeta" onsubmit='return validar()'>
       
-      <h1>Ingresa los datos de tu tarjeta</h1>
+      <h2>Ingresa los datos de tu tarjeta</h2>
    
         <div className="grupo">
-            <label for="inputNumero">Número de tarjeta</label>
+            <h4 for="inputNumero"> Número de tarjeta </h4>
             <input className= "pro" type="text" id="inputNumero" minlength="13" maxlength="18" autocomplete="off"  required pattern="[0-9]+"  />
         </div>
         <br/>
         <div className="grupo">
-            <label for="inputNombre">Nombre titular de la tarjeta</label>
+            <h4 for="inputNombre">Nombre titular de la tarjeta</h4>
             <input className= "pro" type="text" id="inputNombre" maxlength="30" autocomplete="off" required pattern="[a-zA-Z ]{2,254}" />
         </div>
         
@@ -98,17 +98,17 @@ return (
         <div className="grupo expira">
           <label for="selectMes">Fecha de expiración</label>
           <br/>
-          <label for="selectMes">MM/AA</label>
+          
           <div className="flexbox">
               <div className="grupo-select">
-              <label className= "pro2" for="inputMes">Mes</label>
+              <label className= "pro2" for="inputMes">MM</label>
               <br/>
             <input className= "pro22" type="text" id="inputMes" maxlength="30" required pattern="[0-9]+" minlength="1" maxlength="2"/>
    
               </div>
               <p className= "pro44">   /</p>
               <div className="grupo-select">
-              <label className= "pro3" for="inputAno">Año</label>
+              <label className= "pro3" for="inputAno">AA</label>
               <br/>
             <input className= "pro33" type="text" id="inputAno" maxlength="30"  required pattern="[0-9]+" minlength="2" maxlength="2"/>
                
