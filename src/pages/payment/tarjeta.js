@@ -49,7 +49,7 @@ class Tarjeta extends Component{
         const {value} = this.state;
         return(
             <form>
-
+                {/*mejorando el diseño del pago  */}
                 <div className="contenedorRadioButton3" >
 
                 <h4>Pagare con:</h4>
