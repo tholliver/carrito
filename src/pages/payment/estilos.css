@@ -150,6 +150,13 @@ color: #7d8994;
 	margin-right: 15%;
 }
 
-.contenedor-btn{
+.contenedor-btn-tarjetar{
 	color: black;
+	background-color: cadetblue;
+	font-size: x-large;
+}
+.contenedor-btn-tarjetac{
+	color: black;
+	background-color: red;
+	font-size: x-large;
 }
