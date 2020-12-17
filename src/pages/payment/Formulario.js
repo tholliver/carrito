@@ -163,7 +163,7 @@ return (
           
           <div className="flexbox-datos">
                   <p className= "pro2" for="inputMes">MM </p>
-                  <p className= "pro44"> / </p> 
+                  <h6 className= "pro44"> / </h6> 
                   <p className= "pro3" for="inputAno">AA</p> 
           </div>
           <div className="datos-de-entrada">
