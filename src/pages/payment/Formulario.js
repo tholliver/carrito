@@ -7,12 +7,6 @@ import swal from '@sweetalert/with-react'
 
 
 function Formulario() {
-
-  
-
-  function validar2(){
-    
-  }
   
   function validar(){
     var numeTar=parseInt(document.getElementById('inputNumero').value); 
