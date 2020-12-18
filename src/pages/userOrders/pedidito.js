@@ -15,7 +15,7 @@ export default class Pedidito extends React.Component {
   state = {
     products: [],
   };
-  /*
+  
   componentDidMount() {
      //axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
        const idP = this.props.productito.idpedido;
@@ -26,7 +26,7 @@ export default class Pedidito extends React.Component {
     // console.log(products)
     });
   }
-  */
+  
 
   render() {
 
