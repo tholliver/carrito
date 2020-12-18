@@ -6,7 +6,7 @@ import Cookies from "universal-cookie";
 //import Estado from "./Estado"
 
 //import Produc from './Produc';
-var idclientePru=1;
+
 var num =0;
 const cookies = new Cookies();
 
@@ -20,14 +20,15 @@ export default class MisPedidos extends React.Component {
   
   aumentar = ()=>{
     var select = document.getElementById("combo-carrito");
-    this.setState({value: select.value});
+    //this.setState({value: select.value});
   }
   
   componentDidMount() {
-    if (cookies.get('tipoUsuario')==='Cliente') {
+    if (cookies.get('tipoUsuario')==='cliente') {
       const idU = cookies.get('ci')
-      axios.get(`https://alfasoft-api.herokuapp.com/pedidousuario/`+idU).then((res) => {
+      axios.get("https://alfasoft-api.herokuapp.com/pedidousuario/"+idU).then((res) => {
       const products = res.data;
+      console.log(res.data);
       this.setState({ products });
       console.log(products)
       //estoy probando una modificacion
@@ -42,7 +43,11 @@ export default class MisPedidos extends React.Component {
     });
     }
   }
+  
   render() {
+    
+    
+    //  returns the whole pedidos
     return (
       <div className="conte">
         {this.state.products.map((item) => (

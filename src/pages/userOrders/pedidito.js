@@ -15,15 +15,18 @@ export default class Pedidito extends React.Component {
   state = {
     products: [],
   };
+  /*
   componentDidMount() {
      //axios.get(`https://alfasoft-api.herokuapp.com/productopedido`).then((res) => {
        const idP = this.props.productito.idpedido;
-      axios.get(`https://alfasoft-api.herokuapp.com/productopedido/`+idP).then((res) => {
+      axios.get("https://alfasoft-api.herokuapp.com/productopedido/"+idP).then((res) => {
       const products = res.data;
+      console.log(res.data);
       this.setState({ products });
     // console.log(products)
     });
   }
+  */
 
   render() {
 
