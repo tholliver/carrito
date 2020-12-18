@@ -106,3 +106,26 @@ body{
 .elegir-ubicacion-de-entrega:hover {
     opacity: 1;
 }
+.form-row{
+    display: flex;
+    
+
+}
+.ubicacion {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.numerodecasa{
+    margin-left: 30px;
+}
+.form-control1{
+    margin-left: 20px;
+    width: 200px;
+    
+}
+.form-control2{
+    margin-left: 20px;
+    width: 50px;
+    
+}
