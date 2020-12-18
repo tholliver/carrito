@@ -14,25 +14,31 @@ function Formulario() {
     var numeSeg=parseInt(document.getElementById('inputCVV').value); 
     console.log(numeSeg);
 
+
+    //Limitando la cantidad a 2
     var numeMes="";
-    numeMes=parseInt(document.getElementById('inputMes').value); 
+    /////////
+    numeMes=String(document.getElementById('inputAno').value);
+    console.log("El mes es");
     console.log(numeMes);
-    
-    var m = new Number(numeMes);
-    console.log(m);
-    console.log(m.toString().length);
-    var mm =m.toString().length;
-    console.log(mm);
+    console.log(numeMes.length);
+    console.log("El mes era");
+    var mm=numeMes.length;
+    ///////
+    //numeMes=parseInt(document.getElementById('inputMes').value);
+    //var mmm= numeMes.length();
+    //console.log(mmm);
+    //var m = new Number(numeMes);
+    //var mm =m.toString().length;
+    //console.log(mm);
 
     var numeAnio="";
-    numeAnio=parseInt(document.getElementById('inputAno').value); 
+    numeAnio=String(document.getElementById('inputMes').value); 
+    console.log("El año es");
     console.log(numeAnio);
-
-    var a = new Number(numeAnio);
-    console.log(a);
-    console.log(a.toString().length);
-    var aa =a.toString().length;
-    console.log(aa);
+    console.log(numeAnio.length);
+    console.log("El mes era");
+    var aa=numeAnio.length;
 
     console.log("y dale funca")
     var todo_correcto = true;
@@ -102,6 +108,7 @@ function Formulario() {
         icon: 'success',
         timer: 2000
       })
+      console.log("Llego aqui")
       
     }
     
@@ -130,8 +137,7 @@ function Formulario() {
   }
 return (
     <div>
-      <form id="formulario-tarjeta" class="formulario-tarjeta" onsubmit='return validar()'>
-      
+      <form id="formulario-tarjeta" class="formulario-tarjeta" >   
       <h2>Ingresa los datos de tu tarjeta</h2>
        {/*input para ingreso del numero de tarjeta*/}
         <div className="grupo">
