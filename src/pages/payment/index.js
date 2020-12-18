@@ -214,27 +214,27 @@ const Payment = () => {
               <h3 className="metodo-de-pago">
                 Direccion {" "}
               </h3>
-              <form>
+              
 
-              <div class="">
-                <div class="form-row">
+              <div className="ubicacion">
+
+                <div className="form-row">
                      <div class="form-group col-md-3">
                      <label for="inputAddress2">Direccion </label>
                      </div>
                      <div class="form-group col-md-5">
-                     <input type="text" class="form-control" id="inputAddress2" placeholder="Av America / Libertador " onChange={onChange}/>
+                     <input type="text" className="form-control1" id="inputAddress2" placeholder="Av America / Libertador " onChange={onChange}/>
                      </div>
-                     <div class="form-group col-md-2">
+                     <div className="numerodecasa">
                      <label for="inputAddress2">N° Casa </label>
                      </div>
                      <div class="form-group col-md-1">
-                     <input type="number" class="form-control" id="inputAddress2" placeholder="55" onChange={onChange2}/>
+                     <input type="number" className="form-control2" id="inputAddress2" placeholder="55" onChange={onChange2}/>
                      </div>
                 </div>
-                <div class='valid-feedback'>Direccion Valido</div>
-                <div class='invalid-feedback'>Complete el Campo</div>
+                
               </div>
-              </form>
+              
               <h3 className="metodo-de-pago">
                 Metodo de pago Bs.{" "}
               </h3>
