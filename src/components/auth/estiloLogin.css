@@ -90,4 +90,9 @@
 
 .smsUsername{
     display: none;
+    position: relative;
+    color: red;
+    font-size: 12px;
+    bottom: 15px;
+    right: 120px;
  }
