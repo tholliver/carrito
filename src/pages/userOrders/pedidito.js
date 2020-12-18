@@ -7,8 +7,10 @@ import "../cart/Styles.css";
 import "./detalles.css"
 //import swal from 'sweetalert';
 import swal from '@sweetalert/with-react'
+import Cookies from "universal-cookie";
 //import swal from 'sweetalert'
 //var num =0;
+const cookies =new Cookies();
 export default class Pedidito extends React.Component {
   state = {
     products: [],
@@ -94,7 +96,10 @@ export default class Pedidito extends React.Component {
         <p></p>
         <div className = "caja-boton">
           <button onClick={pp} type="button" className="ver-pedido">
-            <a href="#">Ver pedido</a>
+            {/*mejorando diseño del boton ver pedidos */}
+          {cookies.get('tipoUsuario')==='admin' && <a className='verPedido' href="#">Ver pedido</a>}
+           {cookies.get('tipoUsuario')!=='admin'&& <a href="#">Ver pedido</a>}
+          
           </button>
           </div>
         <br></br>
