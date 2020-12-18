@@ -104,27 +104,13 @@ class Estado extends React.Component {
   
 
   render() {
-    function validar2(){
-      
-      var x = document.getElementById("combo-carrito");
-      console.log(x);
-      //if(!todo_correcto){
-      //}else{
-        //ocultando el boton de pago en efectivo 
-        //document.getElementById('probandoID').style.display="none"
-        //swal({
-          //text: 'Transacción exitosa',
-          //icon: 'success',
-          //timer: 2000
-        //})
-        //} 
-      }
+    {/*se elimino la funcion que estaba sobrando */}
     
       const {value} = this.state;
       return (
               <label className="estado"><p className = "combobox-estado-carrito" >{value}</p>
                   {cookies.get('tipoUsuario')==='admin' && value !=='Entregado' &&
-                      <select onClick={validar2} className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
+                      <select  className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
                           <option value="Pendiente">Pendiente</option>
                           <option value="En Camino">En Camino</option>
                           <option value="Entregado">Entregado</option>
