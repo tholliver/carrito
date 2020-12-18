@@ -12,8 +12,7 @@ import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
 import Cookies from "universal-cookie";
 
-
-const cookies = new Cookies()
+const cookies = new Cookies();
 
 
 const Payment = () => {
@@ -32,7 +31,13 @@ const Payment = () => {
       current_datetime.getHours() + ":" +
       current_datetime.getMinutes() + ":" +
       current_datetime.getSeconds();
-    let ramdom = Math.floor(Math.random() * 50) + 1;;
+
+   let estadoP = "Por pagar";
+   if(cookies.get('estadoPago')==='tarjeta'){
+      estadoP='Pago efectuado'
+   }else{
+     estadoP='Por pagar';
+   }
     const newPedido = [
       {
         direccion: cookies.get('direccion')+'-N° '+cookies.get('numCasa'),
@@ -40,11 +45,13 @@ const Payment = () => {
         cantidadTotal: itemCount,
         totalPagar: total, 
         idclienteP: cookies.get('ci'),
-        estado: 'Pendiente'
+        estado: 'Pendiente',
+        estadoPago: estadoP        
       },
     ];
     cookies.remove('direccion',{path: "/"});
     cookies.remove('numCasa',{path: "/"});
+    cookies.remove('estadoPago',{path:"/"});
     axios
       .post("https://alfasoft-api.herokuapp.com/pedidoIn", newPedido, {
         headers: { "Content-Type": "application/json" },

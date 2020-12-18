@@ -119,8 +119,6 @@ function Formulario() {
     swal("Se canceló la transacción");
   };
 
-
-
   const mostrame =()=>{
     swal(
       <img src={guia2}/>
@@ -129,7 +127,6 @@ function Formulario() {
   const p2 =()=>{
     
      
-
   }
   function handleClick() {
     console.log('The link was clicked.');

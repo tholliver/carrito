@@ -5,6 +5,8 @@ import './estilos.css';
 import Formulario from "./Formulario.js"
 
 import './estilos.css';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 
 class Tarjeta extends Component{
@@ -12,10 +14,11 @@ class Tarjeta extends Component{
         value:'efectivo'
     };
     onChange =e =>{
-        
+      cookies.remove('estadoPago',{path:"/"});
         this.setState({value:e.target.value})
+        cookies.set('estadoPago',e.target.value, {path:"/"});
         if(e.target.value==="tarjeta"){
-        swal(
+          swal(
            
           <Formulario/>,  {
             buttons: {
