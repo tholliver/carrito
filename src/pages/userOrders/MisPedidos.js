@@ -101,16 +101,39 @@ class Estado extends React.Component {
       event.preventDefault();
   }
 
+  
+
   render() {
+    function validar2(){
+      
+      var x = document.getElementById("combo-carrito");
+      console.log(x);
+      //if(!todo_correcto){
+      //}else{
+        //ocultando el boton de pago en efectivo 
+        //document.getElementById('probandoID').style.display="none"
+        //swal({
+          //text: 'Transacción exitosa',
+          //icon: 'success',
+          //timer: 2000
+        //})
+        //} 
+      }
+    
       const {value} = this.state;
       return (
               <label className="estado"><p className = "combobox-estado-carrito" >{value}</p>
-                  {cookies.get('tipoUsuario')==='admin' &&
-                      <select className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
+                  {cookies.get('tipoUsuario')==='admin' && value !=='Entregado' &&
+                      <select onClick={validar2} className="combobox-estado-carrito" id="combo-carrito" value={this.state.value} onChange={this.handleChange}>
                           <option value="Pendiente">Pendiente</option>
                           <option value="En Camino">En Camino</option>
                           <option value="Entregado">Entregado</option>
                       </select>
+                  }
+                  { value === 'Entregado' &&  
+                    <select disabled className="combobox-estado-carrito " id="combo-carrito1" value ='Entregado' onChange={this.handleChange}>
+                     <option value="Entregado">Entregado</option>
+                    </select>
                   }
 
               </label>
