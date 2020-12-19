@@ -20,7 +20,7 @@ const Profile = ({ name, bio, avatar }) => {
             alt="profile"
           />
           <figcaption align="center">
-            {name && <strong className='strongy'>{name}</strong>}
+            {name && <div className='strongy' ><strong >{name}</strong></div>}
             {bio && <p className="mastermind">{bio}</p>}
           </figcaption>
         </figure>

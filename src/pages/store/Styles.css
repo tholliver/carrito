@@ -19,6 +19,7 @@ border: 200px;
     justify-content: center;
     width: 100%;
     font-size: 25px;
+    margin-top: 20px;
 }
 .tienda{
     display: flex;
