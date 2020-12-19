@@ -10,8 +10,7 @@ const propTypes = {
 
 const Profile = ({ name, bio, avatar }) => {
   //responsive-textarea no-border no-select
-  const component = (
-    
+  const component = (    
       <div className="profile-wrapper">
         <figure className="figure">
           <img
