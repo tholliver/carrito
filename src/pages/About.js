@@ -9,12 +9,12 @@ const About = () => {
     {
       nombre: "Omar",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/omar.jpeg",
     },
     {
       nombre: "Gustavo",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/gust.jpeg",
     },
     {
       nombre: "Luis",
@@ -24,22 +24,22 @@ const About = () => {
     {
       nombre: "Deniesse",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/den.jpeg",
     },
     {
       nombre: "Maura",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/maur.jpeg",
     },
     {
       nombre: "Antonio",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/antonio.jpeg",
     },
     {
       nombre: "Gary",
       bio: "No es cafe, ni tequila, es tu codigo que no complia",
-      avatar_url: "/teamPics/mike.jpg",
+      avatar_url: "/teamPics/gary.jpeg",
     },
     {
       nombre: "La massa Bro",
