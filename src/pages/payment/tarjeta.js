@@ -13,7 +13,7 @@ class Tarjeta extends Component{
     state ={
         value:'efectivo'
     };
-    onChange =e =>{
+    onChange =e =>{ 
       cookies.remove('estadoPago',{path:"/"});
         this.setState({value:e.target.value})
         cookies.set('estadoPago',e.target.value, {path:"/"});
@@ -68,9 +68,9 @@ class Tarjeta extends Component{
                 </div>
 
                 <div>
-                <label id="probandoID"  className="radioC">
-                Efectivo
-                    <input className="radioB" type="radio" value="efectivo"  
+                 <label id="probandoID"  className="radioC">
+                Efectivo 
+                    <input id='idEfectivo'  className="radioB" type="radio" value="efectivo"  
                                 checked ={value==='efectivo'}
                                 onChange={this.onChange} />
                     
