@@ -115,8 +115,8 @@ function Formulario() {
     return todo_correcto;
     } 
   const pagoCancelado=()=>{
-    console.log("y dale funca")
-    swal("Se canceló la transacción");
+    console.log("y dale funca");
+    window.location.href='./pago';
   };
 
   const mostrame =()=>{

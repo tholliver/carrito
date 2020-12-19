@@ -96,7 +96,10 @@ export default class Pedidito extends React.Component {
         <br/>
         <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
         <br/>
-        <p></p>
+        <div className='estadoPago'><b> Estado de pago: </b> 
+        {this.props.productito.estadoPago ==='Por pagar' && <p className='porPagar'> {this.props.productito.estadoPago}</p>}
+          {this.props.productito.estadoPago !=='Por pagar' && <p> {this.props.productito.estadoPago}</p>}
+        </div> 
         <div className = "caja-boton">
           <button onClick={pp} type="button" className="ver-pedido">
             {/*mejorando diseño del boton ver pedidos */}

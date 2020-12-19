@@ -225,3 +225,9 @@
     font-size: 15px;
     text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
 }
+.estadoPago{
+    display: flex;
+}
+.porPagar{
+    color: red;
+}
