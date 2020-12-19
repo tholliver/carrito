@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Profile from "./Profile/index";
 
 const About = () => {
-  const info = { nombre: "Mike", bio: "lala", avatar_url: "land" };
+  const info = [{ nombre: "Mike", bio: "lala", avatar_url: "land" },{ nombre: "Mike", bio: "lala", avatar_url: "land" }];
 
   return (
     <Layout title="Acerca de" description="About page">
@@ -11,7 +11,8 @@ const About = () => {
         <h1>Acerca de</h1>
         
         <div  >
-          <Profile name={info.nombre} bio={info.bio} avatar={info.avatar_url} />
+          
+          {info.map(item => <Profile name={item.nombre} bio={item.bio} avatar={item.avatar_url} />)}
         </div>
       </div>
     </Layout>
