@@ -236,7 +236,8 @@ const Payment = () => {
                      <label for="inputAddress2">N° Casa </label>
                      </div>
                      <div class="form-group col-md-1">
-                     <input type="number" className="form-control2" id="inputAddress2" placeholder="55" onChange={onChange2}/>
+                     <input type="number" className="form-control2" id="inputAddress2" placeholder="55" min="1" onChange={onChange2}/>
+                  
                      </div>
                 </div>
                 
