@@ -74,7 +74,7 @@ const About = () => {
                   <a href="#">
                     <i class="fas fa-golf-ball"></i>
                   </a>
-                  <h4 class="heading">Suspendisse</h4>
+                  <h4 class="heading">API - Logic</h4>
                   <p>
                     Per conubia nostra per mauris aliquet massa nulla facilisi
                     porta ligula non elementum
@@ -91,7 +91,7 @@ const About = () => {
                   <a href="#">
                     <i class="fas fa-ribbon"></i>
                   </a>
-                  <h4 class="heading">Inceptos</h4>
+                  <h4 class="heading">Diseño</h4>
                   <p>
                     Ultricies justo urna egestas metus ut ornare leo augue
                     pharetra risus morbi tincidunt massa
@@ -108,7 +108,7 @@ const About = () => {
                   <a href="#">
                     <i class="fas fa-tablets"></i>
                   </a>
-                  <h4 class="heading">Himenaeos</h4>
+                  <h4 class="heading">Base de datos</h4>
                   <p>
                     Ac vestibulum rutrum orci augue iaculis nibh quis porta nunc
                     nisi suscipit leo nam ac lacus
@@ -125,7 +125,7 @@ const About = () => {
                   <a href="#">
                     <i class="fas fa-wine-glass"></i>
                   </a>
-                  <h4 class="heading">Facilisis</h4>
+                  <h4 class="heading">Testing</h4>
                   <p>
                     Cras tempor ultricies urna aliquam massa sapien posuere in
                     iaculis adipiscing vulputate
