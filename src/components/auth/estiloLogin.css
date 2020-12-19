@@ -63,6 +63,7 @@
     height: 25px;
     text-align: center;
     vertical-align: center;
+    color: green;
 }
 
 .btn-iniciar:hover{
