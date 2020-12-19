@@ -213,6 +213,7 @@
     height: 25px;
     margin-top: 14px;
     margin-left: 5px;
+    box-shadow: 2px 2px 2px black;
 }
 
 .estado {
