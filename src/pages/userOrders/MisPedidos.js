@@ -121,7 +121,7 @@ class Estado extends React.Component {
                           <option value="Entregado">Entregado</option>
                       </select>
                   }
-                  { value === 'Entregado' &&  
+                  { value === 'Entregado' && cookies.get('tipoUsuario')==='admin' && 
                     <select disabled className="combobox-estado-carrito " id="combo-carrito1" value ='Entregado' onChange={this.handleChange}>
                      <option value="Entregado">Entregado</option>
                     </select>
