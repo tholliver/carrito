@@ -94,7 +94,9 @@ export default class Pedidito extends React.Component {
         <b>Cantidad Total:</b>  {this.props.productito.cantidadTotal}
         <br/>
         <br/>
+        <div className="totalc">
         <b>Total compra:</b> Bs. {this.props.productito.totalPagar}
+        </div>
         <br/>
         <div className='estadoPago'><b> Estado de pago: </b> 
         {this.props.productito.estadoPago ==='Por pagar' && <p className='porPagar'> {this.props.productito.estadoPago}</p>}

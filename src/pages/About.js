@@ -1,8 +1,8 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Profile from "./Profile/index";
-import "./stille.css";
-import "./Profile/styles/layout.css";
+//import "./stille.css";
+//import "./Profile/styles/layout.css";
 
 const About = () => {
   const info = [
