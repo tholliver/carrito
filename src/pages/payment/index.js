@@ -12,6 +12,8 @@ import { Redirect } from "react-router-dom";
 import Tarjeta from  './tarjeta'
 import Cookies from "universal-cookie";
 
+  
+
 const cookies = new Cookies();
 
 
@@ -22,6 +24,8 @@ const Payment = () => {
  var Direccion = "";
  var NombreCalle = "";
  var NumeroCalle ="";
+ 
+
   function func1() {
     let current_datetime = new Date();
     let formatted_date =
@@ -170,7 +174,8 @@ const Payment = () => {
     cookies.remove('numCasa',{path: "/"});
     cookies.set('numCasa', e.target.value , {path: "/"});
     console.log(cookies.get('numCasa'))
-}
+  }
+
   if(cookies.get("username")){
   return (
     <React.Fragment>
